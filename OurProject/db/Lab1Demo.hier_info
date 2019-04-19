@@ -9,7 +9,7 @@ CLOCK_50 => TOP_KBD_DEMOALL:inst8.clk
 CLOCK_50 => game_controller:inst12.clk
 CLOCK_50 => ballBitMap:inst7.clk
 CLOCK_50 => square_object:inst3.clk
-CLOCK_50 => ball_move:inst1.clk
+CLOCK_50 => ballMove:inst1.clk
 CLOCK_50 => back_ground_drawSquare:inst2.clk
 CLOCK_50 => ballBitMap:inst9.clk
 resetN => VGA_Controller:inst.resetN
@@ -21,7 +21,7 @@ resetN => TOP_KBD_DEMOALL:inst8.resetN
 resetN => game_controller:inst12.resetN
 resetN => ballBitMap:inst7.resetN
 resetN => square_object:inst3.resetN
-resetN => ball_move:inst1.resetN
+resetN => ballMove:inst1.resetN
 resetN => back_ground_drawSquare:inst2.resetN
 resetN => ballBitMap:inst9.resetN
 KEY[1] => inst4.IN0
@@ -212,22 +212,6 @@ playerDrawingRequest => tmpRGB.OUTPUTSELECT
 playerDrawingRequest => tmpRGB.OUTPUTSELECT
 playerDrawingRequest => tmpRGB.OUTPUTSELECT
 playerDrawingRequest => tmpRGB.OUTPUTSELECT
-ballRGB[0] => tmpRGB.DATAB
-ballRGB[1] => tmpRGB.DATAB
-ballRGB[2] => tmpRGB.DATAB
-ballRGB[3] => tmpRGB.DATAB
-ballRGB[4] => tmpRGB.DATAB
-ballRGB[5] => tmpRGB.DATAB
-ballRGB[6] => tmpRGB.DATAB
-ballRGB[7] => tmpRGB.DATAB
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
-ballDrawingRequest => tmpRGB.OUTPUTSELECT
 backGroundRGB[0] => tmpRGB.DATAA
 backGroundRGB[1] => tmpRGB.DATAA
 backGroundRGB[2] => tmpRGB.DATAA
@@ -1638,18 +1622,18 @@ result[8] <= lpm_constant:LPM_CONSTANT_component.result
 
 
 |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component
-result[0] <= lpm_constant_qc8:ag.result[0]
-result[1] <= lpm_constant_qc8:ag.result[1]
-result[2] <= lpm_constant_qc8:ag.result[2]
-result[3] <= lpm_constant_qc8:ag.result[3]
-result[4] <= lpm_constant_qc8:ag.result[4]
-result[5] <= lpm_constant_qc8:ag.result[5]
-result[6] <= lpm_constant_qc8:ag.result[6]
-result[7] <= lpm_constant_qc8:ag.result[7]
-result[8] <= lpm_constant_qc8:ag.result[8]
+result[0] <= lpm_constant_rc8:ag.result[0]
+result[1] <= lpm_constant_rc8:ag.result[1]
+result[2] <= lpm_constant_rc8:ag.result[2]
+result[3] <= lpm_constant_rc8:ag.result[3]
+result[4] <= lpm_constant_rc8:ag.result[4]
+result[5] <= lpm_constant_rc8:ag.result[5]
+result[6] <= lpm_constant_rc8:ag.result[6]
+result[7] <= lpm_constant_rc8:ag.result[7]
+result[8] <= lpm_constant_rc8:ag.result[8]
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_qc8:ag
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag
 result[0] <= sld_mod_ram_rom:mgl_prim1.data_write[0]
 result[1] <= sld_mod_ram_rom:mgl_prim1.data_write[1]
 result[2] <= sld_mod_ram_rom:mgl_prim1.data_write[2]
@@ -1661,7 +1645,7 @@ result[7] <= sld_mod_ram_rom:mgl_prim1.data_write[7]
 result[8] <= sld_mod_ram_rom:mgl_prim1.data_write[8]
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_qc8:ag|sld_mod_ram_rom:mgl_prim1
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1
 tck_usr <= <GND>
 address[0] <= <GND>
 enable_write <= <GND>
@@ -1724,7 +1708,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_qc8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -1807,7 +1791,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_qc8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -1890,7 +1874,7 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_qc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN66
 ROM_DATA[1] => Mux2.IN66
 ROM_DATA[2] => Mux1.IN66
@@ -2001,7 +1985,7 @@ keyRisingEdgePulse <= keyRisingEdgePulse.DB_MAX_OUTPUT_PORT_TYPE
 keyIsPressed <= keyIsPressed~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1
 result[0] <= lpm_constant:LPM_CONSTANT_component.result
 result[1] <= lpm_constant:LPM_CONSTANT_component.result
 result[2] <= lpm_constant:LPM_CONSTANT_component.result
@@ -2013,27 +1997,19 @@ result[7] <= lpm_constant:LPM_CONSTANT_component.result
 result[8] <= lpm_constant:LPM_CONSTANT_component.result
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component
-result[0] <= lpm_constant_mh8:ag.result[0]
-result[1] <= lpm_constant_mh8:ag.result[1]
-result[2] <= lpm_constant_mh8:ag.result[2]
-result[3] <= lpm_constant_mh8:ag.result[3]
-result[4] <= lpm_constant_mh8:ag.result[4]
-result[5] <= lpm_constant_mh8:ag.result[5]
-result[6] <= lpm_constant_mh8:ag.result[6]
-result[7] <= lpm_constant_mh8:ag.result[7]
-result[8] <= lpm_constant_mh8:ag.result[8]
-result[9] <= lpm_constant_mh8:ag.result[9]
-result[10] <= lpm_constant_mh8:ag.result[10]
-result[11] <= lpm_constant_mh8:ag.result[11]
-result[12] <= lpm_constant_mh8:ag.result[12]
-result[13] <= lpm_constant_mh8:ag.result[13]
-result[14] <= lpm_constant_mh8:ag.result[14]
-result[15] <= lpm_constant_mh8:ag.result[15]
-result[16] <= lpm_constant_mh8:ag.result[16]
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component
+result[0] <= lpm_constant_hi8:ag.result[0]
+result[1] <= lpm_constant_hi8:ag.result[1]
+result[2] <= lpm_constant_hi8:ag.result[2]
+result[3] <= lpm_constant_hi8:ag.result[3]
+result[4] <= lpm_constant_hi8:ag.result[4]
+result[5] <= lpm_constant_hi8:ag.result[5]
+result[6] <= lpm_constant_hi8:ag.result[6]
+result[7] <= lpm_constant_hi8:ag.result[7]
+result[8] <= lpm_constant_hi8:ag.result[8]
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_mh8:ag
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag
 result[0] <= sld_mod_ram_rom:mgl_prim1.data_write[0]
 result[1] <= sld_mod_ram_rom:mgl_prim1.data_write[1]
 result[2] <= sld_mod_ram_rom:mgl_prim1.data_write[2]
@@ -2043,17 +2019,9 @@ result[5] <= sld_mod_ram_rom:mgl_prim1.data_write[5]
 result[6] <= sld_mod_ram_rom:mgl_prim1.data_write[6]
 result[7] <= sld_mod_ram_rom:mgl_prim1.data_write[7]
 result[8] <= sld_mod_ram_rom:mgl_prim1.data_write[8]
-result[9] <= sld_mod_ram_rom:mgl_prim1.data_write[9]
-result[10] <= sld_mod_ram_rom:mgl_prim1.data_write[10]
-result[11] <= sld_mod_ram_rom:mgl_prim1.data_write[11]
-result[12] <= sld_mod_ram_rom:mgl_prim1.data_write[12]
-result[13] <= sld_mod_ram_rom:mgl_prim1.data_write[13]
-result[14] <= sld_mod_ram_rom:mgl_prim1.data_write[14]
-result[15] <= sld_mod_ram_rom:mgl_prim1.data_write[15]
-result[16] <= sld_mod_ram_rom:mgl_prim1.data_write[16]
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_mh8:ag|sld_mod_ram_rom:mgl_prim1
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1
 tck_usr <= <GND>
 address[0] <= <GND>
 enable_write <= <GND>
@@ -2066,14 +2034,6 @@ data_write[5] <= constant_update_reg[5].DB_MAX_OUTPUT_PORT_TYPE
 data_write[6] <= constant_update_reg[6].DB_MAX_OUTPUT_PORT_TYPE
 data_write[7] <= constant_update_reg[7].DB_MAX_OUTPUT_PORT_TYPE
 data_write[8] <= constant_update_reg[8].DB_MAX_OUTPUT_PORT_TYPE
-data_write[9] <= constant_update_reg[9].DB_MAX_OUTPUT_PORT_TYPE
-data_write[10] <= constant_update_reg[10].DB_MAX_OUTPUT_PORT_TYPE
-data_write[11] <= constant_update_reg[11].DB_MAX_OUTPUT_PORT_TYPE
-data_write[12] <= constant_update_reg[12].DB_MAX_OUTPUT_PORT_TYPE
-data_write[13] <= constant_update_reg[13].DB_MAX_OUTPUT_PORT_TYPE
-data_write[14] <= constant_update_reg[14].DB_MAX_OUTPUT_PORT_TYPE
-data_write[15] <= constant_update_reg[15].DB_MAX_OUTPUT_PORT_TYPE
-data_write[16] <= constant_update_reg[16].DB_MAX_OUTPUT_PORT_TYPE
 data_read[0] => ~NO_FANOUT~
 data_read[1] => ~NO_FANOUT~
 data_read[2] => ~NO_FANOUT~
@@ -2083,14 +2043,6 @@ data_read[5] => ~NO_FANOUT~
 data_read[6] => ~NO_FANOUT~
 data_read[7] => ~NO_FANOUT~
 data_read[8] => ~NO_FANOUT~
-data_read[9] => ~NO_FANOUT~
-data_read[10] => ~NO_FANOUT~
-data_read[11] => ~NO_FANOUT~
-data_read[12] => ~NO_FANOUT~
-data_read[13] => ~NO_FANOUT~
-data_read[14] => ~NO_FANOUT~
-data_read[15] => ~NO_FANOUT~
-data_read[16] => ~NO_FANOUT~
 adapter_ready => ~NO_FANOUT~
 adapter_valid => ~NO_FANOUT~
 adapter_queue_size[0] => ~NO_FANOUT~
@@ -2132,7 +2084,7 @@ ir_out[7] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out[7]
 tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_mh8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -2215,7 +2167,7 @@ adapted_ir_out[6] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[7] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[7]
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_mh8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -2298,55 +2250,23 @@ adapted_ir_out[6] => ir_out[6].DATAIN
 adapted_ir_out[7] => ir_out[7].DATAIN
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_mh8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr
-ROM_DATA[0] => Mux3.IN66
-ROM_DATA[1] => Mux2.IN66
-ROM_DATA[2] => Mux1.IN66
-ROM_DATA[3] => Mux0.IN66
-ROM_DATA[4] => Mux3.IN62
-ROM_DATA[5] => Mux2.IN62
-ROM_DATA[6] => Mux1.IN62
-ROM_DATA[7] => Mux0.IN62
-ROM_DATA[8] => Mux3.IN58
-ROM_DATA[9] => Mux2.IN58
-ROM_DATA[10] => Mux1.IN58
-ROM_DATA[11] => Mux0.IN58
-ROM_DATA[12] => Mux3.IN54
-ROM_DATA[13] => Mux2.IN54
-ROM_DATA[14] => Mux1.IN54
-ROM_DATA[15] => Mux0.IN54
-ROM_DATA[16] => Mux3.IN50
-ROM_DATA[17] => Mux2.IN50
-ROM_DATA[18] => Mux1.IN50
-ROM_DATA[19] => Mux0.IN50
-ROM_DATA[20] => Mux3.IN46
-ROM_DATA[21] => Mux2.IN46
-ROM_DATA[22] => Mux1.IN46
-ROM_DATA[23] => Mux0.IN46
-ROM_DATA[24] => Mux3.IN42
-ROM_DATA[25] => Mux2.IN42
-ROM_DATA[26] => Mux1.IN42
-ROM_DATA[27] => Mux0.IN42
-ROM_DATA[28] => Mux3.IN38
-ROM_DATA[29] => Mux2.IN38
-ROM_DATA[30] => Mux1.IN38
-ROM_DATA[31] => Mux0.IN38
-ROM_DATA[32] => Mux3.IN34
-ROM_DATA[33] => Mux2.IN34
-ROM_DATA[34] => Mux1.IN34
-ROM_DATA[35] => Mux0.IN34
-ROM_DATA[36] => Mux3.IN30
-ROM_DATA[37] => Mux2.IN30
-ROM_DATA[38] => Mux1.IN30
-ROM_DATA[39] => Mux0.IN30
-ROM_DATA[40] => Mux3.IN26
-ROM_DATA[41] => Mux2.IN26
-ROM_DATA[42] => Mux1.IN26
-ROM_DATA[43] => Mux0.IN26
-ROM_DATA[44] => Mux3.IN22
-ROM_DATA[45] => Mux2.IN22
-ROM_DATA[46] => Mux1.IN22
-ROM_DATA[47] => Mux0.IN22
+|TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:inst8|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr
+ROM_DATA[0] => Mux3.IN33
+ROM_DATA[1] => Mux2.IN33
+ROM_DATA[2] => Mux1.IN33
+ROM_DATA[3] => Mux0.IN33
+ROM_DATA[4] => Mux3.IN29
+ROM_DATA[5] => Mux2.IN29
+ROM_DATA[6] => Mux1.IN29
+ROM_DATA[7] => Mux0.IN29
+ROM_DATA[8] => Mux3.IN25
+ROM_DATA[9] => Mux2.IN25
+ROM_DATA[10] => Mux1.IN25
+ROM_DATA[11] => Mux0.IN25
+ROM_DATA[12] => Mux3.IN21
+ROM_DATA[13] => Mux2.IN21
+ROM_DATA[14] => Mux1.IN21
+ROM_DATA[15] => Mux0.IN21
 TCK => WORD_SR[0].CLK
 TCK => WORD_SR[1].CLK
 TCK => WORD_SR[2].CLK
@@ -2354,8 +2274,6 @@ TCK => WORD_SR[3].CLK
 TCK => word_counter[0].CLK
 TCK => word_counter[1].CLK
 TCK => word_counter[2].CLK
-TCK => word_counter[3].CLK
-SHIFT => word_counter.OUTPUTSELECT
 SHIFT => word_counter.OUTPUTSELECT
 SHIFT => word_counter.OUTPUTSELECT
 SHIFT => word_counter.OUTPUTSELECT
@@ -2365,7 +2283,6 @@ SHIFT => WORD_SR.OUTPUTSELECT
 SHIFT => WORD_SR.OUTPUTSELECT
 UPDATE => clear_signal.IN0
 USR1 => clear_signal.IN1
-ENA => word_counter.OUTPUTSELECT
 ENA => word_counter.OUTPUTSELECT
 ENA => word_counter.OUTPUTSELECT
 ENA => word_counter.OUTPUTSELECT
@@ -3687,7 +3604,7 @@ RGBout[6] <= RGBout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RGBout[7] <= RGBout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TOP_VGA_DEMO_WITH_MSS_ALL|ball_move:inst1
+|TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:inst1
 clk => topLeftY_tmp[0].CLK
 clk => topLeftY_tmp[1].CLK
 clk => topLeftY_tmp[2].CLK
@@ -3824,12 +3741,12 @@ resetN => topLeftY_tmp[4].ACLR
 resetN => topLeftY_tmp[5].ACLR
 resetN => topLeftY_tmp[6].ACLR
 resetN => topLeftY_tmp[7].PRESET
-resetN => topLeftY_tmp[8].ACLR
-resetN => topLeftY_tmp[9].PRESET
+resetN => topLeftY_tmp[8].PRESET
+resetN => topLeftY_tmp[9].ACLR
 resetN => topLeftY_tmp[10].PRESET
 resetN => topLeftY_tmp[11].ACLR
 resetN => topLeftY_tmp[12].ACLR
-resetN => topLeftY_tmp[13].ACLR
+resetN => topLeftY_tmp[13].PRESET
 resetN => topLeftY_tmp[14].ACLR
 resetN => topLeftY_tmp[15].ACLR
 resetN => topLeftY_tmp[16].ACLR
@@ -3881,12 +3798,12 @@ resetN => topLeftX_tmp[29].ACLR
 resetN => topLeftX_tmp[30].ACLR
 resetN => topLeftX_tmp[31].ACLR
 resetN => Xspeed[0].ACLR
-resetN => Xspeed[1].ACLR
-resetN => Xspeed[2].PRESET
+resetN => Xspeed[1].PRESET
+resetN => Xspeed[2].ACLR
 resetN => Xspeed[3].ACLR
-resetN => Xspeed[4].ACLR
+resetN => Xspeed[4].PRESET
 resetN => Xspeed[5].PRESET
-resetN => Xspeed[6].PRESET
+resetN => Xspeed[6].ACLR
 resetN => Xspeed[7].ACLR
 resetN => Xspeed[8].ACLR
 resetN => Xspeed[9].ACLR
@@ -3944,7 +3861,6 @@ resetN => Yspeed[28].ACLR
 resetN => Yspeed[29].ACLR
 resetN => Yspeed[30].ACLR
 resetN => Yspeed[31].ACLR
-startOfFrame => Yspeed.OUTPUTSELECT
 startOfFrame => Yspeed.OUTPUTSELECT
 startOfFrame => Yspeed.OUTPUTSELECT
 startOfFrame => Yspeed.OUTPUTSELECT

@@ -13,8 +13,8 @@ module	objects_mux	(
 					input		logic	playerDrawingRequest,
 					
 					//ball
-					input    logic [7:0] ballRGB,
-					input    logic ballDrawingRequest,
+					//input    logic [7:0] ballRGB,
+					//input    logic ballDrawingRequest,
 					
 					// background 
 					input		logic	[7:0] backGroundRGB, 
@@ -41,8 +41,8 @@ begin
 		if (playerDrawingRequest == 1'b1 )   
 			tmpRGB <= playerRGB;  //first priority 
 		
-		else if (ballDrawingRequest == 1'b1)
-			tmpRGB <= ballRGB;
+		//else if (ballDrawingRequest == 1'b1)
+		//	tmpRGB <= ballRGB;
 		
 		else
 			tmpRGB <= backGroundRGB ; // last priority 

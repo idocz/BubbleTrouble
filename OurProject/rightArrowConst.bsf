@@ -28,7 +28,7 @@ agreement for further details.
 		(pt 112 24)
 		(output)
 		(text "result[8..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
-		(text "116" (rect 73 16 91 31)(font "Arial" (font_size 8)))
+		(text "372" (rect 72 16 91 31)(font "Arial" (font_size 8)))
 		(line (pt 112 24)(pt 96 24)(line_width 3))
 	)
 	(drawing

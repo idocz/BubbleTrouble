@@ -271,9 +271,7 @@ set_global_assignment -name BDF_FILE RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf
 set_global_assignment -name BDF_FILE RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/back_ground_drawSquare.sv
 set_global_assignment -name SYSTEMVERILOG_FILE game_controller.sv
-set_global_assignment -name QIP_FILE leftArrowConst.qip
 set_global_assignment -name QIP_FILE spaceBarConst.qip
-set_global_assignment -name QIP_FILE rightArrowConst.qip
 set_global_assignment -name SYSTEMVERILOG_FILE Player/playerMove.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Player/playerBitMap.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -332,5 +330,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT
 set_global_assignment -name SYSTEMVERILOG_FILE Ball/ballMove.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Ball/ballBitMap.sv
+set_global_assignment -name QIP_FILE rightArrowConst.qip
+set_global_assignment -name QIP_FILE leftArrowConst.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp2_auto_stripped.stp

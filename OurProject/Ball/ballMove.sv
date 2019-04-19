@@ -4,7 +4,7 @@
 // coding convention dudy December 2018
 
 
-module	ball_move	(	
+module ballMove	(	
  
 					input	logic	clk,
 					input	logic	resetN,
