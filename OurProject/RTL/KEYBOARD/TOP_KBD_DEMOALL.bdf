@@ -87,9 +87,9 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1056 424 1232 440)
+	(rect 1032 272 1210 288)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "keyToggle" (rect 90 0 140 12)(font "Arial" ))
+	(text "LeftKeyIsPressed" (rect 90 0 172 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -103,9 +103,9 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1040 104 1216 120)
+	(rect 1032 104 1223 120)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "keyIsPressed" (rect 90 0 158 12)(font "Arial" ))
+	(text "RightKeyIsPressed" (rect 90 0 185 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -119,9 +119,9 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1032 272 1208 288)
+	(rect 1032 440 1215 456)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "keyIsPressed1" (rect 90 0 158 17)(font "Intel Clear" ))
+	(text "SpaceBarPressed" (rect 90 0 177 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -504,10 +504,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1000 112)
-	(pt 1040 112)
-)
-(connector
 	(text "resetN" (rect 642 80 672 97)(font "Intel Clear" ))
 	(pt 624 96)
 	(pt 736 96)
@@ -559,22 +555,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1000 432)
-	(pt 1056 432)
-)
-(connector
-	(text "Key_val2[8..0]" (rect 538 496 607 513)(font "Intel Clear" ))
-	(pt 512 512)
-	(pt 736 512)
-	(bus)
-)
-(connector
-	(text "Key_val1[8..0]" (rect 520 144 589 161)(font "Intel Clear" ))
-	(pt 736 160)
-	(pt 504 160)
-	(bus)
-)
-(connector
 	(text "keyCode[8..0]" (rect 928 592 994 609)(font "Intel Clear" ))
 	(pt 920 608)
 	(pt 1008 608)
@@ -589,12 +569,6 @@ agreement for further details.
 	(text "brake" (rect 939 624 966 641)(font "Intel Clear" ))
 	(pt 920 640)
 	(pt 1008 640)
-)
-(connector
-	(text "Key_val1[8..0]" (rect 520 312 589 329)(font "Intel Clear" ))
-	(pt 504 328)
-	(pt 728 328)
-	(bus)
 )
 (connector
 	(text "resetN" (rect 594 608 624 625)(font "Intel Clear" ))
@@ -628,5 +602,31 @@ agreement for further details.
 	(text "resetN" (rect 682 432 712 449)(font "Intel Clear" ))
 	(pt 736 448)
 	(pt 656 448)
+)
+(connector
+	(text "rightArrowVal[8..0]" (rect 520 144 609 161)(font "Intel Clear" ))
+	(pt 736 160)
+	(pt 504 160)
+	(bus)
+)
+(connector
+	(text "leftArrowVal[8..0]" (rect 520 312 604 329)(font "Intel Clear" ))
+	(pt 504 328)
+	(pt 728 328)
+	(bus)
+)
+(connector
+	(text "spaceBarVal[8..0]" (rect 538 496 621 513)(font "Intel Clear" ))
+	(pt 512 512)
+	(pt 736 512)
+	(bus)
+)
+(connector
+	(pt 1000 448)
+	(pt 1032 448)
+)
+(connector
+	(pt 1000 112)
+	(pt 1032 112)
 )
 (text "// (c) Technion IIT, Department of Electrical Engineering 2018  2019\r\n// Written By Alex Grinshpun David Bar-On  Feb  2019 \r\n" (rect 88 0 488 57)(font "Intel Clear" (font_size 8)))

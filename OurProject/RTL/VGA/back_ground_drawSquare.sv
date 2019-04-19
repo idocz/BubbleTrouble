@@ -38,8 +38,8 @@ begin
 	else begin
 	
 	// defaults 
-		greenBits <= 3'b110 ; 
-		redBits <= 3'b010 ;
+		greenBits <= 3'b100 ; 
+		redBits <= LIGHT_COLOR ;
 		blueBits <= LIGHT_COLOR;
 					
 	// draw the yellow borders 
@@ -63,22 +63,9 @@ begin
 	
 	// note numbers can be used inline if they appear only once 
 			
-		if (pixelX > 156 && pixelY >= 256 ) // rectangles on part of the screen 
-					redBits <= DARK_COLOR ; 
-				 
+		//if (pixelX > 156 && pixelY >= 256 ) // rectangles on part of the screen 
+		//			redBits <= DARK_COLOR ; 
 				
-		if (pixelX <  220 && pixelY < 350 ) 
-					greenBits <= 3'b011 ; 
-							
-		if (pixelX <  300 && pixelY < 200 )   
-					blueBits <= 2'b10  ; 
-					
-		if (pixelY > 200 && pixelY < 280 && pixelX > 180 && pixelX < 260)
-		begin
-			blueBits <= DARK_COLOR;
-			greenBits <= LIGHT_COLOR;
-			redBits <= LIGHT_COLOR;
-		end
 				 	   
 		
 	end; 	

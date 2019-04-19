@@ -1,0 +1,12 @@
+module playerMove 	
+ ( 
+	input	logic  clk,
+	input	logic  resetN, 
+	input	logic	 rise,
+	output logic [SIZE_BITS-1:0] dout	
+  ) ;
+
+
+ 
+endmodule
+

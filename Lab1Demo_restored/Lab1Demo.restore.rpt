@@ -1,0 +1,130 @@
+Restore Archived Project report for Lab1Demo
+Fri Apr 19 10:53:04 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Apr 19 10:53:04 2019 ;
+; Revision Name                   ; Lab1Demo                              ;
+; Top-level Entity Name           ; TOP_VGA_DEMO_WITH_MSS_ALL             ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo.qar' into the 'C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/' directory
+Info: Generated report 'Lab1Demo.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Fri Apr 19 10:53:04 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------------------------------------+
+; Files Restored                                        ;
++-------------------------------------------------------+
+; File Name                                             ;
++-------------------------------------------------------+
+; qar_info.json                                         ;
+; DE10_Standard_Audio.sdc                               ;
+; Lab1Demo.qpf                                          ;
+; Lab1Demo.qsf                                          ;
+; RTL/KEYBOARD/HexSS.sv                                 ;
+; RTL/KEYBOARD/TOP_KBDINTF.bdf                          ;
+; RTL/KEYBOARD/TOP_KBD_DEMO.bdf                         ;
+; RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                      ;
+; RTL/KEYBOARD/TOP_KBD_DEMOLPM.bdf                      ;
+; RTL/KEYBOARD/TOP_RANDOM.bdf                           ;
+; RTL/KEYBOARD/bitrec.sv                                ;
+; RTL/KEYBOARD/byterec.sv                               ;
+; RTL/KEYBOARD/con29.bsf                                ;
+; RTL/KEYBOARD/con29.qip                                ;
+; RTL/KEYBOARD/con29.v                                  ;
+; RTL/KEYBOARD/con58.bsf                                ;
+; RTL/KEYBOARD/con58.qip                                ;
+; RTL/KEYBOARD/con58.v                                  ;
+; RTL/KEYBOARD/keyPad_decoder.sv                        ;
+; RTL/KEYBOARD/keyToggle_decoder.sv                     ;
+; RTL/KEYBOARD/keyToggle_decoderIn.sv                   ;
+; RTL/KEYBOARD/lpf.sv                                   ;
+; RTL/KEYBOARD/random.sv                                ;
+; RTL/MSS/SinTable.sv                                   ;
+; RTL/MSS/TOP_MSS_DEMO.bdf                              ;
+; RTL/MSS/ToneDecoder.sv                                ;
+; RTL/MSS/addr_counter.sv                               ;
+; RTL/MSS/data_conversion.sv                            ;
+; RTL/MSS/prescaler.sv                                  ;
+; RTL/Seg7/SEG7.SV                                      ;
+; RTL/VGA/NumbersBitMap.sv                              ;
+; RTL/VGA/TOP_VGA_DEMO_WITH_MSS.bdf                     ;
+; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                 ;
+; RTL/VGA/VGA_Controller.sv                             ;
+; RTL/VGA/back_ground_draw.sv                           ;
+; RTL/VGA/back_ground_drawSquare.sv                     ;
+; RTL/VGA/objects_mux.sv                                ;
+; RTL/VGA/smileyBitMap.sv                               ;
+; RTL/VGA/smileyBitMapX2.sv                             ;
+; RTL/VGA/smileyface_move.sv                            ;
+; RTL/VGA/square_object.sv                              ;
+; RTL/audio_codec_controller/audio_codec_controller.qxp ;
+; assignment_defaults.qdf                               ;
+; con5A.bsf                                             ;
+; con5A.qip                                             ;
+; con5A.v                                               ;
+; con5A_bb.v                                            ;
+; db/stp2_auto_stripped.stp                             ;
+; game_controller.sv                                    ;
+; output_files/Chain1.cdf                               ;
+; output_files/stp2.stp                                 ;
+; pin.tcl                                               ;
+; valX.bsf                                              ;
+; valX.qip                                              ;
+; valX.v                                                ;
+; valX_bb.v                                             ;
++-------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
