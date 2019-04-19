@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="8de7886ce4be7ee9bf1a"/>
+    <hash md5_digest_80b="e8a05198ccb08275c695"/>
   </project>
   <file_info>
     <file device="5CSXFC6D6F31C6" path="Lab1Demo.sof" usercode="0xFFFFFFFF"/>
@@ -67,18 +67,18 @@
         <port name="jtag.bp.inst8_inst2_LPM_CONSTANT_component_ag_mgl_prim1_tdo"/>
       </outputs>
     </node>
-    <node hpath="TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_jb8:ag|sld_mod_ram_rom:mgl_prim1" instance_id="1" mfg_id="110" node_id="3" sld_node_info="0x10186E01" version="2">
+    <node hpath="TOP_KBD_DEMOALL:inst8|rightArrowConst:inst4|lpm_constant:LPM_CONSTANT_component|lpm_constant_mh8:ag|sld_mod_ram_rom:mgl_prim1" instance_id="1" mfg_id="110" node_id="3" sld_node_info="0x10186E01" version="2">
       <parameters>
         <parameter name="SLD_NODE_INFO" type="dec" value="270036480"/>
         <parameter name="SLD_AUTO_INSTANCE_INDEX" type="string" value="yes"/>
         <parameter name="SLD_IP_VERSION" type="dec" value="1"/>
         <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="3"/>
         <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
-        <parameter name="width_word" type="unknown" value="9"/>
+        <parameter name="width_word" type="unknown" value="17"/>
         <parameter name="numwords" type="unknown" value="1"/>
         <parameter name="widthad" type="unknown" value="1"/>
-        <parameter name="shift_count_bits" type="unknown" value="4"/>
-        <parameter name="cvalue" type="unknown" value="001110100"/>
+        <parameter name="shift_count_bits" type="unknown" value="5"/>
+        <parameter name="cvalue" type="unknown" value="01110000001100100"/>
         <parameter name="is_data_in_ram" type="unknown" value="0"/>
         <parameter name="is_readable" type="unknown" value="0"/>
         <parameter name="BACKPRESSURE_ENABLED" type="dec" value="0"/>
@@ -116,6 +116,14 @@
         <port name="data_write[6]"/>
         <port name="data_write[7]"/>
         <port name="data_write[8]"/>
+        <port name="data_write[9]"/>
+        <port name="data_write[10]"/>
+        <port name="data_write[11]"/>
+        <port name="data_write[12]"/>
+        <port name="data_write[13]"/>
+        <port name="data_write[14]"/>
+        <port name="data_write[15]"/>
+        <port name="data_write[16]"/>
         <port name="jtag.bp.inst8_inst4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_"/>
         <port name="jtag.bp.inst8_inst4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_"/>
         <port name="jtag.bp.inst8_inst4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_"/>

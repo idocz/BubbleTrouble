@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Lab1Demo
-Fri Apr 19 10:56:48 2019
+Fri Apr 19 17:11:02 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -100,17 +100,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.57        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.35        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  19.2%      ;
-;     Processor 3            ;  19.1%      ;
-;     Processor 4            ;  19.1%      ;
+;     Processor 2            ;  35.2%      ;
 +----------------------------+-------------+
 
 
@@ -119,7 +117,7 @@ agreement for further details.
 +-------------------------+--------+--------------------------+
 ; SDC File Path           ; Status ; Read at                  ;
 +-------------------------+--------+--------------------------+
-; DE10_Standard_Audio.sdc ; OK     ; Fri Apr 19 10:56:28 2019 ;
+; DE10_Standard_Audio.sdc ; OK     ; Fri Apr 19 17:10:35 2019 ;
 +-------------------------+--------+--------------------------+
 
 
@@ -990,10 +988,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Apr 19 10:56:25 2019
+    Info: Processing started: Fri Apr 19 17:10:31 2019
 Info: Command: quartus_sta Lab1Demo -c Lab1Demo
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332164): Evaluating HDL-embedded SDC commands
@@ -1012,61 +1010,61 @@ Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argum
     Info (332050): read_sdc File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
 Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
 Info (332104): Reading SDC File: 'DE10_Standard_Audio.sdc'
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(9): CLOCK2_50 could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 9
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(9): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 9
-    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK2_50] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 9
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(10): CLOCK3_50 could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 10
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(10): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 10
-    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK3_50] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 10
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(11): CLOCK4_50 could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 11
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(11): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 11
-    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK4_50] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 11
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(14): CLOCK_27 could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 14
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(14): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 14
-    Info (332050): create_clock -period "27.000000 MHz" [get_ports CLOCK_27] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 14
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(9): CLOCK2_50 could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 9
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(9): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 9
+    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK2_50] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 9
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(10): CLOCK3_50 could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 10
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(10): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 10
+    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK3_50] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 10
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(11): CLOCK4_50 could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 11
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(11): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 11
+    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK4_50] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 11
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(14): CLOCK_27 could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 14
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(14): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 14
+    Info (332050): create_clock -period "27.000000 MHz" [get_ports CLOCK_27] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 14
 Warning (332043): Overwriting existing clock: altera_reserved_tck
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(38): u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(39): DRAM_CLK could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 39
-Critical Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(38): u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(39): DRAM_CLK could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 39
+Critical Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
     Info (332050): create_generated_clock -source [get_pins {u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] \
-                      -name clk_dram_ext [get_ports {DRAM_CLK}] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
-Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument -source is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
+                      -name clk_dram_ext [get_ports {DRAM_CLK}] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
+Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument -source is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 38
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): DRAM_DQ* could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): clk_dram_ext could not be matched with a clock File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
-    Info (332050): set_input_delay -max -clock clk_dram_ext 5.9 [get_ports DRAM_DQ*] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 63
-    Info (332050): set_input_delay -min -clock clk_dram_ext 3.0 [get_ports DRAM_DQ*] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 63
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 63
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(67): u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 67
-Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <from> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 66
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): DRAM_DQ* could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): clk_dram_ext could not be matched with a clock File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
+    Info (332050): set_input_delay -max -clock clk_dram_ext 5.9 [get_ports DRAM_DQ*] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument -clock is not an object ID File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 62
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 63
+    Info (332050): set_input_delay -min -clock clk_dram_ext 3.0 [get_ports DRAM_DQ*] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 63
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument -clock is not an object ID File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 63
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(67): u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 67
+Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <from> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 66
     Info (332050): set_multicycle_path -from [get_clocks {clk_dram_ext}] \
                     -to [get_clocks {u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] \
-                                                  -setup 2 File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 66
-Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <to> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 66
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_*DQM could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_DQ* could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
-    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_DQ* DRAM_*DQM}] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 81
-    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_DQ* DRAM_*DQM}] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 81
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 81
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_ADDR* could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_BA* could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CAS_N could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CKE could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CS_N could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_RAS_N could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_WE_N could not be matched with a port File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 83
-    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 83
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 83
+                                                  -setup 2 File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 66
+Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <to> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 66
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_*DQM could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_DQ* could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
+    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_DQ* DRAM_*DQM}] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument -clock is not an object ID File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 80
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 81
+    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_DQ* DRAM_*DQM}] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 81
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument -clock is not an object ID File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 81
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_ADDR* could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_BA* could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CAS_N could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CKE could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CS_N could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_RAS_N could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_WE_N could not be matched with a port File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument -clock is not an object ID File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 82
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument <targets> is an empty collection File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 83
+    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 83
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument -clock is not an object ID File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/Lab1Demo_restored/DE10_Standard_Audio.sdc Line: 83
 Warning (332060): Node: VGA_Controller:inst|oVGA_HS was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register VGA_Controller:inst|V_Cont[5] is being clocked by VGA_Controller:inst|oVGA_HS
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
@@ -1271,9 +1269,9 @@ Info (332114): Report Metastability: Found 71 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 5220 megabytes
-    Info: Processing ended: Fri Apr 19 10:56:48 2019
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 5212 megabytes
+    Info: Processing ended: Fri Apr 19 17:11:02 2019
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:37
 
 

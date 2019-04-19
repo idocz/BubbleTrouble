@@ -6,6 +6,7 @@ module playerMove
 	input	logic	 rightArrow,
 	input	logic	 leftArrow,
 	input	logic	 spaceBar,
+	input logic collision,
 	output	logic	[10:0]	topLeftX,
 	output	logic	[10:0]	topLeftY
 );
@@ -51,9 +52,15 @@ end
 
 // position calculate 
 
-always_ff@(posedge clk or negedge resetN)
+always_ff@(posedge clk or negedge resetN or posedge collision)
 begin
 	if(!resetN)
+	begin
+		topLeftX_tmp	<= INITIAL_X * MULTIPLIER;
+		topLeftY_tmp	<= INITIAL_Y * MULTIPLIER;
+	end
+	
+	else if ( collision )
 	begin
 		topLeftX_tmp	<= INITIAL_X * MULTIPLIER;
 		topLeftY_tmp	<= INITIAL_Y * MULTIPLIER;
