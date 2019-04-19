@@ -610,12 +610,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "leftArrowVal[8..0]" (rect 520 312 604 329)(font "Intel Clear" ))
-	(pt 504 328)
-	(pt 728 328)
-	(bus)
-)
-(connector
 	(text "spaceBarVal[8..0]" (rect 538 496 621 513)(font "Intel Clear" ))
 	(pt 512 512)
 	(pt 736 512)
@@ -628,5 +622,11 @@ agreement for further details.
 (connector
 	(pt 1000 112)
 	(pt 1032 112)
+)
+(connector
+	(text "leftArrowVal[8..0]" (rect 520 312 604 329)(font "Intel Clear" ))
+	(pt 504 328)
+	(pt 728 328)
+	(bus)
 )
 (text "// (c) Technion IIT, Department of Electrical Engineering 2018  2019\r\n// Written By Alex Grinshpun David Bar-On  Feb  2019 \r\n" (rect 88 0 488 57)(font "Intel Clear" (font_size 8)))

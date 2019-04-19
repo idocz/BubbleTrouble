@@ -48,10 +48,10 @@ module rightArrowConst (
 	lpm_constant	LPM_CONSTANT_component (
 				.result (sub_wire0));
 	defparam
-		LPM_CONSTANT_component.lpm_cvalue = 57444,
+		LPM_CONSTANT_component.lpm_cvalue = 116,
 		LPM_CONSTANT_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=ra",
 		LPM_CONSTANT_component.lpm_type = "LPM_CONSTANT",
-		LPM_CONSTANT_component.lpm_width = 17;
+		LPM_CONSTANT_component.lpm_width = 9;
 
 
 endmodule
