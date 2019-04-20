@@ -1,0 +1,172 @@
+// (c) Technion IIT, Department of Electrical Engineering 2018 
+// Updated by Liat Schwartz March 2019 
+
+// Implements a simple traffic lights controller
+// by using state machine with present and next states wvf6
+
+module gameStateMachine 	(
+	input logic clk, resetN, switchN, turbo,
+	output logic redLight, yellowLight, greenLight );
+	
+	
+		
+//******************************************
+// change here from simulation to real time 
+//******************************************
+	
+	localparam FreqDiv = 26'd5_000_000; // for real operation 0.1sec
+//	localparam logic [25:0] FreqDiv = 26'd32; // for simulation, 2 after turbo 
+
+
+//******************************************
+
+	enum logic [2:0] {sred, sred_yellow, sgreen, syellow} cur_st, nxt_st;
+
+	logic t_sec = 1'b0; // Tenth of a second 10 Hz time enable
+	logic [25:0] currentFreq = 0, clockCount = 0;
+	logic [6:0] cntDn, nxt_cntDn; 
+   
+	localparam logic [6:0] RED_TIME = 48; 
+   localparam logic [6:0] RED_YELLOW_TIME = 18; 
+	localparam logic [6:0] GREEN_TIME = 36; 
+   localparam logic [6:0] YELLOW_TIME = 18; 
+
+	localparam logic LED_ON  = 1'b1; 
+	localparam logic LED_OFF = 1'b0;
+
+
+	localparam logic [25:0] FreqDivTurbo = FreqDiv/16; // for 16 times faster
+
+	
+// Counter to determine a tenth of a second t_sec //////////////////
+always_ff @(posedge clk or negedge resetN) 
+   begin
+	   
+   if ( !resetN ) begin  // Asynchronic reset
+		clockCount <= 0;
+		t_sec <= 0;
+	end 
+		
+   else begin // Synchronic logic	
+
+		if ( turbo ) currentFreq <= FreqDivTurbo; // Turbo 160 Hz 
+		else currentFreq <= FreqDiv; // 10 Hz 
+		
+		if ( clockCount < (currentFreq-1) ) begin
+			clockCount <= clockCount + 1;
+			t_sec <= 1'b0;
+			end
+		else begin
+			clockCount <= 0;
+			t_sec <= 1'b1;
+			end 
+			
+	end // synch
+end // always time counter ///////////////////////////////////////////	
+	
+
+	
+always_ff @(posedge clk or negedge resetN) // State machine logic ////
+   begin
+	   
+   if ( !resetN ) begin // Asynchronic reset
+		cur_st <= sred;
+		cntDn  <= RED_TIME;
+	end // asynch
+	else 
+	begin 				// Synchronic logic	
+		cur_st <= nxt_st; // Update current state
+		cntDn <= nxt_cntDn;
+	end 
+		
+end // always state machine //////////////////////////////////////////
+
+	
+always_comb // Update the next state  ////////////////////////////////
+	begin
+		nxt_st = cur_st;	// Set default values
+		nxt_cntDn = cntDn;
+		
+
+	// Check switchN ////////////////////////
+		if ( switchN == 1'b0 && cur_st == sred ) 
+		begin
+			nxt_st = sred_yellow;
+			nxt_cntDn = RED_YELLOW_TIME;
+		end // switchN
+		else if ( t_sec ) 
+		begin // 10 or 160 Hz time enable
+				if ( cntDn > 1 )
+					nxt_cntDn = cntDn - 7'd1; 
+				else 
+				begin
+					case (cur_st)
+					
+						sred: begin
+							nxt_st = sred_yellow;
+							nxt_cntDn = RED_YELLOW_TIME;
+							end // sred
+							
+						sred_yellow: begin
+							
+							nxt_st = sgreen;
+							nxt_cntDn = GREEN_TIME;
+							
+							end // sred_yellow
+							
+						sgreen: begin
+							
+							nxt_st = syellow;
+							nxt_cntDn = YELLOW_TIME; 
+							
+							end // sgreen
+							
+						syellow: begin
+							
+							nxt_st = sred;
+							nxt_cntDn = RED_TIME;
+							
+							end // syellow
+					
+					endcase
+				end // cntDn
+		end // t_sec
+end // always next state ///////////////////////////////
+
+
+always_comb // Update the outputs //////////////////////
+   begin
+	
+	redLight 	= LED_OFF;	// Set default values
+	yellowLight = LED_OFF;
+	greenLight 	= LED_OFF;
+	
+	case (cur_st)
+				
+		sred: begin
+			redLight = LED_ON;
+			end // sred
+			
+		sred_yellow: begin
+			
+			redLight 	= LED_ON;
+			yellowLight = LED_ON; 
+			
+			end // sred_yellow
+			
+		sgreen: begin
+			
+			greenLight 	= LED_ON;
+			
+			end // sgreen
+			
+		syellow: begin
+			
+			yellowLight = LED_ON; 
+			
+			end // syellow
+	
+	endcase
+end // always outputs //////////////////////////////
+	
+endmodule

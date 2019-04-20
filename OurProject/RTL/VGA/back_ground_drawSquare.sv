@@ -9,6 +9,7 @@ module	back_ground_drawSquare	(
 
 					input	logic	clk,
 					input	logic	resetN,
+					input logic [1:0] bgState,
 					input 	logic	[10:0]	pixelX,
 					input 	logic	[10:0]	pixelY,
 
@@ -22,9 +23,10 @@ const int	bracketOffset =	10;
 logic [2:0] redBits;
 logic [2:0] greenBits;
 logic [1:0] blueBits;
+logic [1:0] bgBitMap_tmp;
 
-localparam logic [2:0] DARK_COLOR = 3'b111 ;// bitmap of a dark color
-localparam logic [2:0] LIGHT_COLOR = 3'b000 ;// bitmap of a light color
+localparam logic [2:0] LIGHT_COLOR = 3'b111 ;// bitmap of a dark color
+localparam logic [2:0] DARK_COLOR = 3'b000 ;// bitmap of a light color
 
 assign BG_RGB =  {redBits , greenBits , blueBits} ; //collect color nibbles to an 8 bit word 
 
@@ -37,37 +39,30 @@ begin
 	end 
 	else begin
 	
-	// defaults 
+	if ( bgState == 2'b00 ) // welcome screen
+	begin
 		greenBits <= 3'b100 ; 
-		redBits <= LIGHT_COLOR ;
-		blueBits <= LIGHT_COLOR;
-					
-	// draw the yellow borders 
-		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
-			begin 
-				redBits <= DARK_COLOR ;	
-				greenBits <= DARK_COLOR ;	
-				blueBits <= LIGHT_COLOR ;	// 3rd bit will be truncked
-			end
-		// draw  four lines with "bracketOffset" offset from the border 
-		
-		if (pixelX == bracketOffset ||
-						pixelY == bracketOffset ||
-						pixelX == xFrameSize-bracketOffset || 
-						pixelY == yFrameSize-bracketOffset) 
-			begin 
-					redBits <= DARK_COLOR ;	
-					greenBits <= DARK_COLOR  ;	
-					blueBits <= DARK_COLOR ;	 
-			end
-	
-	// note numbers can be used inline if they appear only once 
-			
-		//if (pixelX > 156 && pixelY >= 256 ) // rectangles on part of the screen 
-		//			redBits <= DARK_COLOR ; 
+		redBits <= DARK_COLOR ;
+		blueBits <= DARK_COLOR;
+	end
+	else if ( bgState == 2'b01 ) // play mode
+	begin
+		greenBits <= DARK_COLOR ; 
+		redBits <= 3'b100 ;
+		blueBits <= DARK_COLOR;
+	end
+	else // game over
+	begin
+		greenBits <= DARK_COLOR ; 
+		redBits <= DARK_COLOR ;
+		blueBits <= 2'b10;
+	end
+						
+
+	//if (pixelX > 156 && pixelY >= 256 ) // rectangles on part of the screen 
+	//			redBits <= DARK_COLOR ; 
 				
-				 	   
-		
+				 	   		
 	end; 	
 end 
 

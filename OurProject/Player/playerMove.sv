@@ -5,8 +5,6 @@ module playerMove
 	input logic	 startOfFrame,
 	input	logic	 rightArrow,
 	input	logic	 leftArrow,
-	input	logic	 spaceBar,
-	input logic collision,
 	output	logic	[10:0]	topLeftX,
 	output	logic	[10:0]	topLeftY
 );
@@ -52,7 +50,7 @@ end
 
 // position calculate 
 
-always_ff@(posedge clk or negedge resetN or posedge collision)
+always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN)
 	begin
@@ -60,12 +58,6 @@ begin
 		topLeftY_tmp	<= INITIAL_Y * MULTIPLIER;
 	end
 	
-	else if ( collision )
-	begin
-		topLeftX_tmp	<= INITIAL_X * MULTIPLIER;
-		topLeftY_tmp	<= INITIAL_Y * MULTIPLIER;
-	end
-
 	else if (startOfFrame == 1'b1) begin // perform only 30 times per second 
 	
 			if(topLeftX_tmp >= 5 && topLeftX <= (635 - playerWidth))

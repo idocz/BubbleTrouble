@@ -119,7 +119,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1032 440 1215 456)
+	(rect 1032 456 1215 472)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "SpaceBarPressed" (rect 90 0 177 12)(font "Arial" ))
 	(pt 0 8)
@@ -616,10 +616,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1000 448)
-	(pt 1032 448)
-)
-(connector
 	(pt 1000 112)
 	(pt 1032 112)
 )
@@ -628,5 +624,9 @@ agreement for further details.
 	(pt 504 328)
 	(pt 728 328)
 	(bus)
+)
+(connector
+	(pt 1000 464)
+	(pt 1032 464)
 )
 (text "// (c) Technion IIT, Department of Electrical Engineering 2018  2019\r\n// Written By Alex Grinshpun David Bar-On  Feb  2019 \r\n" (rect 88 0 488 57)(font "Intel Clear" (font_size 8)))

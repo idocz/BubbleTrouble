@@ -19,8 +19,7 @@ module ropeMove	(
 
 // a module used to generate a ball trajectory.  
 
-parameter int INITIAL_Y = 26;
-parameter int INITIAL_Y_SPEED = -150;
+parameter int Yspeed = -150;
 
 const int	MULTIPLIER	=	64;
 // multiplier is used to work with integers in high resolution 
@@ -30,7 +29,7 @@ const int	y_FRAME_SIZE	=	479 * MULTIPLIER;
 
 
  // local parameters 
-int Yspeed, topY_tmp;
+int topY_tmp;
 logic movingUp_tmp;
 
 
@@ -56,7 +55,6 @@ begin
 			
 	end
 end
-
 
 
 
