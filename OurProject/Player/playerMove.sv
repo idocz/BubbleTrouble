@@ -83,8 +83,7 @@ end
 
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_tmp / MULTIPLIER ;   // note it must be 2^n 
-assign 	topLeftY = topLeftY_tmp / MULTIPLIER ;    
-
+assign 	topLeftY = topLeftY_tmp / MULTIPLIER ; 
 
 endmodule
 

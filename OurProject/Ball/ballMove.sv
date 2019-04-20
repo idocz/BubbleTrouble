@@ -32,7 +32,6 @@ const int	y_FRAME_SIZE	=	479 * MULTIPLIER;
 
 int Xspeed, topLeftX_tmp; // local parameters 
 int Yspeed, topLeftY_tmp;
-logic toggleY_d; 
 
 
 //  calculation x Axis speed 

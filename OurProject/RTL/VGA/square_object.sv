@@ -12,7 +12,6 @@ module	square_object	(
 					input 	logic	[10:0] pixelY,
 					input 	logic	[10:0] topLeftX, //position on the screen 
 					input 	logic	[10:0] topLeftY,
-					
 					output 	logic	[10:0] offsetX,// offset inside bracket from top left position 
 					output 	logic	[10:0] offsetY,
 					output	logic	drawingRequest, // indicates pixel inside the bracket

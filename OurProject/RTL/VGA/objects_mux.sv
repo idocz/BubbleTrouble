@@ -16,6 +16,10 @@ module	objects_mux	(
 					//input    logic [7:0] ballRGB,
 					//input    logic ballDrawingRequest,
 					
+					//rope
+					input    logic [7:0] ropeRGB,
+					input    logic ropeDrawingRequest,
+					
 					// background 
 					input		logic	[7:0] backGroundRGB, 
 
@@ -43,6 +47,9 @@ begin
 		
 		//else if (ballDrawingRequest == 1'b1)
 		//	tmpRGB <= ballRGB;
+		
+		else if(ropeDrawingRequest == 1'b1)
+			tmpRGB <= ropeRGB;
 		
 		else
 			tmpRGB <= backGroundRGB ; // last priority 
