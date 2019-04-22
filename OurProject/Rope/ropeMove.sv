@@ -10,6 +10,7 @@ module ropeMove	(
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
 					input logic deploy,
+					input logic col_rope_ball, // Ball-Rope collision indicator
 					output	logic	[10:0] topY, // output the top Y of the rope 
 					output logic movingUp
 
@@ -46,6 +47,9 @@ begin
 	else begin
 		movingUp_tmp = (deploy == 1'b1 || (topY_tmp != y_FRAME_SIZE && topY_tmp >= 0)); //Legal blocking assignment
 			
+		if (col_rope_ball == 1'b1)
+			topY_tmp <= y_FRAME_SIZE;
+			
 		if (startOfFrame == 1'b1 && movingUp_tmp == 1'b1) begin // perform only 30 times per second  
 			topY_tmp  <= topY_tmp + Yspeed;				
 		end
@@ -55,7 +59,7 @@ begin
 			
 	end
 end
-
+//TODO: always_comb for movingUp_tmp
 
 
 assign 	topY = topY_tmp / MULTIPLIER ;  

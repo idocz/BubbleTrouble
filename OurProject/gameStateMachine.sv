@@ -9,15 +9,18 @@ module gameStateMachine 	(
 	input logic clk, resetN,
 	input logic rightArrow, leftArrow, spaceBar,
 	input logic col_player_ball,
+	input logic [10:0] playerX,
 	
 	output logic [1:0] gameState,
-	output logic playerMoveRight, playerMoveLeft, ropeDeploy, playerVisible, ballVisible
+	output logic playerMoveRight, playerMoveLeft, ropeDeploy, playerVisible, ballVisible,
+	output logic [10:0] ropeX
 	
 );
 	
 	
 enum logic [2:0] {welcomeScreen, playMode, gameOver} cur_st, nxt_st;
 logic [2:0] lives, nxt_lives;
+logic [10:0] nxt_ropeX;
 
 
 
@@ -27,11 +30,14 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
    if ( !resetN ) begin // Asynchronic reset
 		cur_st <= welcomeScreen;
 		lives <= 1;
+		ropeX <= 0;
+		
 	end // asynch
 	else 
 	begin 				// Synchronic logic	
 		cur_st <= nxt_st; // Update current state
 		lives <= nxt_lives;
+		ropeX <= nxt_ropeX;
 	end 
 		
 end
@@ -75,6 +81,7 @@ always_comb // Update the outputs //////////////////////
 	ropeDeploy = 0;
 	playerVisible = 0;
 	ballVisible = 0;
+	nxt_ropeX = ropeX;
 	
 	case (cur_st)
 				
@@ -92,8 +99,10 @@ always_comb // Update the outputs //////////////////////
 				playerMoveRight = 1;
 			if ( leftArrow )
 				playerMoveLeft = 1;
-			if ( spaceBar )
+			if ( spaceBar ) begin
 				ropeDeploy = 1;
+				nxt_ropeX = playerX;
+			end
 		end // playMode
 			
 		gameOver: begin

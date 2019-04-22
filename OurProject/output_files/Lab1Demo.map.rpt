@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1Demo
-Mon Apr 22 14:44:46 2019
+Mon Apr 22 15:54:56 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -26,12 +26,12 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  18. Source assignments for sld_signaltap:auto_signaltap_0
  19. Parameter Settings for User Entity Instance: square_object:playerSquareObject
  20. Parameter Settings for User Entity Instance: playerMove:playerMove
- 21. Parameter Settings for User Entity Instance: square_object:ballSquareObject
- 22. Parameter Settings for User Entity Instance: ballMove:ballMove
- 23. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|lpf:cleaner
- 24. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component
- 25. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component
- 26. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component
+ 21. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|lpf:cleaner
+ 22. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component
+ 23. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component
+ 24. Parameter Settings for User Entity Instance: TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component
+ 25. Parameter Settings for User Entity Instance: square_object:ballSquareObject
+ 26. Parameter Settings for User Entity Instance: ballMove:ballMove
  27. Parameter Settings for User Entity Instance: squareRope:ropeSquareObject
  28. Parameter Settings for User Entity Instance: zeroConst:zero|lpm_constant:LPM_CONSTANT_component
  29. Parameter Settings for User Entity Instance: ropeMove:ropeMove
@@ -69,13 +69,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 22 14:44:46 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 22 15:54:55 2019       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_WITH_MSS_ALL                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1290                                        ;
+; Total registers                 ; 1301                                        ;
 ; Total pins                      ; 36                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 491,520                                     ;
@@ -295,16 +295,16 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1522           ;
+; Estimate of Logic utilization (ALMs needed) ; 1542           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1996           ;
+; Combinational ALUT usage for logic          ; 2022           ;
 ;     -- 7 input functions                    ; 32             ;
-;     -- 6 input functions                    ; 776            ;
+;     -- 6 input functions                    ; 789            ;
 ;     -- 5 input functions                    ; 324            ;
-;     -- 4 input functions                    ; 219            ;
-;     -- <=3 input functions                  ; 645            ;
+;     -- 4 input functions                    ; 223            ;
+;     -- <=3 input functions                  ; 654            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1290           ;
+; Dedicated logic registers                   ; 1301           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 36             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -313,8 +313,8 @@ agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 798            ;
-; Total fan-out                               ; 15499          ;
+; Maximum fan-out                             ; 809            ;
+; Total fan-out                               ; 15653          ;
 ; Average fan-out                             ; 4.52           ;
 +---------------------------------------------+----------------+
 
@@ -324,7 +324,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                              ; 1996 (5)            ; 1290 (0)                  ; 491520            ; 0          ; 36   ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_WITH_MSS_ALL         ; work         ;
+; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                              ; 2022 (4)            ; 1301 (0)                  ; 491520            ; 0          ; 36   ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_WITH_MSS_ALL         ; work         ;
 ;    |TOP_KBD_DEMOALL:TOP_KBD|                                                                                                            ; 143 (0)             ; 140 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD                                                                                                                                                                                                                                                                                                                    ; TOP_KBD_DEMOALL                   ; work         ;
 ;       |TOP_KBDINTF:inst|                                                                                                                ; 38 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst                                                                                                                                                                                                                                                                                                   ; TOP_KBDINTF                       ; work         ;
 ;          |bitrec:inst4|                                                                                                                 ; 14 (14)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4                                                                                                                                                                                                                                                                                      ; bitrec                            ; work         ;
@@ -348,12 +348,12 @@ agreement for further details.
 ;             |lpm_constant_mb8:ag|                                                                                                       ; 28 (0)              ; 29 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag                                                                                                                                                                                                                                        ; lpm_constant_mb8                  ; work         ;
 ;                |sld_mod_ram_rom:mgl_prim1|                                                                                              ; 28 (14)             ; 29 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1                                                                                                                                                                                                              ; sld_mod_ram_rom                   ; work         ;
 ;                   |sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|                                                                 ; 14 (14)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |VGA_Controller:VGA_Controller|                                                                                                      ; 70 (70)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|VGA_Controller:VGA_Controller                                                                                                                                                                                                                                                                                                              ; VGA_Controller                    ; work         ;
+;    |VGA_Controller:VGA_Controller|                                                                                                      ; 71 (71)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|VGA_Controller:VGA_Controller                                                                                                                                                                                                                                                                                                              ; VGA_Controller                    ; work         ;
 ;    |back_ground_drawSquare:bgDraw|                                                                                                      ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|back_ground_drawSquare:bgDraw                                                                                                                                                                                                                                                                                                              ; back_ground_drawSquare            ; work         ;
 ;    |ballBitMap:inst|                                                                                                                    ; 143 (143)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst                                                                                                                                                                                                                                                                                                                            ; ballBitMap                        ; work         ;
 ;    |ballMove:ballMove|                                                                                                                  ; 198 (198)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:ballMove                                                                                                                                                                                                                                                                                                                          ; ballMove                          ; work         ;
-;    |gameControllerTop:gameControllerTop|                                                                                                ; 8 (0)               ; 6 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop                                                                                                                                                                                                                                                                                                        ; gameControllerTop                 ; work         ;
-;       |gameStateMachine:inst|                                                                                                           ; 8 (8)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|gameStateMachine:inst                                                                                                                                                                                                                                                                                  ; gameStateMachine                  ; work         ;
+;    |gameControllerTop:gameControllerTop|                                                                                                ; 9 (0)               ; 17 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop                                                                                                                                                                                                                                                                                                        ; gameControllerTop                 ; work         ;
+;       |gameStateMachine:inst|                                                                                                           ; 9 (9)               ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|gameStateMachine:inst                                                                                                                                                                                                                                                                                  ; gameStateMachine                  ; work         ;
 ;    |objects_mux:VGAmux|                                                                                                                 ; 11 (11)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux                                                                                                                                                                                                                                                                                                                         ; objects_mux                       ; work         ;
 ;    |playerBitMap:playerBitMap|                                                                                                          ; 694 (694)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerBitMap:playerBitMap                                                                                                                                                                                                                                                                                                                  ; playerBitMap                      ; work         ;
 ;    |playerMove:playerMove|                                                                                                              ; 67 (67)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerMove:playerMove                                                                                                                                                                                                                                                                                                                      ; playerMove                        ; work         ;
@@ -416,9 +416,9 @@ agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 15 (15)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |squareRope:ropeSquareObject|                                                                                                        ; 49 (49)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|squareRope:ropeSquareObject                                                                                                                                                                                                                                                                                                                ; squareRope                        ; work         ;
-;    |square_object:ballSquareObject|                                                                                                     ; 77 (77)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:ballSquareObject                                                                                                                                                                                                                                                                                                             ; square_object                     ; work         ;
-;    |square_object:playerSquareObject|                                                                                                   ; 23 (23)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:playerSquareObject                                                                                                                                                                                                                                                                                                           ; square_object                     ; work         ;
+;    |squareRope:ropeSquareObject|                                                                                                        ; 50 (50)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|squareRope:ropeSquareObject                                                                                                                                                                                                                                                                                                                ; squareRope                        ; work         ;
+;    |square_object:ballSquareObject|                                                                                                     ; 75 (75)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:ballSquareObject                                                                                                                                                                                                                                                                                                             ; square_object                     ; work         ;
+;    |square_object:playerSquareObject|                                                                                                   ; 49 (49)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:playerSquareObject                                                                                                                                                                                                                                                                                                           ; square_object                     ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -540,12 +540,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1290  ;
+; Total registers                              ; 1301  ;
 ; Number of registers using Synchronous Clear  ; 214   ;
 ; Number of registers using Synchronous Load   ; 264   ;
-; Number of registers using Asynchronous Clear ; 646   ;
+; Number of registers using Asynchronous Clear ; 657   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 815   ;
+; Number of registers using Clock Enable       ; 826   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -566,9 +566,9 @@ Encoding Type:  One-Hot
 ; ropeMove:ropeMove|topY_tmp[7]                                                                                                                                                                                                                                                                                                   ; 3       ;
 ; ropeMove:ropeMove|topY_tmp[6]                                                                                                                                                                                                                                                                                                   ; 3       ;
 ; gameControllerTop:gameControllerTop|gameStateMachine:inst|lives[0]                                                                                                                                                                                                                                                              ; 4       ;
-; playerMove:playerMove|topLeftX_tmp[14]                                                                                                                                                                                                                                                                                          ; 3       ;
 ; playerMove:playerMove|topLeftX_tmp[10]                                                                                                                                                                                                                                                                                          ; 3       ;
 ; playerMove:playerMove|topLeftX_tmp[9]                                                                                                                                                                                                                                                                                           ; 4       ;
+; playerMove:playerMove|topLeftX_tmp[14]                                                                                                                                                                                                                                                                                          ; 3       ;
 ; ballMove:ballMove|topLeftY_tmp[7]                                                                                                                                                                                                                                                                                               ; 4       ;
 ; ballMove:ballMove|topLeftY_tmp[10]                                                                                                                                                                                                                                                                                              ; 4       ;
 ; ballMove:ballMove|topLeftY_tmp[8]                                                                                                                                                                                                                                                                                               ; 4       ;
@@ -606,27 +606,27 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|keyToggle_decoderIn:SpaceBar|keyIsPressed                                                                                                                                      ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[6]                                                   ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[3]                                                  ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[1]                                                    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:ballMove|Yspeed[30]                                                                                                                                                                           ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[2]                                                                                                                                                                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|keyToggle_decoderIn:RightArrow|keyIsPressed                                                                                                                                    ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[8]                                                   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[0]                                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[3]                                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:ballMove|Yspeed[9]                                                                                                                                                                            ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[5]                                                                                                                                                                          ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux|tmpRGB[3]                                                                                                                                                                           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[0]     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[2]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux|tmpRGB[7]                                                                                                                                                                           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[1] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[1]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux|tmpRGB[1]                                                                                                                                                                           ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[1]          ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[0]          ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[0]           ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst|RGBout[5]                                                                                                                                                                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[6]                                                                                                                                                                          ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst|RGBout[1]                                                                                                                                                                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[8]                                                                                                                                                                          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerBitMap:playerBitMap|Mux514                                                                                                                                                                       ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|gameStateMachine:inst|Selector0                                                                                                                                    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4|Selector7                                                                                                                                        ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4|Selector4                                                                                                                                        ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|byterec:inst3|Selector3                                                                                                                                       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4|Selector6                                                                                                                                        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4|Selector8                                                                                                                                        ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|byterec:inst3|Selector6                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -661,32 +661,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; X_SPEED        ; 110   ; Signed Integer                            ;
 ; playerWidth    ; 26    ; Signed Integer                            ;
 +----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: square_object:ballSquareObject ;
-+-----------------+----------+------------------------------------------------+
-; Parameter Name  ; Value    ; Type                                           ;
-+-----------------+----------+------------------------------------------------+
-; OBJECT_WIDTH_X  ; 26       ; Signed Integer                                 ;
-; OBJECT_HEIGHT_Y ; 26       ; Signed Integer                                 ;
-; OBJECT_COLOR    ; 01110001 ; Unsigned Binary                                ;
-+-----------------+----------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ballMove:ballMove ;
-+-----------------+-------+--------------------------------------+
-; Parameter Name  ; Value ; Type                                 ;
-+-----------------+-------+--------------------------------------+
-; INITIAL_X       ; 26    ; Signed Integer                       ;
-; INITIAL_Y       ; 150   ; Signed Integer                       ;
-; INITIAL_X_SPEED ; 50    ; Signed Integer                       ;
-; INITIAL_Y_SPEED ; 0     ; Signed Integer                       ;
-; g               ; 1     ; Signed Integer                       ;
-+-----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -736,6 +710,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_RUNTIME_MOD ; YES              ; Untyped                                                                              ;
 ; CBXI_PARAMETER     ; lpm_constant_mb8 ; Untyped                                                                              ;
 +--------------------+------------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: square_object:ballSquareObject ;
++-----------------+----------+------------------------------------------------+
+; Parameter Name  ; Value    ; Type                                           ;
++-----------------+----------+------------------------------------------------+
+; OBJECT_WIDTH_X  ; 26       ; Signed Integer                                 ;
+; OBJECT_HEIGHT_Y ; 26       ; Signed Integer                                 ;
+; OBJECT_COLOR    ; 01110001 ; Unsigned Binary                                ;
++-----------------+----------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ballMove:ballMove ;
++-----------------+-------+--------------------------------------+
+; Parameter Name  ; Value ; Type                                 ;
++-----------------+-------+--------------------------------------+
+; INITIAL_X       ; 26    ; Signed Integer                       ;
+; INITIAL_Y       ; 150   ; Signed Integer                       ;
+; INITIAL_X_SPEED ; 50    ; Signed Integer                       ;
+; INITIAL_Y_SPEED ; 0     ; Signed Integer                       ;
+; g               ; 1     ; Signed Integer                       ;
++-----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -865,31 +865,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 429                         ;
+; arriav_ff             ; 440                         ;
 ;     CLR               ; 79                          ;
 ;     CLR SCLR          ; 22                          ;
 ;     ENA               ; 51                          ;
-;     ENA CLR           ; 196                         ;
+;     ENA CLR           ; 207                         ;
 ;     ENA CLR SCLR      ; 23                          ;
 ;     ENA SCLR          ; 31                          ;
 ;     ENA SLD           ; 27                          ;
-; arriav_lcell_comb     ; 1555                        ;
-;     arith             ; 334                         ;
-;         0 data inputs ; 7                           ;
-;         1 data inputs ; 167                         ;
-;         2 data inputs ; 100                         ;
+; arriav_lcell_comb     ; 1581                        ;
+;     arith             ; 344                         ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 175                         ;
+;         2 data inputs ; 101                         ;
 ;         4 data inputs ; 39                          ;
 ;         5 data inputs ; 21                          ;
 ;     extend            ; 29                          ;
 ;         7 data inputs ; 29                          ;
-;     normal            ; 1192                        ;
+;     normal            ; 1208                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 49                          ;
 ;         2 data inputs ; 43                          ;
-;         3 data inputs ; 85                          ;
-;         4 data inputs ; 129                         ;
+;         3 data inputs ; 84                          ;
+;         4 data inputs ; 133                         ;
 ;         5 data inputs ; 218                         ;
-;         6 data inputs ; 666                         ;
+;         6 data inputs ; 679                         ;
 ; boundary_port         ; 119                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.10                        ;
@@ -983,7 +983,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 14:43:44 2019
+    Info: Processing started: Mon Apr 22 15:53:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projectTop -c Lab1Demo
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file collisiondetector.sv
@@ -1107,14 +1107,8 @@ Info (10041): Inferred latch for "topLeftY_tmp[30]" at playerMove.sv(53) File: C
 Info (10041): Inferred latch for "topLeftY_tmp[31]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
 Info (12128): Elaborating entity "gameControllerTop" for hierarchy "gameControllerTop:gameControllerTop"
 Info (12128): Elaborating entity "gameStateMachine" for hierarchy "gameControllerTop:gameControllerTop|gameStateMachine:inst"
-Warning (10230): Verilog HDL assignment warning at gameStateMachine.sv(90): truncated value with size 32 to match size of target (3) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/gameStateMachine.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at gameStateMachine.sv(97): truncated value with size 32 to match size of target (3) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/gameStateMachine.sv Line: 97
 Info (12128): Elaborating entity "collisionDetector" for hierarchy "gameControllerTop:gameControllerTop|collisionDetector:collisionDetector"
-Info (12128): Elaborating entity "ballBitMap" for hierarchy "ballBitMap:inst"
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
-Info (12128): Elaborating entity "square_object" for hierarchy "square_object:ballSquareObject"
-Info (12128): Elaborating entity "ballMove" for hierarchy "ballMove:ballMove"
-Warning (10230): Verilog HDL assignment warning at ballMove.sv(92): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 92
-Warning (10230): Verilog HDL assignment warning at ballMove.sv(93): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 93
 Info (12128): Elaborating entity "TOP_KBD_DEMOALL" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD"
 Info (12128): Elaborating entity "keyToggle_decoderIn" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|keyToggle_decoderIn:LeftArrow"
 Info (12128): Elaborating entity "TOP_KBDINTF" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst"
@@ -1192,6 +1186,12 @@ Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:i
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "4"
     Info (12134): Parameter "WIDTH_WORD" = "9"
     Info (12134): Parameter "WIDTHAD" = "1"
+Info (12128): Elaborating entity "ballBitMap" for hierarchy "ballBitMap:inst"
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
+Info (12128): Elaborating entity "square_object" for hierarchy "square_object:ballSquareObject"
+Info (12128): Elaborating entity "ballMove" for hierarchy "ballMove:ballMove"
+Warning (10230): Verilog HDL assignment warning at ballMove.sv(92): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 92
+Warning (10230): Verilog HDL assignment warning at ballMove.sv(93): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 93
 Info (12128): Elaborating entity "ropeBitMap" for hierarchy "ropeBitMap:ropeBitMap"
 Warning (10202): Verilog HDL Declaration warning at ropeBitMap.sv(27): vector has more than 2**16 bits File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 27
 Warning (10202): Verilog HDL Declaration warning at ropeBitMap.sv(28): vector has more than 2**16 bits File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 28
@@ -1241,7 +1241,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2019.04.22.14:44:20 Progress: Loading sldcbc818cf/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.04.22.15:54:29 Progress: Loading sldcbc818cf/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1272,16 +1272,16 @@ Info (144001): Generated suppressed messages file C:/Users/idocz/OneDrive - Tech
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 37 of its 63 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 26 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2796 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2833 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 2695 logic cells
+    Info (21061): Implemented 2732 logic cells
     Info (21064): Implemented 60 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4970 megabytes
-    Info: Processing ended: Mon Apr 22 14:44:47 2019
-    Info: Elapsed time: 00:01:03
-    Info: Total CPU time (on all processors): 00:01:40
+    Info: Peak virtual memory: 4975 megabytes
+    Info: Processing ended: Mon Apr 22 15:54:56 2019
+    Info: Elapsed time: 00:01:04
+    Info: Total CPU time (on all processors): 00:01:44
 
 
 +------------------------------------------+

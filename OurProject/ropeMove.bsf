@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 216 128)
+	(rect 16 16 216 160)
 	(text "ropeMove" (rect 5 0 46 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -53,6 +53,13 @@ agreement for further details.
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
+		(pt 0 96)
+		(input)
+		(text "col_rope_ball" (rect 0 0 51 12)(font "Arial" ))
+		(text "col_rope_ball" (rect 21 91 72 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
 		(pt 200 32)
 		(output)
 		(text "topY[10..0]" (rect 0 0 42 12)(font "Arial" ))
@@ -67,17 +74,12 @@ agreement for further details.
 		(line (pt 200 48)(pt 184 48)(line_width 1))
 	)
 	(parameter
-		"INITIAL_Y"
-		"26"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"INITIAL_Y_SPEED"
+		"Yspeed"
 		"-150"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 184 96)(line_width 1))
+		(rectangle (rect 16 16 184 128)(line_width 1))
 	)
 	(annotation_block (parameter)(rect 216 -64 316 16))
 )
