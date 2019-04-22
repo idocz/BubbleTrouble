@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1Demo
-Sat Apr 20 19:29:05 2019
+Mon Apr 22 14:44:46 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -69,13 +69,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr 20 19:29:05 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 22 14:44:46 2019       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_WITH_MSS_ALL                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1287                                        ;
+; Total registers                 ; 1290                                        ;
 ; Total pins                      ; 36                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 491,520                                     ;
@@ -182,114 +182,112 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                               ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                     ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
-; collisionDetector.sv                                               ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/collisionDetector.sv                                               ;             ;
-; RTL/KEYBOARD/keyToggle_decoderIn.sv                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/keyToggle_decoderIn.sv                                ;             ;
-; RTL/KEYBOARD/lpf.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/lpf.sv                                                ;             ;
-; RTL/KEYBOARD/byterec.sv                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv                                            ;             ;
-; RTL/KEYBOARD/bitrec.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/bitrec.sv                                             ;             ;
-; RTL/KEYBOARD/TOP_KBDINTF.bdf                                       ; yes             ; User Block Diagram/Schematic File            ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/TOP_KBDINTF.bdf                                       ;             ;
-; RTL/VGA/square_object.sv                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/square_object.sv                                           ;             ;
-; RTL/VGA/objects_mux.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/objects_mux.sv                                             ;             ;
-; RTL/VGA/VGA_Controller.sv                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv                                          ;             ;
-; RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                                   ; yes             ; User Block Diagram/Schematic File            ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                                   ;             ;
-; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                              ; yes             ; User Block Diagram/Schematic File            ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                              ;             ;
-; RTL/VGA/back_ground_drawSquare.sv                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv                                  ;             ;
-; spaceBarConst.v                                                    ; yes             ; User Wizard-Generated File                   ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/spaceBarConst.v                                                    ;             ;
-; Player/playerMove.sv                                               ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv                                               ;             ;
-; Player/playerBitMap.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerBitMap.sv                                             ;             ;
-; Ball/ballMove.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Ball/ballMove.sv                                                   ;             ;
-; Ball/ballBitMap.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Ball/ballBitMap.sv                                                 ;             ;
-; rightArrowConst.v                                                  ; yes             ; User Wizard-Generated File                   ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/rightArrowConst.v                                                  ;             ;
-; leftArrowConst.v                                                   ; yes             ; User Wizard-Generated File                   ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/leftArrowConst.v                                                   ;             ;
-; Rope/ropeMove.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeMove.sv                                                   ;             ;
-; zeroConst.v                                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/zeroConst.v                                                        ;             ;
-; Rope/squareRope.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/squareRope.sv                                                 ;             ;
-; Rope/ropeBitMap.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeBitMap.sv                                                 ;             ;
-; gameController/gameControllerTop.bdf                               ; yes             ; User Block Diagram/Schematic File            ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/gameController/gameControllerTop.bdf                               ;             ;
-; gameStateMachine.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/gameStateMachine.sv                                                ;             ;
-; lpm_constant.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf                                                          ;             ;
-; db/lpm_constant_rc8.tdf                                            ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf                                            ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                       ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                             ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                         ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                            ;             ;
-; db/lpm_constant_hi8.tdf                                            ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf                                            ;             ;
-; db/lpm_constant_mb8.tdf                                            ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf                                            ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_signaltap.vhd                                                         ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                    ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_ela_control.vhd                                                       ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                          ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.inc                                                          ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/dffeea.inc                                                                ;             ;
-; aglobal170.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                                            ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                             ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                              ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                    ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                                            ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                                     ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                                               ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                                            ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                             ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                                                ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                                                ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                                              ;             ;
-; db/altsyncram_el84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/altsyncram_el84.tdf                                             ;             ;
-; db/decode_8la.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/decode_8la.tdf                                                  ;             ;
-; db/mux_6hb.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/mux_6hb.tdf                                                     ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.tdf                                                              ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/others/maxplus2/memmodes.inc                                                            ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_hdffe.inc                                                               ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                       ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.inc                                                            ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.tdf                                                               ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/muxlut.inc                                                                ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/bypassff.inc                                                              ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.inc                                                              ;             ;
-; db/mux_clc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/mux_clc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.tdf                                                            ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/declut.inc                                                                ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_compare.inc                                                           ;             ;
-; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/decode_vnf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_counter.tdf                                                           ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                                           ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/cmpconst.inc                                                              ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_counter.inc                                                           ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                   ;             ;
-; db/cntr_19i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_19i.tdf                                                    ;             ;
-; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cmpr_c9c.tdf                                                    ;             ;
-; db/cntr_24j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_24j.tdf                                                    ;             ;
-; db/cntr_v8i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_v8i.tdf                                                    ;             ;
-; db/cmpr_d9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cmpr_d9c.tdf                                                    ;             ;
-; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_kri.tdf                                                    ;             ;
-; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cmpr_99c.tdf                                                    ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_hub.vhd                                                               ; altera_sld  ;
-; db/ip/sldcbc818cf/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                          ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                           ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                 ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; collisionDetector.sv                                               ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/collisionDetector.sv                                               ;             ;
+; RTL/KEYBOARD/keyToggle_decoderIn.sv                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/keyToggle_decoderIn.sv                                ;             ;
+; RTL/KEYBOARD/lpf.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/lpf.sv                                                ;             ;
+; RTL/KEYBOARD/byterec.sv                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv                                            ;             ;
+; RTL/KEYBOARD/bitrec.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/bitrec.sv                                             ;             ;
+; RTL/KEYBOARD/TOP_KBDINTF.bdf                                       ; yes             ; User Block Diagram/Schematic File            ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/TOP_KBDINTF.bdf                                       ;             ;
+; RTL/VGA/square_object.sv                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/square_object.sv                                           ;             ;
+; RTL/VGA/objects_mux.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/objects_mux.sv                                             ;             ;
+; RTL/VGA/VGA_Controller.sv                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv                                          ;             ;
+; RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                                   ; yes             ; User Block Diagram/Schematic File            ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                                   ;             ;
+; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                              ; yes             ; User Block Diagram/Schematic File            ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                              ;             ;
+; RTL/VGA/back_ground_drawSquare.sv                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv                                  ;             ;
+; spaceBarConst.v                                                    ; yes             ; User Wizard-Generated File                   ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/spaceBarConst.v                                                    ;             ;
+; Player/playerMove.sv                                               ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv                                               ;             ;
+; Player/playerBitMap.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerBitMap.sv                                             ;             ;
+; Ball/ballMove.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv                                                   ;             ;
+; Ball/ballBitMap.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballBitMap.sv                                                 ;             ;
+; rightArrowConst.v                                                  ; yes             ; User Wizard-Generated File                   ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/rightArrowConst.v                                                  ;             ;
+; leftArrowConst.v                                                   ; yes             ; User Wizard-Generated File                   ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/leftArrowConst.v                                                   ;             ;
+; Rope/ropeMove.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeMove.sv                                                   ;             ;
+; zeroConst.v                                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/zeroConst.v                                                        ;             ;
+; Rope/squareRope.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/squareRope.sv                                                 ;             ;
+; Rope/ropeBitMap.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeBitMap.sv                                                 ;             ;
+; gameController/gameControllerTop.bdf                               ; yes             ; User Block Diagram/Schematic File            ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/gameController/gameControllerTop.bdf                               ;             ;
+; gameStateMachine.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/gameStateMachine.sv                                                ;             ;
+; lpm_constant.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf                                                                      ;             ;
+; db/lpm_constant_rc8.tdf                                            ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf                                            ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                                   ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                         ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                     ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                        ;             ;
+; db/lpm_constant_hi8.tdf                                            ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf                                            ;             ;
+; db/lpm_constant_mb8.tdf                                            ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf                                            ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_signaltap.vhd                                                                     ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                                ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_ela_control.vhd                                                                   ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                      ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.inc                                                                      ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/dffeea.inc                                                                            ;             ;
+; aglobal170.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                                                        ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                         ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                          ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                                ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                                                        ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                 ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                                                           ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                                                        ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                                         ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                                                            ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                                                            ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                                                          ;             ;
+; db/altsyncram_el84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/altsyncram_el84.tdf                                             ;             ;
+; db/decode_8la.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/decode_8la.tdf                                                  ;             ;
+; db/mux_6hb.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/mux_6hb.tdf                                                     ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.tdf                                                                          ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/others/maxplus2/memmodes.inc                                                                        ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_hdffe.inc                                                                           ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                   ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.inc                                                                        ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.tdf                                                                           ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/muxlut.inc                                                                            ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/bypassff.inc                                                                          ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.inc                                                                          ;             ;
+; db/mux_clc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/mux_clc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.tdf                                                                        ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/declut.inc                                                                            ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_compare.inc                                                                       ;             ;
+; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/decode_vnf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_counter.tdf                                                                       ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                       ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/cmpconst.inc                                                                          ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_counter.inc                                                                       ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                               ;             ;
+; db/cntr_19i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_19i.tdf                                                    ;             ;
+; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_c9c.tdf                                                    ;             ;
+; db/cntr_24j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_24j.tdf                                                    ;             ;
+; db/cntr_v8i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_v8i.tdf                                                    ;             ;
+; db/cmpr_d9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_d9c.tdf                                                    ;             ;
+; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_kri.tdf                                                    ;             ;
+; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_99c.tdf                                                    ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_hub.vhd                                                                           ; altera_sld  ;
+; db/ip/sldcbc818cf/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                      ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +--------------------------------------------------------------+
@@ -297,16 +295,16 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1033           ;
+; Estimate of Logic utilization (ALMs needed) ; 1522           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1420           ;
-;     -- 7 input functions                    ; 9              ;
-;     -- 6 input functions                    ; 396            ;
-;     -- 5 input functions                    ; 238            ;
-;     -- 4 input functions                    ; 151            ;
-;     -- <=3 input functions                  ; 626            ;
+; Combinational ALUT usage for logic          ; 1996           ;
+;     -- 7 input functions                    ; 32             ;
+;     -- 6 input functions                    ; 776            ;
+;     -- 5 input functions                    ; 324            ;
+;     -- 4 input functions                    ; 219            ;
+;     -- <=3 input functions                  ; 645            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 1287           ;
+; Dedicated logic registers                   ; 1290           ;
 ;                                             ;                ;
 ; I/O pins                                    ; 36             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -315,9 +313,9 @@ agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 795            ;
-; Total fan-out                               ; 12295          ;
-; Average fan-out                             ; 4.32           ;
+; Maximum fan-out                             ; 798            ;
+; Total fan-out                               ; 15499          ;
+; Average fan-out                             ; 4.52           ;
 +---------------------------------------------+----------------+
 
 
@@ -326,7 +324,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                              ; 1420 (4)            ; 1287 (0)                  ; 491520            ; 0          ; 36   ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_WITH_MSS_ALL         ; work         ;
+; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                              ; 1996 (5)            ; 1290 (0)                  ; 491520            ; 0          ; 36   ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_WITH_MSS_ALL         ; work         ;
 ;    |TOP_KBD_DEMOALL:TOP_KBD|                                                                                                            ; 143 (0)             ; 140 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD                                                                                                                                                                                                                                                                                                                    ; TOP_KBD_DEMOALL                   ; work         ;
 ;       |TOP_KBDINTF:inst|                                                                                                                ; 38 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst                                                                                                                                                                                                                                                                                                   ; TOP_KBDINTF                       ; work         ;
 ;          |bitrec:inst4|                                                                                                                 ; 14 (14)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4                                                                                                                                                                                                                                                                                      ; bitrec                            ; work         ;
@@ -350,17 +348,17 @@ agreement for further details.
 ;             |lpm_constant_mb8:ag|                                                                                                       ; 28 (0)              ; 29 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag                                                                                                                                                                                                                                        ; lpm_constant_mb8                  ; work         ;
 ;                |sld_mod_ram_rom:mgl_prim1|                                                                                              ; 28 (14)             ; 29 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1                                                                                                                                                                                                              ; sld_mod_ram_rom                   ; work         ;
 ;                   |sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|                                                                 ; 14 (14)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |VGA_Controller:VGA_Controller|                                                                                                      ; 68 (68)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|VGA_Controller:VGA_Controller                                                                                                                                                                                                                                                                                                              ; VGA_Controller                    ; work         ;
+;    |VGA_Controller:VGA_Controller|                                                                                                      ; 70 (70)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|VGA_Controller:VGA_Controller                                                                                                                                                                                                                                                                                                              ; VGA_Controller                    ; work         ;
 ;    |back_ground_drawSquare:bgDraw|                                                                                                      ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|back_ground_drawSquare:bgDraw                                                                                                                                                                                                                                                                                                              ; back_ground_drawSquare            ; work         ;
-;    |ballBitMap:inst7|                                                                                                                   ; 138 (138)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst7                                                                                                                                                                                                                                                                                                                           ; ballBitMap                        ; work         ;
+;    |ballBitMap:inst|                                                                                                                    ; 143 (143)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst                                                                                                                                                                                                                                                                                                                            ; ballBitMap                        ; work         ;
 ;    |ballMove:ballMove|                                                                                                                  ; 198 (198)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:ballMove                                                                                                                                                                                                                                                                                                                          ; ballMove                          ; work         ;
 ;    |gameControllerTop:gameControllerTop|                                                                                                ; 8 (0)               ; 6 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop                                                                                                                                                                                                                                                                                                        ; gameControllerTop                 ; work         ;
 ;       |gameStateMachine:inst|                                                                                                           ; 8 (8)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|gameStateMachine:inst                                                                                                                                                                                                                                                                                  ; gameStateMachine                  ; work         ;
 ;    |objects_mux:VGAmux|                                                                                                                 ; 11 (11)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux                                                                                                                                                                                                                                                                                                                         ; objects_mux                       ; work         ;
-;    |playerBitMap:playerBitMap|                                                                                                          ; 138 (138)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerBitMap:playerBitMap                                                                                                                                                                                                                                                                                                                  ; playerBitMap                      ; work         ;
-;    |playerMove:playerMove|                                                                                                              ; 66 (66)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerMove:playerMove                                                                                                                                                                                                                                                                                                                      ; playerMove                        ; work         ;
+;    |playerBitMap:playerBitMap|                                                                                                          ; 694 (694)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerBitMap:playerBitMap                                                                                                                                                                                                                                                                                                                  ; playerBitMap                      ; work         ;
+;    |playerMove:playerMove|                                                                                                              ; 67 (67)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerMove:playerMove                                                                                                                                                                                                                                                                                                                      ; playerMove                        ; work         ;
 ;    |ropeBitMap:ropeBitMap|                                                                                                              ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeBitMap:ropeBitMap                                                                                                                                                                                                                                                                                                                      ; ropeBitMap                        ; work         ;
-;    |ropeMove:ropeMove|                                                                                                                  ; 63 (63)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove                                                                                                                                                                                                                                                                                                                          ; ropeMove                          ; work         ;
+;    |ropeMove:ropeMove|                                                                                                                  ; 60 (60)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove                                                                                                                                                                                                                                                                                                                          ; ropeMove                          ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 146 (1)             ; 157 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 145 (0)             ; 157 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 145 (0)             ; 157 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -418,9 +416,9 @@ agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 15 (15)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 1 (1)               ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 20 (20)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |squareRope:ropeSquareObject|                                                                                                        ; 50 (50)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|squareRope:ropeSquareObject                                                                                                                                                                                                                                                                                                                ; squareRope                        ; work         ;
-;    |square_object:ballSquareObject|                                                                                                     ; 75 (75)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:ballSquareObject                                                                                                                                                                                                                                                                                                             ; square_object                     ; work         ;
-;    |square_object:playerSquareObject|                                                                                                   ; 10 (10)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:playerSquareObject                                                                                                                                                                                                                                                                                                           ; square_object                     ; work         ;
+;    |squareRope:ropeSquareObject|                                                                                                        ; 49 (49)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|squareRope:ropeSquareObject                                                                                                                                                                                                                                                                                                                ; squareRope                        ; work         ;
+;    |square_object:ballSquareObject|                                                                                                     ; 77 (77)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:ballSquareObject                                                                                                                                                                                                                                                                                                             ; square_object                     ; work         ;
+;    |square_object:playerSquareObject|                                                                                                   ; 23 (23)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_WITH_MSS_ALL|square_object:playerSquareObject                                                                                                                                                                                                                                                                                                           ; square_object                     ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -542,12 +540,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1287  ;
-; Number of registers using Synchronous Clear  ; 211   ;
+; Total registers                              ; 1290  ;
+; Number of registers using Synchronous Clear  ; 214   ;
 ; Number of registers using Synchronous Load   ; 264   ;
 ; Number of registers using Asynchronous Clear ; 646   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 812   ;
+; Number of registers using Clock Enable       ; 815   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -559,7 +557,7 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; VGA_Controller:VGA_Controller|oVGA_VS                                                                                                                                                                                                                                                                                           ; 15      ;
 ; VGA_Controller:VGA_Controller|oVGA_HS                                                                                                                                                                                                                                                                                           ; 14      ;
-; ropeMove:ropeMove|topY_tmp[8]                                                                                                                                                                                                                                                                                                   ; 4       ;
+; ropeMove:ropeMove|topY_tmp[8]                                                                                                                                                                                                                                                                                                   ; 3       ;
 ; ropeMove:ropeMove|topY_tmp[14]                                                                                                                                                                                                                                                                                                  ; 3       ;
 ; ropeMove:ropeMove|topY_tmp[13]                                                                                                                                                                                                                                                                                                  ; 3       ;
 ; ropeMove:ropeMove|topY_tmp[12]                                                                                                                                                                                                                                                                                                  ; 3       ;
@@ -608,27 +606,27 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|keyToggle_decoderIn:LeftArrow|keyIsPressed                                                                                                                                     ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[3]                                                   ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[0]                                                  ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[0]                                                    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:ballMove|Yspeed[21]                                                                                                                                                                           ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[1]                                                                                                                                                                          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux|tmpRGB[5]                                                                                                                                                                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|keyToggle_decoderIn:SpaceBar|keyIsPressed                                                                                                                                      ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[6]                                                   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[3]                                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[1]                                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballMove:ballMove|Yspeed[30]                                                                                                                                                                           ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[2]                                                                                                                                                                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux|tmpRGB[3]                                                                                                                                                                           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[0]     ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[3]      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[2]      ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|objects_mux:VGAmux|tmpRGB[7]                                                                                                                                                                           ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]      ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[0]          ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[2]           ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst7|RGBout[1]                                                                                                                                                                             ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerBitMap:playerBitMap|RGBout[5]                                                                                                                                                                    ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[1]          ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[0]           ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ballBitMap:inst|RGBout[5]                                                                                                                                                                              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TOP_VGA_DEMO_WITH_MSS_ALL|ropeMove:ropeMove|topY_tmp[6]                                                                                                                                                                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|playerBitMap:playerBitMap|Mux514                                                                                                                                                                       ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|gameStateMachine:inst|Selector0                                                                                                                                    ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4|Selector7                                                                                                                                        ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4|Selector4                                                                                                                                        ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|byterec:inst3|Selector1                                                                                                                                       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|byterec:inst3|Selector3                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -867,35 +865,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 426                         ;
+; arriav_ff             ; 429                         ;
 ;     CLR               ; 79                          ;
 ;     CLR SCLR          ; 22                          ;
 ;     ENA               ; 51                          ;
 ;     ENA CLR           ; 196                         ;
 ;     ENA CLR SCLR      ; 23                          ;
-;     ENA SCLR          ; 28                          ;
+;     ENA SCLR          ; 31                          ;
 ;     ENA SLD           ; 27                          ;
-; arriav_lcell_comb     ; 979                         ;
-;     arith             ; 320                         ;
-;         0 data inputs ; 6                           ;
+; arriav_lcell_comb     ; 1555                        ;
+;     arith             ; 334                         ;
+;         0 data inputs ; 7                           ;
 ;         1 data inputs ; 167                         ;
 ;         2 data inputs ; 100                         ;
-;         4 data inputs ; 32                          ;
-;         5 data inputs ; 15                          ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 653                         ;
+;         4 data inputs ; 39                          ;
+;         5 data inputs ; 21                          ;
+;     extend            ; 29                          ;
+;         7 data inputs ; 29                          ;
+;     normal            ; 1192                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 49                          ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 84                          ;
-;         4 data inputs ; 68                          ;
-;         5 data inputs ; 138                         ;
-;         6 data inputs ; 286                         ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 85                          ;
+;         4 data inputs ; 129                         ;
+;         5 data inputs ; 218                         ;
+;         6 data inputs ; 666                         ;
 ; boundary_port         ; 119                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 3.83                        ;
+; Average LUT depth     ; 4.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -904,7 +902,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -985,160 +983,159 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Apr 20 19:28:29 2019
+    Info: Processing started: Mon Apr 22 14:43:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projectTop -c Lab1Demo
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file collisiondetector.sv
-    Info (12023): Found entity 1: collisionDetector File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/collisionDetector.sv Line: 4
+    Info (12023): Found entity 1: collisionDetector File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/collisionDetector.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/keytoggle_decoderin.sv
-    Info (12023): Found entity 1: keyToggle_decoderIn File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/keyToggle_decoderIn.sv Line: 6
+    Info (12023): Found entity 1: keyToggle_decoderIn File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/keyToggle_decoderIn.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/lpf.sv
-    Info (12023): Found entity 1: lpf File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/lpf.sv Line: 5
+    Info (12023): Found entity 1: lpf File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/lpf.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/byterec.sv
-    Info (12023): Found entity 1: byterec File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 4
+    Info (12023): Found entity 1: byterec File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/random.sv
-    Info (12023): Found entity 1: random File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/random.sv Line: 1
+    Info (12023): Found entity 1: random File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/random.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/bitrec.sv
-    Info (12023): Found entity 1: bitrec File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/bitrec.sv Line: 4
+    Info (12023): Found entity 1: bitrec File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/bitrec.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/top_kbdintf.bdf
     Info (12023): Found entity 1: TOP_KBDINTF
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/smileyface_move.sv
-    Info (12023): Found entity 1: smileyface_move File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/smileyface_move.sv Line: 7
+    Info (12023): Found entity 1: smileyface_move File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/smileyface_move.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/square_object.sv
-    Info (12023): Found entity 1: square_object File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/square_object.sv Line: 8
+    Info (12023): Found entity 1: square_object File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/square_object.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/smileybitmap.sv
-    Info (12023): Found entity 1: smileyBitMap File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/smileyBitMap.sv Line: 9
+    Info (12023): Found entity 1: smileyBitMap File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/smileyBitMap.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/objects_mux.sv
-    Info (12023): Found entity 1: objects_mux File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/objects_mux.sv Line: 7
+    Info (12023): Found entity 1: objects_mux File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/objects_mux.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/vga_controller.sv
-    Info (12023): Found entity 1: VGA_Controller File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv Line: 6
+    Info (12023): Found entity 1: VGA_Controller File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/mss/tonedecoder.sv
-    Info (12023): Found entity 1: ToneDecoder File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/MSS/ToneDecoder.sv Line: 6
+    Info (12023): Found entity 1: ToneDecoder File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/MSS/ToneDecoder.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/mss/top_mss_demo.bdf
     Info (12023): Found entity 1: TOP_MSS_DEMO
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/mss/sintable.sv
-    Info (12023): Found entity 1: sintable File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/MSS/SinTable.sv Line: 8
+    Info (12023): Found entity 1: sintable File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/MSS/SinTable.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/mss/prescaler.sv
-    Info (12023): Found entity 1: prescaler File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/MSS/prescaler.sv Line: 12
+    Info (12023): Found entity 1: prescaler File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/MSS/prescaler.sv Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/mss/data_conversion.sv
-    Info (12023): Found entity 1: data_conversion File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/MSS/data_conversion.sv Line: 4
+    Info (12023): Found entity 1: data_conversion File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/MSS/data_conversion.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/mss/addr_counter.sv
-    Info (12023): Found entity 1: addr_counter File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/MSS/addr_counter.sv Line: 4
+    Info (12023): Found entity 1: addr_counter File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/MSS/addr_counter.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/audio_codec_controller/audio_codec_controller.qxp
-    Info (12023): Found entity 1: audio_codec_controller File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/audio_codec_controller/audio_codec_controller.qxp Line: -1
+    Info (12023): Found entity 1: audio_codec_controller File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/audio_codec_controller/audio_codec_controller.qxp Line: -1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/top_kbd_demoall.bdf
     Info (12023): Found entity 1: TOP_KBD_DEMOALL
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/top_vga_demo_with_mss_all.bdf
     Info (12023): Found entity 1: TOP_VGA_DEMO_WITH_MSS_ALL
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/back_ground_drawsquare.sv
-    Info (12023): Found entity 1: back_ground_drawSquare File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 8
+    Info (12023): Found entity 1: back_ground_drawSquare File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file spacebarconst.v
-    Info (12023): Found entity 1: spaceBarConst File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/spaceBarConst.v Line: 40
+    Info (12023): Found entity 1: spaceBarConst File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/spaceBarConst.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file player/playermove.sv
-    Info (12023): Found entity 1: playerMove File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 1
+    Info (12023): Found entity 1: playerMove File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file player/playerbitmap.sv
-    Info (12023): Found entity 1: playerBitMap File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerBitMap.sv Line: 9
+    Info (12023): Found entity 1: playerBitMap File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerBitMap.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ball/ballmove.sv
-    Info (12023): Found entity 1: ballMove File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 7
+    Info (12023): Found entity 1: ballMove File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file ball/ballbitmap.sv
-    Info (12023): Found entity 1: ballBitMap File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Ball/ballBitMap.sv Line: 9
+    Info (12023): Found entity 1: ballBitMap File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballBitMap.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file rightarrowconst.v
-    Info (12023): Found entity 1: rightArrowConst File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/rightArrowConst.v Line: 40
+    Info (12023): Found entity 1: rightArrowConst File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/rightArrowConst.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file leftarrowconst.v
-    Info (12023): Found entity 1: leftArrowConst File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/leftArrowConst.v Line: 40
+    Info (12023): Found entity 1: leftArrowConst File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/leftArrowConst.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rope/ropemove.sv
-    Info (12023): Found entity 1: ropeMove File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeMove.sv Line: 7
+    Info (12023): Found entity 1: ropeMove File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeMove.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file zeroconst.v
-    Info (12023): Found entity 1: zeroConst File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/zeroConst.v Line: 40
+    Info (12023): Found entity 1: zeroConst File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/zeroConst.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rope/squarerope.sv
-    Info (12023): Found entity 1: squareRope File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/squareRope.sv Line: 8
+    Info (12023): Found entity 1: squareRope File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/squareRope.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file rope/ropebitmap.sv
-    Info (12023): Found entity 1: ropeBitMap File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 9
+    Info (12023): Found entity 1: ropeBitMap File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file gamecontroller/gamecontrollertop.bdf
     Info (12023): Found entity 1: gameControllerTop
 Info (12021): Found 1 design units, including 1 entities, in source file gamestatemachine.sv
-    Info (12023): Found entity 1: gameStateMachine File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/gameStateMachine.sv Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(35): created implicit net for "nor_code" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(36): created implicit net for "ext_code" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(37): created implicit net for "rel_code" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 37
+    Info (12023): Found entity 1: gameStateMachine File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/gameStateMachine.sv Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(35): created implicit net for "nor_code" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(36): created implicit net for "ext_code" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at byterec.sv(37): created implicit net for "rel_code" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/byterec.sv Line: 37
 Info (12127): Elaborating entity "TOP_VGA_DEMO_WITH_MSS_ALL" for the top level hierarchy
-Warning (275011): Block or symbol "ballBitMap" of instance "inst7" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:VGA_Controller"
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(58): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv Line: 58
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(59): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(58): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(59): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/VGA_Controller.sv Line: 59
 Info (12128): Elaborating entity "objects_mux" for hierarchy "objects_mux:VGAmux"
 Info (12128): Elaborating entity "playerBitMap" for hierarchy "playerBitMap:playerBitMap"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
 Info (12128): Elaborating entity "square_object" for hierarchy "square_object:playerSquareObject"
 Info (12128): Elaborating entity "playerMove" for hierarchy "playerMove:playerMove"
-Warning (10036): Verilog HDL or VHDL warning at playerMove.sv(23): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 23
-Warning (10036): Verilog HDL or VHDL warning at playerMove.sv(24): object "y_FRAME_SIZE" assigned a value but never read File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 24
-Warning (10240): Verilog HDL Always Construct warning at playerMove.sv(53): inferring latch(es) for variable "topLeftY_tmp", which holds its previous value in one or more paths through the always construct File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at playerMove.sv(77): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 77
-Warning (10230): Verilog HDL assignment warning at playerMove.sv(78): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 78
-Info (10041): Inferred latch for "topLeftY_tmp[0]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[1]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[2]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[3]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[4]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[5]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[6]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[7]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[8]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[9]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[10]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[11]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[12]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[13]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[14]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[15]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[16]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[17]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[18]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[19]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[20]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[21]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[22]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[23]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[24]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[25]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[26]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[27]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[28]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[29]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[30]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
-Info (10041): Inferred latch for "topLeftY_tmp[31]" at playerMove.sv(53) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Warning (10036): Verilog HDL or VHDL warning at playerMove.sv(23): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at playerMove.sv(24): object "y_FRAME_SIZE" assigned a value but never read File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at playerMove.sv(53): inferring latch(es) for variable "topLeftY_tmp", which holds its previous value in one or more paths through the always construct File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at playerMove.sv(77): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at playerMove.sv(78): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 78
+Info (10041): Inferred latch for "topLeftY_tmp[0]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[1]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[2]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[3]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[4]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[5]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[6]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[7]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[8]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[9]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[10]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[11]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[12]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[13]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[14]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[15]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[16]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[17]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[18]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[19]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[20]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[21]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[22]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[23]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[24]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[25]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[26]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[27]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[28]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[29]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[30]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
+Info (10041): Inferred latch for "topLeftY_tmp[31]" at playerMove.sv(53) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Player/playerMove.sv Line: 53
 Info (12128): Elaborating entity "gameControllerTop" for hierarchy "gameControllerTop:gameControllerTop"
 Info (12128): Elaborating entity "gameStateMachine" for hierarchy "gameControllerTop:gameControllerTop|gameStateMachine:inst"
-Warning (10230): Verilog HDL assignment warning at gameStateMachine.sv(86): truncated value with size 32 to match size of target (3) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/gameStateMachine.sv Line: 86
+Warning (10230): Verilog HDL assignment warning at gameStateMachine.sv(90): truncated value with size 32 to match size of target (3) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/gameStateMachine.sv Line: 90
 Info (12128): Elaborating entity "collisionDetector" for hierarchy "gameControllerTop:gameControllerTop|collisionDetector:collisionDetector"
-Info (12128): Elaborating entity "ballBitMap" for hierarchy "ballBitMap:inst7"
+Info (12128): Elaborating entity "ballBitMap" for hierarchy "ballBitMap:inst"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
 Info (12128): Elaborating entity "square_object" for hierarchy "square_object:ballSquareObject"
 Info (12128): Elaborating entity "ballMove" for hierarchy "ballMove:ballMove"
-Warning (10230): Verilog HDL assignment warning at ballMove.sv(92): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 92
-Warning (10230): Verilog HDL assignment warning at ballMove.sv(93): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 93
+Warning (10230): Verilog HDL assignment warning at ballMove.sv(92): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 92
+Warning (10230): Verilog HDL assignment warning at ballMove.sv(93): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Ball/ballMove.sv Line: 93
 Info (12128): Elaborating entity "TOP_KBD_DEMOALL" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD"
 Info (12128): Elaborating entity "keyToggle_decoderIn" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|keyToggle_decoderIn:LeftArrow"
 Info (12128): Elaborating entity "TOP_KBDINTF" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst"
 Info (12128): Elaborating entity "byterec" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|byterec:inst3"
 Info (12128): Elaborating entity "bitrec" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|bitrec:inst4"
-Warning (10230): Verilog HDL assignment warning at bitrec.sv(71): truncated value with size 32 to match size of target (4) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/KEYBOARD/bitrec.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at bitrec.sv(71): truncated value with size 32 to match size of target (4) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/KEYBOARD/bitrec.sv Line: 71
 Info (12128): Elaborating entity "lpf" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|lpf:cleaner"
 Info (12128): Elaborating entity "leftArrowConst" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/leftArrowConst.v Line: 49
-Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/leftArrowConst.v Line: 49
-Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/leftArrowConst.v Line: 49
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/leftArrowConst.v Line: 49
+Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/leftArrowConst.v Line: 49
+Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/leftArrowConst.v Line: 49
     Info (12134): Parameter "lpm_cvalue" = "363"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=la"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "9"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_rc8.tdf
-    Info (12023): Found entity 1: lpm_constant_rc8 File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 26
+    Info (12023): Found entity 1: lpm_constant_rc8 File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 26
 Info (12128): Elaborating entity "lpm_constant_rc8" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf Line: 46
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 31
-Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 31
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 31
+Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_rc8.tdf Line: 31
     Info (12134): Parameter "CVALUE" = "101101011"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "0"
     Info (12134): Parameter "IS_READABLE" = "0"
@@ -1151,19 +1148,19 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "TOP_
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 485
 Info (12128): Elaborating entity "rightArrowConst" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/rightArrowConst.v Line: 49
-Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/rightArrowConst.v Line: 49
-Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/rightArrowConst.v Line: 49
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/rightArrowConst.v Line: 49
+Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/rightArrowConst.v Line: 49
+Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/rightArrowConst.v Line: 49
     Info (12134): Parameter "lpm_cvalue" = "372"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=NONE"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "9"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_hi8.tdf
-    Info (12023): Found entity 1: lpm_constant_hi8 File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 26
+    Info (12023): Found entity 1: lpm_constant_hi8 File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 26
 Info (12128): Elaborating entity "lpm_constant_hi8" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf Line: 46
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 31
-Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 31
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 31
+Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_hi8.tdf Line: 31
     Info (12134): Parameter "CVALUE" = "101110100"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "0"
     Info (12134): Parameter "IS_READABLE" = "0"
@@ -1174,19 +1171,19 @@ Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst
     Info (12134): Parameter "WIDTHAD" = "1"
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 456
 Info (12128): Elaborating entity "spaceBarConst" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/spaceBarConst.v Line: 49
-Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/spaceBarConst.v Line: 49
-Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/spaceBarConst.v Line: 49
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/spaceBarConst.v Line: 49
+Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/spaceBarConst.v Line: 49
+Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/spaceBarConst.v Line: 49
     Info (12134): Parameter "lpm_cvalue" = "41"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=sc"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "9"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_mb8.tdf
-    Info (12023): Found entity 1: lpm_constant_mb8 File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 26
+    Info (12023): Found entity 1: lpm_constant_mb8 File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 26
 Info (12128): Elaborating entity "lpm_constant_mb8" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf Line: 46
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 31
-Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 31
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 31
+Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/lpm_constant_mb8.tdf Line: 31
     Info (12134): Parameter "CVALUE" = "000101001"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "0"
     Info (12134): Parameter "IS_READABLE" = "0"
@@ -1196,55 +1193,55 @@ Info (12133): Instantiated megafunction "TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:i
     Info (12134): Parameter "WIDTH_WORD" = "9"
     Info (12134): Parameter "WIDTHAD" = "1"
 Info (12128): Elaborating entity "ropeBitMap" for hierarchy "ropeBitMap:ropeBitMap"
-Warning (10202): Verilog HDL Declaration warning at ropeBitMap.sv(27): vector has more than 2**16 bits File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 27
-Warning (10202): Verilog HDL Declaration warning at ropeBitMap.sv(28): vector has more than 2**16 bits File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 28
+Warning (10202): Verilog HDL Declaration warning at ropeBitMap.sv(27): vector has more than 2**16 bits File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 27
+Warning (10202): Verilog HDL Declaration warning at ropeBitMap.sv(28): vector has more than 2**16 bits File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeBitMap.sv Line: 28
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
 Info (12128): Elaborating entity "squareRope" for hierarchy "squareRope:ropeSquareObject"
 Info (12128): Elaborating entity "zeroConst" for hierarchy "zeroConst:zero"
-Info (12128): Elaborating entity "lpm_constant" for hierarchy "zeroConst:zero|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/zeroConst.v Line: 49
-Info (12130): Elaborated megafunction instantiation "zeroConst:zero|lpm_constant:LPM_CONSTANT_component" File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/zeroConst.v Line: 49
-Info (12133): Instantiated megafunction "zeroConst:zero|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/zeroConst.v Line: 49
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "zeroConst:zero|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/zeroConst.v Line: 49
+Info (12130): Elaborated megafunction instantiation "zeroConst:zero|lpm_constant:LPM_CONSTANT_component" File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/zeroConst.v Line: 49
+Info (12133): Instantiated megafunction "zeroConst:zero|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/zeroConst.v Line: 49
     Info (12134): Parameter "lpm_cvalue" = "0"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "11"
 Info (12128): Elaborating entity "ropeMove" for hierarchy "ropeMove:ropeMove"
-Warning (10036): Verilog HDL or VHDL warning at ropeMove.sv(27): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeMove.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at ropeMove.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/Rope/ropeMove.sv Line: 61
+Warning (10036): Verilog HDL or VHDL warning at ropeMove.sv(27): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeMove.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at ropeMove.sv(61): truncated value with size 32 to match size of target (11) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/Rope/ropeMove.sv Line: 61
 Info (12128): Elaborating entity "back_ground_drawSquare" for hierarchy "back_ground_drawSquare:bgDraw"
-Warning (10036): Verilog HDL or VHDL warning at back_ground_drawSquare.sv(19): object "xFrameSize" assigned a value but never read File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 19
-Warning (10036): Verilog HDL or VHDL warning at back_ground_drawSquare.sv(20): object "yFrameSize" assigned a value but never read File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 20
-Warning (10036): Verilog HDL or VHDL warning at back_ground_drawSquare.sv(21): object "bracketOffset" assigned a value but never read File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 21
-Warning (10230): Verilog HDL assignment warning at back_ground_drawSquare.sv(38): truncated value with size 3 to match size of target (2) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at back_ground_drawSquare.sv(46): truncated value with size 3 to match size of target (2) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at back_ground_drawSquare.sv(52): truncated value with size 3 to match size of target (2) File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 52
+Warning (10036): Verilog HDL or VHDL warning at back_ground_drawSquare.sv(19): object "xFrameSize" assigned a value but never read File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 19
+Warning (10036): Verilog HDL or VHDL warning at back_ground_drawSquare.sv(20): object "yFrameSize" assigned a value but never read File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 20
+Warning (10036): Verilog HDL or VHDL warning at back_ground_drawSquare.sv(21): object "bracketOffset" assigned a value but never read File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at back_ground_drawSquare.sv(38): truncated value with size 3 to match size of target (2) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at back_ground_drawSquare.sv(46): truncated value with size 3 to match size of target (2) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at back_ground_drawSquare.sv(52): truncated value with size 3 to match size of target (2) File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/RTL/VGA/back_ground_drawSquare.sv Line: 52
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_el84.tdf
-    Info (12023): Found entity 1: altsyncram_el84 File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/altsyncram_el84.tdf Line: 32
+    Info (12023): Found entity 1: altsyncram_el84 File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/altsyncram_el84.tdf Line: 32
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
-    Info (12023): Found entity 1: decode_8la File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/decode_8la.tdf Line: 23
+    Info (12023): Found entity 1: decode_8la File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/decode_8la.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_6hb.tdf
-    Info (12023): Found entity 1: mux_6hb File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/mux_6hb.tdf Line: 23
+    Info (12023): Found entity 1: mux_6hb File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/mux_6hb.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_clc.tdf
-    Info (12023): Found entity 1: mux_clc File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/mux_clc.tdf Line: 23
+    Info (12023): Found entity 1: mux_clc File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/mux_clc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
-    Info (12023): Found entity 1: decode_vnf File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/decode_vnf.tdf Line: 23
+    Info (12023): Found entity 1: decode_vnf File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/decode_vnf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_19i.tdf
-    Info (12023): Found entity 1: cntr_19i File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_19i.tdf Line: 28
+    Info (12023): Found entity 1: cntr_19i File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_19i.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c9c.tdf
-    Info (12023): Found entity 1: cmpr_c9c File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cmpr_c9c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_c9c File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_c9c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_24j.tdf
-    Info (12023): Found entity 1: cntr_24j File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_24j.tdf Line: 26
+    Info (12023): Found entity 1: cntr_24j File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_24j.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_v8i.tdf
-    Info (12023): Found entity 1: cntr_v8i File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_v8i.tdf Line: 28
+    Info (12023): Found entity 1: cntr_v8i File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_v8i.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_d9c.tdf
-    Info (12023): Found entity 1: cmpr_d9c File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cmpr_d9c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_d9c File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_d9c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
-    Info (12023): Found entity 1: cntr_kri File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cntr_kri.tdf Line: 28
+    Info (12023): Found entity 1: cntr_kri File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cntr_kri.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
-    Info (12023): Found entity 1: cmpr_99c File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/cmpr_99c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_99c File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2019.04.20.19:28:50 Progress: Loading sldcbc818cf/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.04.22.14:44:20 Progress: Loading sldcbc818cf/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1255,41 +1252,41 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 222
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 222
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/db/ip/sldcbc818cf/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 13 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/output_files/Lab1Demo.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/output_files/Lab1Demo.map.smsg
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 37 of its 63 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 26 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2229 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2796 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 2128 logic cells
+    Info (21061): Implemented 2695 logic cells
     Info (21064): Implemented 60 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4946 megabytes
-    Info: Processing ended: Sat Apr 20 19:29:05 2019
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:01:00
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4970 megabytes
+    Info: Processing ended: Mon Apr 22 14:44:47 2019
+    Info: Elapsed time: 00:01:03
+    Info: Total CPU time (on all processors): 00:01:40
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/output_files/Lab1Demo.map.smsg.
+The suppressed messages can be found in C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/output_files/Lab1Demo.map.smsg.
 
 

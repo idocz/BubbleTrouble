@@ -11,7 +11,7 @@ module gameStateMachine 	(
 	input logic col_player_ball,
 	
 	output logic [1:0] gameState,
-	output logic playerMoveRight, playerMoveLeft, ropeDeploy
+	output logic playerMoveRight, playerMoveLeft, ropeDeploy, playerVisible, ballVisible
 	
 );
 	
@@ -73,6 +73,8 @@ always_comb // Update the outputs //////////////////////
 	playerMoveRight = 0;
 	playerMoveLeft = 0;
 	ropeDeploy = 0;
+	playerVisible = 0;
+	ballVisible = 0;
 	
 	case (cur_st)
 				
@@ -82,6 +84,8 @@ always_comb // Update the outputs //////////////////////
 							
 		playMode: begin
 			gameState = 1;
+			playerVisible = 1;
+			ballVisible = 1;
 			if ( col_player_ball )
 				nxt_lives = lives - 1;
 			if ( rightArrow )

@@ -64,10 +64,10 @@ begin
 			
 			
 		if ((topLeftY_tmp <= 0 ) && (Yspeed < 0 )) // hit top border heading up
-			Yspeed <= 0.5*(-Yspeed) ; 
+			Yspeed <= -Yspeed ; 
 			
 		if ( ( topLeftY_tmp >= y_FRAME_SIZE) && (Yspeed > 0 )) //hit bottom border heading down 
-			Yspeed <= 0.5*(-Yspeed) ; 
+			Yspeed <= -Yspeed ; 
 		end 
 end
 

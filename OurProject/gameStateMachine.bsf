@@ -94,6 +94,20 @@ agreement for further details.
 		(text "ropeDeploy" (rect 165 75 211 87)(font "Arial" ))
 		(line (pt 232 80)(pt 216 80)(line_width 1))
 	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "playerVisible" (rect 0 0 50 12)(font "Arial" ))
+		(text "playerVisible" (rect 161 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 1))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "ballVisible" (rect 0 0 37 12)(font "Arial" ))
+		(text "ballVisible" (rect 174 107 211 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 216 128)(line_width 1))
 	)
