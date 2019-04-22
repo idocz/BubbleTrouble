@@ -8,19 +8,21 @@ module gameStateMachine 	(
 
 	input logic clk, resetN,
 	input logic rightArrow, leftArrow, spaceBar,
-	input logic col_player_ball,
-	input logic [10:0] playerX,
-	
+	input logic col_player_ball, col_rope_ball,
+	input logic [10:0] playerX, ropeTopY,
+
 	output logic [1:0] gameState,
-	output logic playerMoveRight, playerMoveLeft, ropeDeploy, playerVisible, ballVisible,
+	output logic playerMoveRight, playerMoveLeft, ropeActive, playerVisible, ballVisible,
 	output logic [10:0] ropeX
 	
 );
 	
+const int y_FRAME_SIZE =	479;
 	
 enum logic [2:0] {welcomeScreen, playMode, gameOver} cur_st, nxt_st;
 logic [2:0] lives, nxt_lives;
 logic [10:0] nxt_ropeX;
+logic nxt_ropeActive;
 
 
 
@@ -31,6 +33,7 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		cur_st <= welcomeScreen;
 		lives <= 1;
 		ropeX <= 0;
+		ropeActive <= 0;
 		
 	end // asynch
 	else 
@@ -38,6 +41,7 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		cur_st <= nxt_st; // Update current state
 		lives <= nxt_lives;
 		ropeX <= nxt_ropeX;
+		ropeActive <= nxt_ropeActive;
 	end 
 		
 end
@@ -78,7 +82,7 @@ always_comb // Update the outputs //////////////////////
 	nxt_lives = lives;
 	playerMoveRight = 0;
 	playerMoveLeft = 0;
-	ropeDeploy = 0;
+	nxt_ropeActive = ropeActive;
 	playerVisible = 0;
 	ballVisible = 0;
 	nxt_ropeX = ropeX;
@@ -87,26 +91,45 @@ always_comb // Update the outputs //////////////////////
 				
 		welcomeScreen: begin
 			gameState = 0;
+			nxt_ropeActive = 0;
 		end // welcomeScreen
 							
 		playMode: begin
+		
 			gameState = 1;
 			playerVisible = 1;
 			ballVisible = 1;
-			if ( col_player_ball )
-				nxt_lives = lives - 1;
-			if ( rightArrow )
-				playerMoveRight = 1;
-			if ( leftArrow )
-				playerMoveLeft = 1;
-			if ( spaceBar ) begin
-				ropeDeploy = 1;
+			
+			if ( ropeTopY <= 0 )
+				nxt_ropeActive = 0;
+			
+			if ( spaceBar && ropeActive == 0) 
+			begin
+				nxt_ropeActive = 1;
 				nxt_ropeX = playerX;
 			end
+			
+			if ( col_player_ball )
+				nxt_lives = lives - 1;
+				
+			if ( col_rope_ball )
+			begin
+				ballVisible = 0;
+				nxt_ropeActive = 0;
+			end
+				
+			if ( rightArrow )
+				playerMoveRight = 1;
+				
+			if ( leftArrow )
+				playerMoveLeft = 1;
+			
+
 		end // playMode
 			
 		gameOver: begin
 			gameState = 2;
+			nxt_ropeActive = 0;
 		end // gameOver
 	
 	endcase

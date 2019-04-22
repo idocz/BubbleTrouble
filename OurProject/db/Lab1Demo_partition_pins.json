@@ -120,11 +120,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "resetN",
+					"name" : "KEY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
+					"name" : "resetN",
 					"strict" : false
 				},
 				{

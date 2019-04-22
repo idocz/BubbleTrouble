@@ -14,6 +14,6 @@ module collisionDetector	(
 
 
 assign col_player_ball = playerRequest & ballRequest;
-assign col_rope_ball   = ropeRequest & ropeRequest;
+assign col_rope_ball   = ropeRequest & ballRequest;
 
 endmodule

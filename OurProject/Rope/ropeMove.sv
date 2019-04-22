@@ -9,11 +9,8 @@ module ropeMove	(
 					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-					input logic deploy,
-					input logic col_rope_ball, // Ball-Rope collision indicator
-					output	logic	[10:0] topY, // output the top Y of the rope 
-					output logic movingUp
-
+					input logic ropeActive,
+					output	logic	[10:0] topY // output the top Y of the rope 
 					
 );
 
@@ -31,10 +28,7 @@ const int	y_FRAME_SIZE	=	479 * MULTIPLIER;
 
  // local parameters 
 int topY_tmp;
-logic movingUp_tmp;
-
-
-
+int Yspeed_tmp;
 
 // position calculate 
 
@@ -45,25 +39,28 @@ begin
 		topY_tmp	<= y_FRAME_SIZE;
 	end
 	else begin
-		movingUp_tmp = (deploy == 1'b1 || (topY_tmp != y_FRAME_SIZE && topY_tmp >= 0)); //Legal blocking assignment
-			
-		if (col_rope_ball == 1'b1)
-			topY_tmp <= y_FRAME_SIZE;
-			
-		if (startOfFrame == 1'b1 && movingUp_tmp == 1'b1) begin // perform only 30 times per second  
-			topY_tmp  <= topY_tmp + Yspeed;				
+		
+		if (startOfFrame == 1'b1 && ropeActive == 1'b1) begin // perform only 30 times per second  
+			topY_tmp  <= topY_tmp + Yspeed_tmp;				
 		end
-		else if (startOfFrame == 1'b1 && movingUp_tmp == 1'b0) begin //
+		
+		else if (startOfFrame == 1'b1 && ropeActive == 1'b0) begin //
 			topY_tmp <= y_FRAME_SIZE;
 		end
 			
 	end
 end
-//TODO: always_comb for movingUp_tmp
+
+
+always_comb
+begin
+	if(topY <= 0) 
+		Yspeed_tmp = 0;
+	else
+		Yspeed_tmp = Yspeed;
+end
 
 
 assign 	topY = topY_tmp / MULTIPLIER ;  
-assign   movingUp = movingUp_tmp;  
-
 
 endmodule

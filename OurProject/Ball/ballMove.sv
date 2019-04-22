@@ -8,7 +8,10 @@ module ballMove	(
  
 					input	logic	clk,
 					input	logic	resetN,
-					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
+					input	logic	startOfFrame,  // short pulse every start of frame 30Hz
+					input logic [10:0] initialX, initialY,
+					input logic [10:0] initialXspeed, initialYspeed,
+					input logic active,
 					output	logic	[10:0]	topLeftX,// output the top left corner 
 					output	logic	[10:0]	topLeftY
 					
@@ -17,10 +20,6 @@ module ballMove	(
 
 // a module used to generate a ball trajectory.  
 
-parameter int INITIAL_X = 26;
-parameter int INITIAL_Y = 26;
-parameter int INITIAL_X_SPEED = 100;
-parameter int INITIAL_Y_SPEED = 0;
 parameter int g = 1;
 
 const int	MULTIPLIER	=	64;
@@ -34,12 +33,16 @@ int Xspeed, topLeftX_tmp; // local parameters
 int Yspeed, topLeftY_tmp;
 
 
+
+
 //  calculation x Axis speed 
 
 always_ff@(posedge clk or negedge resetN)
 begin
-	if(!resetN)
-		Xspeed	<= INITIAL_X_SPEED;
+	if(!resetN) begin
+		Xspeed	<= initialXspeed;
+	end
+
 	else 	begin
 			
 			if ((topLeftX_tmp <= 0 ) && (Xspeed < 0) ) // hit left border while moving right
@@ -56,7 +59,7 @@ end
 always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) begin 
-		Yspeed	<= INITIAL_Y_SPEED;
+		Yspeed	<= initialYspeed;
 	end 
 	else begin
 		if (startOfFrame == 1'b1) 
@@ -77,8 +80,8 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN)
 	begin
-		topLeftX_tmp	<= INITIAL_X * MULTIPLIER;
-		topLeftY_tmp	<= INITIAL_Y * MULTIPLIER;
+		topLeftX_tmp	<= initialX * MULTIPLIER;
+		topLeftY_tmp	<= initialY * MULTIPLIER;
 	end
 	else begin
 		if (startOfFrame == 1'b1) begin // perform only 30 times per second 
