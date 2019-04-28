@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="69a7ceeaa5aa992a48ac"/>
+    <hash md5_digest_80b="df434aad58596d315e0f"/>
   </project>
   <file_info>
     <file device="5CSXFC6D6F31C6" path="Lab1Demo.sof" usercode="0xFFFFFFFF"/>
@@ -187,7 +187,7 @@
         <port name="jtag.bp.TOP_KBD_inst3_LPM_CONSTANT_component_ag_mgl_prim1_tdo"/>
       </outputs>
     </node>
-    <node hpath="Huge_Ball_TOP:inst|test:inst13|lpm_constant:LPM_CONSTANT_component|lpm_constant_jj8:ag|sld_mod_ram_rom:mgl_prim1" instance_id="3" mfg_id="110" node_id="3" sld_node_info="0x10186E03" version="2">
+    <node hpath="balls_TOP:inst|test:inst13|lpm_constant:LPM_CONSTANT_component|lpm_constant_jj8:ag|sld_mod_ram_rom:mgl_prim1" instance_id="3" mfg_id="110" node_id="3" sld_node_info="0x10186E03" version="2">
       <parameters>
         <parameter name="SLD_NODE_INFO" type="dec" value="270036480"/>
         <parameter name="SLD_AUTO_INSTANCE_INDEX" type="string" value="yes"/>

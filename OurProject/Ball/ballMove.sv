@@ -11,9 +11,11 @@ module ballMove	(
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz
 					input logic [10:0] initialX, initialY,
 					input logic [10:0] initialXspeed, initialYspeed,
-					input logic active,
+					
 					output	logic	[10:0]	topLeftX,// output the top left corner 
-					output	logic	[10:0]	topLeftY
+					output	logic	[10:0]	topLeftY,
+					output   logic [10:0]   Xspeed,
+					output   logic [10:0]   Yspeed
 					
 );
 
@@ -29,8 +31,8 @@ const int	x_FRAME_SIZE	=	639 * MULTIPLIER;
 const int	y_FRAME_SIZE	=	479 * MULTIPLIER;
 
 
-int Xspeed, topLeftX_tmp; // local parameters 
-int Yspeed, topLeftY_tmp;
+int Xspeed_tmp, topLeftX_tmp; // local parameters 
+int Yspeed_tmp, topLeftY_tmp;
 
 
 
@@ -40,16 +42,16 @@ int Yspeed, topLeftY_tmp;
 always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) begin
-		Xspeed	<= initialXspeed;
+		Xspeed_tmp	<= initialXspeed;
 	end
 
 	else 	begin
 			
-			if ((topLeftX_tmp <= 0 ) && (Xspeed < 0) ) // hit left border while moving right
-				Xspeed <= -Xspeed ; 
+			if ((topLeftX_tmp <= 0 ) && (Xspeed_tmp < 0) ) // hit left border while moving right
+				Xspeed_tmp <= -Xspeed_tmp ; 
 			
-			if ( (topLeftX_tmp >= x_FRAME_SIZE) && (Xspeed > 0 )) // hit right border while moving left
-				Xspeed <= -Xspeed ; 
+			if ( (topLeftX_tmp >= x_FRAME_SIZE) && (Xspeed_tmp > 0 )) // hit right border while moving left
+				Xspeed_tmp <= -Xspeed_tmp ; 
 	end
 end
 
@@ -59,18 +61,18 @@ end
 always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) begin 
-		Yspeed	<= initialYspeed;
+		Yspeed_tmp	<= initialYspeed;
 	end 
 	else begin
 		if (startOfFrame == 1'b1) 
-			Yspeed <= Yspeed  + g ; // gravity force 
+			Yspeed_tmp <= Yspeed_tmp  + g ; // gravity force 
 			
 			
-		if ((topLeftY_tmp <= 0 ) && (Yspeed < 0 )) // hit top border heading up
-			Yspeed <= -Yspeed ; 
+		if ((topLeftY_tmp <= 0 ) && (Yspeed_tmp < 0 )) // hit top border heading up
+			Yspeed_tmp <= -Yspeed_tmp ; 
 			
-		if ( ( topLeftY_tmp >= y_FRAME_SIZE) && (Yspeed > 0 )) //hit bottom border heading down 
-			Yspeed <= -Yspeed ; 
+		if ( ( topLeftY_tmp >= y_FRAME_SIZE) && (Yspeed_tmp > 0 )) //hit bottom border heading down 
+			Yspeed_tmp <= -Yspeed_tmp ; 
 		end 
 end
 
@@ -85,15 +87,19 @@ begin
 	end
 	else begin
 		if (startOfFrame == 1'b1) begin // perform only 30 times per second 
-				topLeftX_tmp  <= topLeftX_tmp + Xspeed;  
-				topLeftY_tmp  <= topLeftY_tmp + Yspeed; 
+				topLeftX_tmp  <= topLeftX_tmp + Xspeed_tmp;  
+				topLeftY_tmp  <= topLeftY_tmp + Yspeed_tmp; 
 			end
 	end
 end
 
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_tmp / MULTIPLIER ;   // note it must be 2^n 
-assign 	topLeftY = topLeftY_tmp / MULTIPLIER ;    
+assign 	topLeftY = topLeftY_tmp / MULTIPLIER ;  
+
+assign Xspeed = Xspeed_tmp;
+assign Yspeed = Yspeed_tmp;
+
 
 
 endmodule

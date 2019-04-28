@@ -62,8 +62,8 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "active" (rect 0 0 23 12)(font "Arial" ))
-		(text "active" (rect 21 107 44 119)(font "Arial" ))
+		(text "ballVisible" (rect 0 0 37 12)(font "Arial" ))
+		(text "ballVisible" (rect 21 107 58 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port

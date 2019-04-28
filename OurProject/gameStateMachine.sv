@@ -114,7 +114,6 @@ always_comb // Update the outputs //////////////////////
 				
 			if ( col_rope_ball )
 			begin
-				ballVisible = 0;
 				nxt_ropeActive = 0;
 			end
 				

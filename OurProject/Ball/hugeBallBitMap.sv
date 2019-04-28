@@ -12,7 +12,7 @@ module	hugeBallBitMap	(
 					input logic	[10:0] offsetX,// offset from top left  position 
 					input logic	[10:0] offsetY,
 					input	logic	InsideRectangle, //input that the pixel is within a bracket
-					input logic active, // visible state
+					input logic ballVisible, // visible state
 
 					output	logic	drawingRequest, //output that the pixel should be dispalyed 
 					output	logic	[7:0] RGBout  //rgb value from the bitmap 
@@ -61,7 +61,7 @@ begin
 		RGBout <=	8'h00;
 	end
 	else begin
-		if (InsideRectangle == 1'b1 && active == 1'b1 )  // inside an external bracket 
+		if (InsideRectangle == 1'b1 && ballVisible == 1'b1 )  // inside an external bracket 
 			RGBout <= object_colors[offsetY/2][offsetX/2];	//get RGB from the colors table  
 		else 
 			RGBout <= TRANSPARENT_ENCODING ; // force color to transparent so it will not be displayed 
