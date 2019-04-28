@@ -5,33 +5,34 @@
 // (c) Technion IIT, Department of Electrical Engineering 2019 
 
 module	speedCalc	(	
-					input		logic [10:0]	Xspeed,
-					input		logic [10:0]   Yspeed,
+					input	int Xspeed,
+					input	int Yspeed,
 					
 					//ball1
-					output   logic [10:0] Xspeed1_out,
+					output int Xspeed1_out,
 					
 					//ball2
-					output   logic [10:0] Xspeed2_out,
+					output int Xspeed2_out,
 					
 					//both
-					output   logic [10:0] Yspeed_both
+					output int Yspeed_both
 
 					
 );
 
-
-
-
 always_comb
 begin
 
-Yspeed_both = (Yspeed < 0) ? Yspeed : -Yspeed;
-Xspeed1_out = Xspeed;
-Xspeed2_out = -Xspeed; 
-
-
+	if(Yspeed < 0)
+		Yspeed_both = Yspeed;
+	else
+		Yspeed_both = -Yspeed;		
+		
+	Xspeed1_out = Xspeed;
+	Xspeed2_out = -Xspeed;	
+			
 end
+
 endmodule
 
 

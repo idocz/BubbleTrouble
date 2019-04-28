@@ -23,8 +23,15 @@ module  ballController (
 	output logic hugeBallVisible,
 	output logic bigBall1Visible,
 	output logic bigBall2Visible,
+
+	//reset
+	output logic hugeBallReset,
+	output logic bigBall1Reset,
+	output logic bigBall2Reset,
+	
 	output logic col_rope_ball,
 	output logic col_player_ball
+	
 	
 );
 	
@@ -38,6 +45,9 @@ logic	nxt_hugeBallVisible;
 logic	nxt_bigBall1Visible;
 logic	nxt_bigBall2Visible;
 
+logic	nxt_hugeBallReset;
+logic	nxt_bigBall1Reset;
+logic	nxt_bigBall2Reset;
 
 always_ff @(posedge clk or negedge resetN) // State machine logic ////
    begin
@@ -49,6 +59,9 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		hugeBallVisible <= 0;
 		bigBall1Visible <= 0;
 		bigBall2Visible <= 0;
+		hugeBallReset <= 0;
+		bigBall1Reset <= 0;
+		bigBall2Reset <= 0;
 		
 	end // asynch
 	else 
@@ -58,6 +71,11 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		hugeBallVisible <= nxt_hugeBallVisible;
 		bigBall1Visible <= nxt_bigBall1Visible;
 		bigBall2Visible <= nxt_bigBall2Visible;
+		
+		hugeBallReset <= nxt_hugeBallReset;
+		bigBall1Reset <= nxt_bigBall1Reset;
+		bigBall2Reset <= nxt_bigBall2Reset;
+		
 		
 	end 
 		
@@ -105,18 +123,30 @@ always_comb // Update the outputs //////////////////////
 	nxt_bigBall1Visible = bigBall1Visible;
 	nxt_bigBall2Visible = bigBall2Visible;
 	
+	nxt_hugeBallReset = hugeBallReset;
+	nxt_bigBall1Reset = bigBall1Reset;
+	nxt_bigBall2Reset = bigBall2Reset;
+	
 	case (cur_st)
 				
 		inactive: begin
 			nxt_hugeBallVisible = 0;
 			nxt_bigBall1Visible = 0;
 			nxt_bigBall2Visible = 0;
+			
+			nxt_hugeBallReset = 0;
+			nxt_bigBall1Reset = 0;
+			nxt_bigBall2Reset = 0;
+			
 		end // inactive
 							
 		deploy: begin
 			nxt_hugeBallVisible = 1;
+			nxt_hugeBallReset = 1;
+			
 			nxt_bigBall1Visible = 0;
 			nxt_bigBall2Visible = 0;
+			
 		end
 		
 		active: begin
@@ -124,8 +154,13 @@ always_comb // Update the outputs //////////////////////
 			if ( col_rope_hugeBall )
 			begin
 				nxt_hugeBallVisible = 0;
+				
 				nxt_bigBall1Visible = 1;
+				nxt_bigBall1Reset = 1;
+				
 				nxt_bigBall2Visible = 1;
+				nxt_bigBall2Reset = 1;
+			
 			end
 			
 			if ( col_rope_bigBall1 )

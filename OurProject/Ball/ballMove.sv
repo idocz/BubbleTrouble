@@ -10,12 +10,11 @@ module ballMove	(
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz
 					input logic [10:0] initialX, initialY,
-					input logic [10:0] initialXspeed, initialYspeed,
+					input int initialXspeed, initialYspeed,
 					
 					output	logic	[10:0]	topLeftX,// output the top left corner 
 					output	logic	[10:0]	topLeftY,
-					output   logic [10:0]   Xspeed,
-					output   logic [10:0]   Yspeed
+					output   int   Xspeed, Yspeed
 					
 );
 
@@ -33,8 +32,6 @@ const int	y_FRAME_SIZE	=	479 * MULTIPLIER;
 
 int Xspeed_tmp, topLeftX_tmp; // local parameters 
 int Yspeed_tmp, topLeftY_tmp;
-
-
 
 
 //  calculation x Axis speed 
@@ -63,17 +60,19 @@ begin
 	if(!resetN) begin 
 		Yspeed_tmp	<= initialYspeed;
 	end 
-	else begin
+	else 
+	begin
+	
 		if (startOfFrame == 1'b1) 
 			Yspeed_tmp <= Yspeed_tmp  + g ; // gravity force 
-			
 			
 		if ((topLeftY_tmp <= 0 ) && (Yspeed_tmp < 0 )) // hit top border heading up
 			Yspeed_tmp <= -Yspeed_tmp ; 
 			
 		if ( ( topLeftY_tmp >= y_FRAME_SIZE) && (Yspeed_tmp > 0 )) //hit bottom border heading down 
 			Yspeed_tmp <= -Yspeed_tmp ; 
-		end 
+			
+	end 
 end
 
 // position calculate 
