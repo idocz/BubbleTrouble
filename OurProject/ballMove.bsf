@@ -62,15 +62,15 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "initialXspeed[31..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "initialXspeed[31..0]" (rect 21 107 90 119)(font "Arial" ))
+		(text "initialXspeed[15..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "initialXspeed[15..0]" (rect 21 107 90 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "initialYspeed[31..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "initialYspeed[31..0]" (rect 21 123 91 135)(font "Arial" ))
+		(text "initialYspeed[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "initialYspeed[15..0]" (rect 21 123 91 135)(font "Arial" ))
 		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
@@ -90,15 +90,15 @@ agreement for further details.
 	(port
 		(pt 232 64)
 		(output)
-		(text "Xspeed[31..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "Xspeed[31..0]" (rect 158 59 211 71)(font "Arial" ))
+		(text "Xspeed[15..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "Xspeed[15..0]" (rect 158 59 211 71)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64)(line_width 3))
 	)
 	(port
 		(pt 232 80)
 		(output)
-		(text "Yspeed[31..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "Yspeed[31..0]" (rect 157 75 211 87)(font "Arial" ))
+		(text "Yspeed[15..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "Yspeed[15..0]" (rect 157 75 211 87)(font "Arial" ))
 		(line (pt 232 80)(pt 216 80)(line_width 3))
 	)
 	(parameter

@@ -16,7 +16,6 @@ module ropeMove	(
 
 
 // a module used to generate a ball trajectory.  
-
 parameter int Yspeed = -150;
 
 const int	MULTIPLIER	=	64;

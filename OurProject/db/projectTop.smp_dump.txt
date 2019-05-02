@@ -1,4 +1,10 @@
 
+State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|Presents_TOP:inst16|presentsController:inst18|cur_st
+Name cur_st.inactive cur_st.active cur_st.deploy 
+cur_st.inactive 0 0 0 
+cur_st.deploy 1 0 1 
+cur_st.active 1 1 0 
+
 State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst|ballController:inst6|cur_st
 Name cur_st.inactive cur_st.active cur_st.deploy 
 cur_st.inactive 0 0 0 

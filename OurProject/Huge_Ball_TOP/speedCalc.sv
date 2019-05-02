@@ -5,17 +5,17 @@
 // (c) Technion IIT, Department of Electrical Engineering 2019 
 
 module	speedCalc	(	
-					input	int Xspeed,
-					input	int Yspeed,
+					input	shortint Xspeed,
+					input	shortint Yspeed,
 					
 					//ball1
-					output int Xspeed1_out,
+					output shortint Xspeed1_out,
 					
 					//ball2
-					output int Xspeed2_out,
+					output shortint Xspeed2_out,
 					
 					//both
-					output int Yspeed_both
+					output shortint Yspeed_both
 
 					
 );

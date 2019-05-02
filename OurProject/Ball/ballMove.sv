@@ -10,11 +10,11 @@ module ballMove	(
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz
 					input logic [10:0] initialX, initialY,
-					input int initialXspeed, initialYspeed,
+					input shortint initialXspeed, initialYspeed,
 					
 					output	logic	[10:0]	topLeftX,// output the top left corner 
 					output	logic	[10:0]	topLeftY,
-					output   int   Xspeed, Yspeed
+					output   shortint   Xspeed, Yspeed
 					
 );
 

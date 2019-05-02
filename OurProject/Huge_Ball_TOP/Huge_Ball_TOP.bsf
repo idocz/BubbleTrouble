@@ -90,15 +90,15 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "initialXspeed[31..0]" (rect 0 0 116 19)(font "Intel Clear" (font_size 8)))
-		(text "initialXspeed[31..0]" (rect 21 171 137 190)(font "Intel Clear" (font_size 8)))
+		(text "initialXspeed[15..0]" (rect 0 0 116 19)(font "Intel Clear" (font_size 8)))
+		(text "initialXspeed[15..0]" (rect 21 171 137 190)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
 		(pt 0 192)
 		(input)
-		(text "initialYspeed[31..0]" (rect 0 0 116 19)(font "Intel Clear" (font_size 8)))
-		(text "initialYspeed[31..0]" (rect 21 187 137 206)(font "Intel Clear" (font_size 8)))
+		(text "initialYspeed[15..0]" (rect 0 0 116 19)(font "Intel Clear" (font_size 8)))
+		(text "initialYspeed[15..0]" (rect 21 187 137 206)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 192)(pt 16 192)(line_width 3))
 	)
 	(port
@@ -132,15 +132,15 @@ agreement for further details.
 	(port
 		(pt 264 96)
 		(output)
-		(text "Xspeed[31..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Xspeed[31..0]" (rect 160 91 243 110)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed[15..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed[15..0]" (rect 160 91 243 110)(font "Intel Clear" (font_size 8)))
 		(line (pt 264 96)(pt 248 96)(line_width 3))
 	)
 	(port
 		(pt 264 112)
 		(output)
-		(text "Yspeed[31..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Yspeed[31..0]" (rect 160 107 243 126)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed[15..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed[15..0]" (rect 160 107 243 126)(font "Intel Clear" (font_size 8)))
 		(line (pt 264 112)(pt 248 112)(line_width 3))
 	)
 	(drawing
