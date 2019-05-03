@@ -13,7 +13,8 @@ module gameStateMachine 	(
 
 	output logic [1:0] gameState,
 	output logic playerMoveRight, playerMoveLeft, ropeActive, playerVisible, ballVisible,
-	output logic [10:0] ropeX
+	output logic [10:0] ropeX,
+	output logic presentDrop
 	
 );
 	
@@ -133,5 +134,7 @@ always_comb // Update the outputs //////////////////////
 	
 	endcase
 end // always outputs //////////////////////////////
+
+assign presentDrop = col_rope_ball;
 	
 endmodule

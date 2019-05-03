@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 280 208)
+	(rect 16 16 288 240)
 	(text "present_top" (rect 5 0 76 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 171 24 188)(font "Intel Clear" ))
+	(text "inst" (rect 8 203 24 220)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -88,20 +88,27 @@ agreement for further details.
 		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
 	(port
-		(pt 264 32)
-		(output)
-		(text "presentRequest" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
-		(text "presentRequest" (rect 150 27 243 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 264 32)(pt 248 32))
+		(pt 0 176)
+		(input)
+		(text "nxt_present[1..0]" (rect 0 0 100 19)(font "Intel Clear" (font_size 8)))
+		(text "nxt_present[1..0]" (rect 21 171 121 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
-		(pt 264 48)
+		(pt 272 32)
+		(output)
+		(text "presentRequest" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
+		(text "presentRequest" (rect 158 27 251 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 32)(pt 256 32))
+	)
+	(port
+		(pt 272 48)
 		(output)
 		(text "presentRGBout[7..0]" (rect 0 0 120 19)(font "Intel Clear" (font_size 8)))
-		(text "presentRGBout[7..0]" (rect 123 43 243 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 264 48)(pt 248 48)(line_width 3))
+		(text "presentRGBout[7..0]" (rect 131 43 251 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 272 48)(pt 256 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 248 176))
+		(rectangle (rect 16 16 256 208))
 	)
 )

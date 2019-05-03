@@ -7,6 +7,7 @@
 module  presentsController (
 
 	input logic clk, resetN,
+	
 	input logic dropPresent,
 	
 	input logic col_player_present1,
@@ -17,7 +18,12 @@ module  presentsController (
 	
 	input logic col_player_present3,
 	input logic col_rope_present3,
+	
+	//random present
+	input logic [1:0] nxt_present,
 
+	//sec counter
+	input logic secClk,
 	
 	//Visible
 	output logic present1Visible,
@@ -36,53 +42,156 @@ module  presentsController (
 );
 	
 	
-const int y_FRAME_SIZE =	479;
-	
-enum logic [1:0] {inactive, deploy, active} cur_st, nxt_st;
+enum logic [1:0] {inactive, active} cur_st1, nxt_st1, cur_st2, nxt_st2, cur_st3, nxt_st3;
+logic [3:0] timer1, timer2, timer3, nxt_timer1, nxt_timer2, nxt_timer3; 
+logic [1:0] pType1, pType2, pType3, nxt_pType1, nxt_pType2, nxt_pType3;
+logic nxt_present1Visible, nxt_present2Visible, nxt_present3Visible;
+logic nxt_present1Reset, nxt_present2Reset, nxt_present3Reset;
+parameter maxTime = 10;
 
 
-
-always_ff @(posedge clk or negedge resetN) // State machine logic ////
-   begin
-	   
+always_ff @(posedge clk or negedge resetN)
+begin
    if ( !resetN ) 
-	begin // Asynchronic reset
+	begin // Asynchronic reset	
 	
-		cur_st <= inactive;
+		cur_st1 <= inactive;
+		cur_st2 <= inactive;
+		cur_st3 <= inactive;
+		
+		timer1 <= maxTime;
+		timer2 <= maxTime;
+		timer3 <= maxTime;
+		
+		pType1 <= 0;
+		pType2 <= 0;
+		pType3 <= 0;
+		
+		present1Visible <= 0;
+		present2Visible <= 0;
+		present3Visible <= 0;
+
+		present1Reset <= 0;
+		present2Reset <= 0;
+		present3Reset <= 0;
 		
 	end // asynch
-	else 
-	begin 				// Synchronic logic
+	else
+	begin
 	
-		cur_st <= nxt_st; // Update current state
+		cur_st1 <= nxt_st1; 
+		cur_st2 <= nxt_st2;
+		cur_st3 <= nxt_st3;
 		
-	end 
+		timer1 <= nxt_timer1;
+		timer2 <= nxt_timer2;
+		timer3 <= nxt_timer3;
 		
+		pType1 <= nxt_pType1;
+		pType2 <= nxt_pType2;
+		pType3 <= nxt_pType3;
+		
+		present1Visible <= nxt_present1Visible;
+		present2Visible <= nxt_present2Visible;
+		present3Visible <= nxt_present3Visible;
+		
+		present1Reset <= nxt_present1Reset;
+		present2Reset <= nxt_present2Reset;
+		present3Reset <= nxt_present3Reset;
+		
+	end
 end
 
 
 	
-always_comb // Update the next state  ////////////////////////////////
+always_comb // Update the next state 1  ////////////////////////////////
 begin
 
-		nxt_st = cur_st;	// Set default values
+		nxt_st1 = cur_st1;	// Set default values
+		nxt_st2 = cur_st2;
+		nxt_st3 = cur_st3;
 		
-		case (cur_st)
-					
-			inactive: begin
-						
-			end // inactive
-			
-			
-			deploy: begin
-			
+		nxt_pType1 = pType1;
+		nxt_pType2 = pType2;
+		nxt_pType3 = pType3;
+		
+		nxt_timer1 = timer1;
+		nxt_timer2 = timer2;
+		nxt_timer3 = timer3;
+		
+		if ( dropPresent == 1'b1 )
+		begin
+			if (cur_st1 == inactive) begin
+				nxt_st1 = active;
+				nxt_timer1 = maxTime;
+				nxt_pType1 = nxt_present;
+			end
+				
+			else if (cur_st2 == inactive) begin
+				nxt_st2 = active;
+				nxt_timer2 = maxTime;
+				nxt_pType2 = nxt_present;
 			end
 			
-			active: begin
+			else if (cur_st3 == inactive) begin
+				nxt_st3 = active;
+				nxt_timer3 = maxTime;
+				nxt_pType3 = nxt_present;
+			end
+		end
+
 		
+		case ( cur_st1 )
+		
+			active: begin
+			
+				if ( timer1 > 0 )
+				begin
+					if ( secClk )
+						nxt_timer1 = timer1 - 1;
+				end
+				else
+					nxt_st1 = inactive;
 					
-			end // active
+				if ( col_rope_present1 || col_player_present1 )
+					nxt_st1 = inactive;
 					
+				
+			end
+		
+		endcase
+		
+		case ( cur_st2 )
+		
+			active: begin
+			
+				if ( timer2 > 0 )
+					if ( secClk )
+						nxt_timer2 = timer2 - 1;
+				else
+					nxt_st2 = inactive;
+					
+				if ( col_rope_present2 || col_player_present2 )
+					nxt_st2 = inactive;
+				
+			end
+		
+		endcase
+		
+		case ( cur_st3 )
+		
+			active: begin
+			
+				if ( timer3 > 0 )
+					if ( secClk )
+						nxt_timer3 = timer3 - 1;
+				else
+					nxt_st3 = inactive;
+				
+				if ( col_rope_present3 || col_player_present3 )
+					nxt_st3 = inactive;	
+			end
+		
 		endcase
 
 end // always next state ///////////////////////////////
@@ -91,32 +200,88 @@ end // always next state ///////////////////////////////
 
 always_comb // Update the outputs //////////////////////
   begin
+  
+  	nxt_present1Visible = present1Visible;
+	nxt_present2Visible = present2Visible;
+	nxt_present3Visible = present3Visible;
+	
+	nxt_present1Reset = present1Reset;
+	nxt_present2Reset = present2Reset;
+	nxt_present3Reset = present3Reset;
+	
+	present_type = 0;
 
 	
-	case (cur_st)
+	case (cur_st1) // update outputs for present 1
 				
 		inactive: begin
-
+		
+			nxt_present1Visible = 0;
+			nxt_present1Reset = 0;
 			
 		end // inactive
 							
-		deploy: begin
 
-			
-		end
-		
 		active: begin
 		
+			nxt_present1Visible = 1;
+			nxt_present1Reset = 1;
 			
-		end // active
-	
+			if ( col_rope_present1 || col_player_present1 )
+				present_type = pType1;
+			
+		end // active	
 	endcase
+	
+	
+	case (cur_st2) // update outputs for present 2
+				
+		inactive: begin
+		
+			nxt_present2Visible = 0;
+			nxt_present2Reset = 0;
+										
+		end // inactive
+							
+
+		active: begin
+		
+			nxt_present2Visible = 1;
+			nxt_present2Reset = 1;
+			
+			if ( col_rope_present2 || col_player_present2 )
+					present_type = pType2;
+					
+		end // active	
+	endcase
+	
+	case (cur_st3) // update outputs for present3
+				
+		inactive: begin
+		
+			nxt_present3Visible = 0;
+			nxt_present3Reset = 0;
+			
+		end // inactive
+							
+
+		active: begin
+		
+			nxt_present3Visible = 1;
+			nxt_present3Reset = 1;
+			
+			if ( col_rope_present3 || col_player_present3 )
+					present_type = pType3;
+					
+		end // active	
+	endcase
+	
 end // always outputs //////////////////////////////
 	
 	
 	
-assign col_present = 	col_rope_present1 || col_rope_present2 || col_rope_present3 ||
-									col_player_present1 || col_player_present2 || col_player_present3;
+assign col_present =	col_rope_present1 || col_rope_present2 || col_rope_present3 ||
+								col_player_present1 || col_player_present2 || col_player_present3;
 
 	
 endmodule
