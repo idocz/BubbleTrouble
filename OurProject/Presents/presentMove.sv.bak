@@ -1,0 +1,104 @@
+//-- Alex Grinshpun Apr 2017
+//-- Dudy Nov 13 2017
+// SystemVerilog version Alex Grinshpun May 2018
+// coding convention dudy December 2018
+
+
+module presentMove	(	
+ 
+					input	logic	clk,
+					input	logic	resetN,
+					input	logic	startOfFrame,  // short pulse every start of frame 30Hz
+					input logic [10:0] initialX, initialY,
+					input shortint initialXspeed, initialYspeed,
+					
+					output	logic	[10:0]	topLeftX,// output the top left corner 
+					output	logic	[10:0]	topLeftY,
+					output   shortint   Xspeed, Yspeed
+					
+);
+
+
+// a module used to generate a ball trajectory.  
+
+parameter int g = 1;
+
+const int	MULTIPLIER	=	64;
+// multiplier is used to work with integers in high resolution 
+// we devide at the end by multiplier which must be 2^n 
+const int	x_FRAME_SIZE	=	639 * MULTIPLIER;
+const int	y_FRAME_SIZE	=	479 * MULTIPLIER;
+
+
+int Xspeed_tmp, topLeftX_tmp; // local parameters 
+int Yspeed_tmp, topLeftY_tmp;
+
+
+//  calculation x Axis speed 
+
+always_ff@(posedge clk or negedge resetN)
+begin
+	if(!resetN) begin
+		Xspeed_tmp	<= initialXspeed;
+	end
+
+	else 	begin
+			
+			if ((topLeftX_tmp <= 0 ) && (Xspeed_tmp < 0) ) // hit left border while moving right
+				Xspeed_tmp <= -Xspeed_tmp ; 
+			
+			if ( (topLeftX_tmp >= x_FRAME_SIZE) && (Xspeed_tmp > 0 )) // hit right border while moving left
+				Xspeed_tmp <= -Xspeed_tmp ; 
+	end
+end
+
+
+//  calculation Y Axis speed using gravity
+
+always_ff@(posedge clk or negedge resetN)
+begin
+	if(!resetN) begin 
+		Yspeed_tmp	<= initialYspeed;
+	end 
+	else 
+	begin
+	
+		if (startOfFrame == 1'b1) 
+			Yspeed_tmp <= Yspeed_tmp  + g ; // gravity force 
+			
+		if ((topLeftY_tmp <= 0 ) && (Yspeed_tmp < 0 )) // hit top border heading up
+			Yspeed_tmp <= -Yspeed_tmp ; 
+			
+		if ( ( topLeftY_tmp >= y_FRAME_SIZE) && (Yspeed_tmp > 0 )) //hit bottom border heading down 
+			Yspeed_tmp <= -Yspeed_tmp ; 
+			
+	end 
+end
+
+// position calculate 
+
+always_ff@(posedge clk or negedge resetN)
+begin
+	if(!resetN)
+	begin
+		topLeftX_tmp	<= initialX * MULTIPLIER;
+		topLeftY_tmp	<= initialY * MULTIPLIER;
+	end
+	else begin
+		if (startOfFrame == 1'b1) begin // perform only 30 times per second 
+				topLeftX_tmp  <= topLeftX_tmp + Xspeed_tmp;  
+				topLeftY_tmp  <= topLeftY_tmp + Yspeed_tmp; 
+			end
+	end
+end
+
+//get a better (64 times) resolution using integer   
+assign 	topLeftX = topLeftX_tmp / MULTIPLIER ;   // note it must be 2^n 
+assign 	topLeftY = topLeftY_tmp / MULTIPLIER ;  
+
+assign Xspeed = Xspeed_tmp;
+assign Yspeed = Yspeed_tmp;
+
+
+
+endmodule

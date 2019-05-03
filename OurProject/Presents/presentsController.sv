@@ -24,6 +24,7 @@ module  presentsController (
 
 	//sec counter
 	input logic secClk,
+	input logic presentsVisible,
 	
 	//Visible
 	output logic present1Visible,
@@ -35,6 +36,9 @@ module  presentsController (
 	output logic present2Reset,
 	output logic present3Reset,
 	
+	//presents types
+	output logic [1:0] pType1, pType2, pType3,
+	
 	output logic col_present,
 	output logic [1:0] present_type
 	
@@ -44,7 +48,7 @@ module  presentsController (
 	
 enum logic [1:0] {inactive, active} cur_st1, nxt_st1, cur_st2, nxt_st2, cur_st3, nxt_st3;
 logic [3:0] timer1, timer2, timer3, nxt_timer1, nxt_timer2, nxt_timer3; 
-logic [1:0] pType1, pType2, pType3, nxt_pType1, nxt_pType2, nxt_pType3;
+logic [1:0] nxt_pType1, nxt_pType2, nxt_pType3;
 logic nxt_present1Visible, nxt_present2Visible, nxt_present3Visible;
 logic nxt_present1Reset, nxt_present2Reset, nxt_present3Reset;
 parameter maxTime = 10;
@@ -153,7 +157,7 @@ begin
 				else
 					nxt_st1 = inactive;
 					
-				if ( col_rope_present1 || col_player_present1 )
+				if ( col_rope_present1 || col_player_present1 || presentsVisible == 1'b0 )
 					nxt_st1 = inactive;
 					
 				
@@ -166,12 +170,14 @@ begin
 			active: begin
 			
 				if ( timer2 > 0 )
+				begin
 					if ( secClk )
 						nxt_timer2 = timer2 - 1;
+				end
 				else
 					nxt_st2 = inactive;
 					
-				if ( col_rope_present2 || col_player_present2 )
+				if ( col_rope_present2 || col_player_present2 || presentsVisible == 1'b0 )
 					nxt_st2 = inactive;
 				
 			end
@@ -183,12 +189,14 @@ begin
 			active: begin
 			
 				if ( timer3 > 0 )
+				begin
 					if ( secClk )
 						nxt_timer3 = timer3 - 1;
+				end
 				else
 					nxt_st3 = inactive;
 				
-				if ( col_rope_present3 || col_player_present3 )
+				if ( col_rope_present3 || col_player_present3 || presentsVisible == 1'b0 )
 					nxt_st3 = inactive;	
 			end
 		
@@ -210,7 +218,7 @@ always_comb // Update the outputs //////////////////////
 	nxt_present3Reset = present3Reset;
 	
 	present_type = 0;
-
+	col_present = 0;
 	
 	case (cur_st1) // update outputs for present 1
 				
@@ -228,7 +236,10 @@ always_comb // Update the outputs //////////////////////
 			nxt_present1Reset = 1;
 			
 			if ( col_rope_present1 || col_player_present1 )
-				present_type = pType1;
+			begin
+					col_present = 1;
+					present_type = pType1;
+			end
 			
 		end // active	
 	endcase
@@ -248,9 +259,12 @@ always_comb // Update the outputs //////////////////////
 		
 			nxt_present2Visible = 1;
 			nxt_present2Reset = 1;
-			
+
 			if ( col_rope_present2 || col_player_present2 )
+			begin
+					col_present = 1;
 					present_type = pType2;
+			end
 					
 		end // active	
 	endcase
@@ -269,19 +283,18 @@ always_comb // Update the outputs //////////////////////
 		
 			nxt_present3Visible = 1;
 			nxt_present3Reset = 1;
-			
+
 			if ( col_rope_present3 || col_player_present3 )
+			begin
+					col_present = 1;
 					present_type = pType3;
+			end
 					
 		end // active	
 	endcase
 	
 end // always outputs //////////////////////////////
 	
-	
-	
-assign col_present =	col_rope_present1 || col_rope_present2 || col_rope_present3 ||
-								col_player_present1 || col_player_present2 || col_player_present3;
 
 	
 endmodule

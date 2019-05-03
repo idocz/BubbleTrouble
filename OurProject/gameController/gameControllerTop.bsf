@@ -109,6 +109,13 @@ agreement for further details.
 		(line (pt 0 208)(pt 16 208)(line_width 3))
 	)
 	(port
+		(pt 0 224)
+		(input)
+		(text "secClk" (rect 0 0 37 19)(font "Intel Clear" (font_size 8)))
+		(text "secClk" (rect 21 219 58 238)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
 		(pt 288 32)
 		(output)
 		(text "playerMoveRight" (rect 0 0 100 19)(font "Intel Clear" (font_size 8)))
@@ -163,6 +170,20 @@ agreement for further details.
 		(text "dropPresent" (rect 0 0 73 19)(font "Intel Clear" (font_size 8)))
 		(text "dropPresent" (rect 194 139 267 158)(font "Intel Clear" (font_size 8)))
 		(line (pt 288 144)(pt 272 144))
+	)
+	(port
+		(pt 288 160)
+		(output)
+		(text "presentsVisible" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "presentsVisible" (rect 177 155 267 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 160)(pt 272 160))
+	)
+	(port
+		(pt 288 176)
+		(output)
+		(text "gameTime[11..0]" (rect 0 0 102 19)(font "Intel Clear" (font_size 8)))
+		(text "gameTime[11..0]" (rect 165 171 267 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 176)(pt 272 176)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 272 240))
