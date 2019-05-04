@@ -46,15 +46,17 @@ begin
 			tmpRGB	<= 8'b0;
 	end
 	else begin
-		if (playerDrawingRequest == 1'b1 )   
-			tmpRGB <= playerRGB;  //first priority 
-		
-		else if (presentDrawingRequest == 1'b1)
+		//first priority
+ 
+		if (presentDrawingRequest == 1'b1)
 			tmpRGB <= presentRGB;
 			
 		else if (ballDrawingRequest == 1'b1)
 			tmpRGB <= ballRGB;
 		
+		else if (playerDrawingRequest == 1'b1 )   
+			tmpRGB <= playerRGB; 
+			
 		else if(ropeDrawingRequest == 1'b1)
 			tmpRGB <= ropeRGB;
 		

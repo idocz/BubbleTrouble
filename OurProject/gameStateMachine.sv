@@ -148,6 +148,9 @@ always_comb // Update the outputs //////////////////////
 			nxt_ropeActive = 0;
 			nxt_gameTime = 0;
 			nxt_lives = INITIAL_LIVES;
+			nxt_superRope = 0;
+			nxt_immortal = 0;
+			nxt_superSpeed = 0;
 			
 		end // welcomeScreen
 							
@@ -171,7 +174,7 @@ always_comb // Update the outputs //////////////////////
 			begin
 				nxt_lives = lives - 1;
 				nxt_immortal = 1;
-				nxt_immortalTimer = MAX_IMMORTAL_TIMER;
+				nxt_immortalTimer = 3;
 				playerReset = 1;
 			end
 				

@@ -666,11 +666,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 496 328)
-	(pt 600 328)
-	(bus)
-)
-(connector
 	(pt 600 328)
 	(pt 600 384)
 	(bus)
@@ -678,11 +673,6 @@ agreement for further details.
 (connector
 	(pt 696 384)
 	(pt 600 384)
-	(bus)
-)
-(connector
-	(pt 496 344)
-	(pt 584 344)
 	(bus)
 )
 (connector
@@ -727,6 +717,18 @@ agreement for further details.
 	(text "initialYspeed[15..0]" (rect 154 408 244 425)(font "Intel Clear" ))
 	(pt 264 424)
 	(pt 144 424)
+	(bus)
+)
+(connector
+	(text "topLeftX[10..0]" (rect 515 312 585 329)(font "Intel Clear" ))
+	(pt 496 328)
+	(pt 600 328)
+	(bus)
+)
+(connector
+	(text "topLeftY[10..0]" (rect 514 328 584 345)(font "Intel Clear" ))
+	(pt 496 344)
+	(pt 584 344)
 	(bus)
 )
 (text "Big Ball Unit" (rect 64 176 137 195)(font "Intel Clear" (font_size 8)))

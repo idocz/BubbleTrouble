@@ -20,6 +20,22 @@ module	ballMux	(
 					input    logic [7:0] biGBall2RGB,
 					input    logic bigBall2Request,
 					
+					// Medium Ball 4
+					input    logic [7:0] mediumBall1RGB,
+					input    logic mediumBall1Request,
+					
+					// Medium Ball 4
+					input    logic [7:0] mediumBall2RGB,
+					input    logic mediumBall2Request,
+					
+					// Medium Ball 4
+					input    logic [7:0] mediumBall3RGB,
+					input    logic mediumBall3Request,
+					
+					// Medium Ball 4
+					input    logic [7:0] mediumBall4RGB,
+					input    logic mediumBall4Request,
+					
 
 					output 	logic ballRequest,
 					output	logic	[7:0] ballRGBout // full 24 bits color output
@@ -34,8 +50,21 @@ begin
 			ballRGBout	<= 8'b0;
 	end
 	else begin
-		if (bigBall1Request == 1'b1 )   
-			ballRGBout <= biGBall1RGB;  //first priority 
+	
+		if (mediumBall1Request == 1'b1 ) //first priority
+			ballRGBout <= mediumBall1RGB;
+		
+		else if (mediumBall2Request == 1'b1 )   
+			ballRGBout <= mediumBall2RGB;
+		
+		else if (mediumBall3Request == 1'b1 )   
+			ballRGBout <= mediumBall3RGB;
+			
+		else if (mediumBall4Request == 1'b1 )   
+			ballRGBout <= mediumBall4RGB;
+			
+		else if (bigBall1Request == 1'b1 )   
+			ballRGBout <= biGBall1RGB;   
 		
 		else if (bigBall2Request == 1'b1)
 			ballRGBout <= biGBall2RGB;
@@ -45,7 +74,9 @@ begin
 		end ;
 	end
 
-	assign ballRequest = hugeBallRequest || bigBall1Request || bigBall2Request;
+	assign ballRequest = hugeBallRequest || 
+								bigBall1Request || bigBall2Request || 
+								mediumBall1Request || mediumBall2Request || mediumBall3Request || mediumBall4Request;
 	
 	
 endmodule

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dZ:/BubbleTrouble/OurProject/simulation/qsim
+vTOP_VGA_DEMO_WITH_MSS_ALL
+!s110 1556989668
+!i10b 1
+!s100 MfCb]i6b7a7@X?04g>lI@3
+I_MDedG`oT;[<2XfPU0C3]0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1556989666
+8Lab1Demo.vo
+FLab1Demo.vo
+L0 32
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1556989665.000000
+!s107 Lab1Demo.vo|
+!s90 -work|work|Lab1Demo.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@t@o@p_@v@g@a_@d@e@m@o_@w@i@t@h_@m@s@s_@a@l@l
+vTOP_VGA_DEMO_WITH_MSS_ALL_vlg_vec_tst
+!s110 1556989674
+!i10b 1
+!s100 g>Qi_ba5bPObejTIJaaMl2
+IQJ<ch[BGZL51e?@zA0N201
+R1
+R0
+w1556989652
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R2
+r1
+!s85 0
+31
+!s108 1556989669.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R3
+R4
+n@t@o@p_@v@g@a_@d@e@m@o_@w@i@t@h_@m@s@s_@a@l@l_vlg_vec_tst
