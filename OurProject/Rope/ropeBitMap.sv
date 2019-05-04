@@ -12,19 +12,46 @@ module	ropeBitMap	(
 					input logic	[10:0] offsetX,// offset from top left  position 
 					input logic	[10:0] offsetY,
 					input	logic	InsideRectangle, //input that the pixel is within a bracket 
+					input logic superRope,
 
 					output	logic	drawingRequest, //output that the pixel should be dispalyed 
 					output	logic	[7:0] RGBout  //rgb value from the bitmap 
 );
 // generating a smiley bitmap 
 
-localparam  int OBJECT_WIDTH_X = 6;
-localparam  int OBJECT_HEIGHT_Y = 480;
-localparam  logic [7:0] RC = 8'hD0;    //RopeColor
+localparam  int OBJECT_WIDTH_X = 7;
+localparam  int OBJECT_HEIGHT_Y = 8;
+localparam  logic [7:0] RC = 8'b00011100;    //RopeColor
+localparam  logic [7:0] SRC = 8'b11100000;    //Super RopeColor
 
 localparam logic [7:0] TRANSPARENT_ENCODING = 8'hFF ;// RGB value in the bitmap representing a transparent pixel 
 
-logic [0:OBJECT_WIDTH_X-1] [7:0] object_colors = { RC, RC, RC, RC, RC, RC};
+logic [0:1] [0:OBJECT_HEIGHT_Y-1][0:OBJECT_WIDTH_X-1] [7:0] object_colors = 
+{
+{
+{8'hFF, 8'hFF, RC, RC, RC, 8'hFF,8'hFF},
+{8'hFF, 8'hFF, 8'hFF, RC, RC, RC,8'hFF},
+{8'hFF, 8'hFF, 8'hFF, 8'hFF, RC, RC,RC},
+{8'hFF, 8'hFF, 8'hFF, RC, RC, RC,8'hFF},
+{8'hFF, 8'hFF, RC, RC, RC, 8'hFF,8'hFF},
+{8'hFF, RC, RC, RC, 8'hFF , 8'hFF,8'hFF},
+{RC, RC, RC, 8'hFF, 8'hFF , 8'hFF,8'hFF},
+{8'hFF, RC, RC, RC, 8'hFF , 8'hFF,8'hFF}
+},
+
+{
+{8'hFF, 8'hFF,SRC,SRC,SRC,8'hFF,8'hFF},
+{8'hFF, 8'hFF,8'hFF,SRC,SRC,SRC,8'hFF},
+{8'hFF, 8'hFF,8'hFF,8'hFF, SRC,SRC,SRC},
+{8'hFF, 8'hFF,8'hFF,SRC,SRC,SRC,8'hFF},
+{8'hFF, 8'hFF,SRC,SRC,SRC,8'hFF,8'hFF},
+{8'hFF, SRC,SRC, SRC, 8'hFF , 8'hFF,8'hFF},
+{SRC, SRC, SRC, 8'hFF, 8'hFF , 8'hFF,8'hFF},
+{8'hFF, SRC, SRC, SRC, 8'hFF , 8'hFF,8'hFF}
+}
+
+
+};
 
 
 // pipeline (ff) to get the pixel color from the array 	 
@@ -36,7 +63,7 @@ begin
 	end
 	else begin
 		if (InsideRectangle == 1'b1 )  // inside an external bracket 
-			RGBout <= object_colors[offsetX];	//get RGB from the colors table  
+			RGBout <= object_colors[superRope][offsetY % 8][offsetX];	//get RGB from the colors table  
 		else 
 			RGBout <= TRANSPARENT_ENCODING ; // force color to transparent so it will not be displayed 
 	end 

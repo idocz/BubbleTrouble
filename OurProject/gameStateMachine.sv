@@ -17,40 +17,48 @@ module gameStateMachine 	(
 	output logic [1:0] gameState,
 	output logic playerMoveRight, playerMoveLeft, ropeActive, playerVisible, ballVisible, presentsVisible,
 	output logic [10:0] ropeX,
-	output logic presentDrop,
-	output logic immortal
+	output logic presentDrop, playerReset,
+	output logic immortal, superSpeed, superRope,
+	output shortint lives
 	
 );
 	
 const int y_FRAME_SIZE =	479;
 parameter INITIAL_LIVES = 1;
+parameter MAX_IMMORTAL_TIMER = 5;
+parameter MAX_ROPE_TIMER = 5;
+parameter MAX_SUPERSPEED_TIMER = 5;
 	
 enum logic [2:0] {welcomeScreen, playMode, gameOver} cur_st, nxt_st;
-shortint lives, nxt_lives;
+shortint nxt_lives;
 logic [10:0] nxt_ropeX;
 logic nxt_ropeActive;
 logic [11:0] nxt_gameTime;
-logic superRope, nxt_superRope;
-logic [2:0] superRopeTimer, nxt_superRopeTimer;
-logic nxt_immortal;
+logic [2:0] superRopeTimer, nxt_superRopeTimer, immortalTimer, nxt_immortalTimer, superSpeedTimer, nxt_superSpeedTimer;
+logic nxt_immortal, nxt_superSpeed, nxt_superRope;
 
 
 always_ff @(posedge clk or negedge resetN) // State machine logic ////
    begin
 	   
    if ( !resetN ) begin // Asynchronic reset
+	
 		cur_st <= welcomeScreen;
 		lives <= INITIAL_LIVES;
-		superRope <= 0;
 		ropeX <= 0;
 		ropeActive <= 0;
 		gameTime <= 0;
+		superRope <= 0;
 		superRopeTimer <= 0;
 		immortal <= 0;
+		immortalTimer <= 0;
+		superSpeed <= 0;
+		superSpeedTimer <= 0;
 		
 	end // asynch
 	else 
-	begin 				// Synchronic logic	
+	begin  // Synchronic logic
+	
 		cur_st <= nxt_st; // Update current state
 		lives <= nxt_lives;
 		ropeX <= nxt_ropeX;
@@ -59,6 +67,9 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		superRope <= nxt_superRope;
 		superRopeTimer <= nxt_superRopeTimer;
 		immortal <= nxt_immortal;
+		immortalTimer <= nxt_immortalTimer;
+		superSpeed <= nxt_superSpeed;
+		superSpeedTimer <= nxt_superSpeedTimer;
 	end 
 		
 end
@@ -104,20 +115,30 @@ end // always next state ///////////////////////////////
 always_comb // Update the outputs //////////////////////
   begin
 	
-	gameState = 0;	// Set default values
-	nxt_lives = lives;
+	// Set default values
+	
+	gameState = 0;	
 	playerMoveRight = 0;
 	playerMoveLeft = 0;
-	nxt_ropeActive = ropeActive;
 	playerVisible = 0;
+	playerReset = 0;
 	ballVisible = 0;
 	presentsVisible = 0;
-	nxt_ropeX = ropeX;
-	nxt_gameTime = gameTime;
 	presentDrop = 0;
+	
+	nxt_lives = lives;
+	nxt_gameTime = gameTime;
+	
+	nxt_ropeX = ropeX;
 	nxt_superRope = superRope;
+	nxt_ropeActive = ropeActive;
 	nxt_superRopeTimer = superRopeTimer;
+	
 	nxt_immortal = immortal;
+	nxt_immortalTimer = immortalTimer;
+	
+	nxt_superSpeed = superSpeed;
+	nxt_superSpeedTimer = superSpeedTimer;
 	
 	case (cur_st)
 				
@@ -139,8 +160,6 @@ always_comb // Update the outputs //////////////////////
 			
 			if ( ropeTopY <= 0 && !superRope )
 				nxt_ropeActive = 0;
-			else if ( ropeTopY <= 0 && superRope )
-				nxt_superRopeTimer = 5;
 			
 			if ( spaceBar && ropeActive == 0) 
 			begin
@@ -149,7 +168,12 @@ always_comb // Update the outputs //////////////////////
 			end
 			
 			if ( col_player_ball )
+			begin
 				nxt_lives = lives - 1;
+				nxt_immortal = 1;
+				nxt_immortalTimer = MAX_IMMORTAL_TIMER;
+				playerReset = 1;
+			end
 				
 			if ( col_rope_ball )
 			begin
@@ -169,6 +193,7 @@ always_comb // Update the outputs //////////////////////
 			if ( gameTime % 3 == 0 && secClk )
 				presentDrop = 1;
 				
+			// Present Collector
 			if ( col_present ) 
 			begin
 			
@@ -176,16 +201,28 @@ always_comb // Update the outputs //////////////////////
 					nxt_lives = lives + 1;
 					
 				else if ( presentType == 2'b01 ) // super rope
+				begin
 					nxt_superRope = 1;
-					
-				//else if ( presentType == 2'b10 ) // super speed
+					nxt_superRopeTimer = MAX_ROPE_TIMER;
+				end
+				
+				
+				else if ( presentType == 2'b10 ) // super speed
+				begin
+					nxt_superSpeed = 1;
+					nxt_superSpeedTimer = MAX_SUPERSPEED_TIMER;
+				end
 				
 				else if ( presentType == 2'b11 ) // immortal
+				begin
 					nxt_immortal = 1;
-
+					nxt_immortalTimer = MAX_IMMORTAL_TIMER;
+				end
+					
 			end
 			
-		
+			
+			// Super Rope Timer
 			if ( secClk && superRope && ropeTopY <= 0 )
 			begin
 				if ( superRopeTimer > 0 )
@@ -193,6 +230,27 @@ always_comb // Update the outputs //////////////////////
 				else
 					nxt_superRope = 0;
 			end
+			
+			
+			// Immortal Timer
+			if ( secClk && immortal )
+			begin
+				if ( immortalTimer > 0 )
+					nxt_immortalTimer = immortalTimer - 1;
+				else
+					nxt_immortal = 0;
+			end
+			
+			
+			// Super Speed Timer
+			if ( secClk && superSpeed )
+			begin
+				if ( superSpeedTimer > 0 )
+					nxt_superSpeedTimer = superSpeedTimer - 1;
+				else
+					nxt_superSpeed = 0;
+			end
+			
 			
 
 		end // playMode

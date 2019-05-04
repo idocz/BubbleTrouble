@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 256 256)
+	(rect 16 16 256 320)
 	(text "gameStateMachine" (rect 5 0 80 12)(font "Arial" ))
-	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -181,17 +181,60 @@ agreement for further details.
 	(port
 		(pt 240 192)
 		(output)
-		(text "immortal" (rect 0 0 34 12)(font "Arial" ))
-		(text "immortal" (rect 185 187 219 199)(font "Arial" ))
+		(text "playerReset" (rect 0 0 49 12)(font "Arial" ))
+		(text "playerReset" (rect 170 187 219 199)(font "Arial" ))
 		(line (pt 240 192)(pt 224 192)(line_width 1))
+	)
+	(port
+		(pt 240 208)
+		(output)
+		(text "immortal" (rect 0 0 34 12)(font "Arial" ))
+		(text "immortal" (rect 185 203 219 215)(font "Arial" ))
+		(line (pt 240 208)(pt 224 208)(line_width 1))
+	)
+	(port
+		(pt 240 224)
+		(output)
+		(text "superSpeed" (rect 0 0 47 12)(font "Arial" ))
+		(text "superSpeed" (rect 172 219 219 231)(font "Arial" ))
+		(line (pt 240 224)(pt 224 224)(line_width 1))
+	)
+	(port
+		(pt 240 240)
+		(output)
+		(text "superRope" (rect 0 0 44 12)(font "Arial" ))
+		(text "superRope" (rect 175 235 219 247)(font "Arial" ))
+		(line (pt 240 240)(pt 224 240)(line_width 1))
+	)
+	(port
+		(pt 240 256)
+		(output)
+		(text "lives[15..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "lives[15..0]" (rect 178 251 219 263)(font "Arial" ))
+		(line (pt 240 256)(pt 224 256)(line_width 3))
 	)
 	(parameter
 		"INITIAL_LIVES"
 		"1"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_IMMORTAL_TIMER"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_ROPE_TIMER"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_SUPERSPEED_TIMER"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 224 224)(line_width 1))
+		(rectangle (rect 16 16 224 288)(line_width 1))
 	)
 	(annotation_block (parameter)(rect 256 -64 356 16))
 )
