@@ -666,11 +666,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 512 448)
-	(pt 616 448)
-	(bus)
-)
-(connector
 	(pt 616 448)
 	(pt 616 504)
 	(bus)
@@ -678,11 +673,6 @@ agreement for further details.
 (connector
 	(pt 712 504)
 	(pt 616 504)
-	(bus)
-)
-(connector
-	(pt 512 464)
-	(pt 600 464)
 	(bus)
 )
 (connector
@@ -727,6 +717,18 @@ agreement for further details.
 	(text "initialYspeed[15..0]" (rect 170 528 260 545)(font "Intel Clear" ))
 	(pt 280 544)
 	(pt 160 544)
+	(bus)
+)
+(connector
+	(text "topLeftX[10..0]" (rect 522 432 592 449)(font "Intel Clear" ))
+	(pt 512 448)
+	(pt 616 448)
+	(bus)
+)
+(connector
+	(text "topLeftY[10..0]" (rect 522 448 592 465)(font "Intel Clear" ))
+	(pt 512 464)
+	(pt 600 464)
 	(bus)
 )
 (text "Inputs" (rect 56 32 92 51)(font "Intel Clear" (font_size 8)))

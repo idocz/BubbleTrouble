@@ -16,9 +16,17 @@ module	objects_mux	(
 					input    logic [7:0] presentRGB,
 					input    logic presentDrawingRequest,
 					
-					//ball
-					input    logic [7:0] ballRGB,
-					input    logic ballDrawingRequest,
+					//ball1
+					input    logic [7:0] ball1RGB,
+					input    logic ball1DrawingRequest,
+					
+					//ball2
+					input    logic [7:0] ball2RGB,
+					input    logic ball2DrawingRequest,
+					
+					//ball3
+					input    logic [7:0] ball3RGB,
+					input    logic ball3DrawingRequest,
 					
 					//rope
 					input    logic [7:0] ropeRGB,
@@ -46,13 +54,20 @@ begin
 			tmpRGB	<= 8'b0;
 	end
 	else begin
+	
 		//first priority
- 
+		
 		if (presentDrawingRequest == 1'b1)
 			tmpRGB <= presentRGB;
 			
-		else if (ballDrawingRequest == 1'b1)
-			tmpRGB <= ballRGB;
+		else if (ball1DrawingRequest == 1'b1)
+			tmpRGB <= ball1RGB;
+			
+		else if (ball2DrawingRequest == 1'b1)
+			tmpRGB <= ball2RGB;
+			
+		else if (ball3DrawingRequest == 1'b1)
+			tmpRGB <= ball3RGB;
 		
 		else if (playerDrawingRequest == 1'b1 )   
 			tmpRGB <= playerRGB; 

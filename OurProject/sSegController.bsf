@@ -41,8 +41,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "gameTime[11..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "gameTime[11..0]" (rect 21 59 85 71)(font "Arial" ))
+		(text "integerInput[15..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "integerInput[15..0]" (rect 21 59 89 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
