@@ -4,19 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "VGA_G[7]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[6]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[7]",
-					"strict" : false
-				},
-				{
 					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
@@ -140,11 +136,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "VGA_VS",
+					"name" : "VGA_G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_CLK",
+					"name" : "VGA_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[6]",
 					"strict" : false
 				},
 				{
@@ -197,10 +201,6 @@
 				},
 				{
 					"name" : "VGA_G[0]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[6]",
 					"strict" : false
 				},
 				{

@@ -13,6 +13,7 @@ module	backgroundDraw	(
 					input 	logic	[10:0]	pixelX,
 					input 	logic	[10:0]	pixelY,
 
+					output	logic infoRequest,
 					output	logic	[7:0]	BG_RGB
 );
 

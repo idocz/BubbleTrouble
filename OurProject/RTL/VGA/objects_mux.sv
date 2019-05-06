@@ -33,6 +33,8 @@ module	objects_mux	(
 					input    logic ropeDrawingRequest,
 					
 					// background 
+					input		logic INFO_Request,
+					input		logic	[7:0] infoBackgroundRGB, 
 					input		logic	[7:0] backGroundRGB, 
 
 					output	logic	[7:0] redOut, // full 24 bits color output
@@ -57,7 +59,10 @@ begin
 	
 		//first priority
 		
-		if (presentDrawingRequest == 1'b1)
+		if (INFO_Request == 1'b1)
+			tmpRGB <= infoBackgroundRGB;
+			
+		else if (presentDrawingRequest == 1'b1)
 			tmpRGB <= presentRGB;
 			
 		else if (ball1DrawingRequest == 1'b1)

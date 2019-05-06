@@ -1,5 +1,5 @@
 Assembler report for Lab1Demo
-Sun May 05 22:30:31 2019
+Mon May 06 22:12:02 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun May 05 22:30:31 2019 ;
+; Assembler Status      ; Successful - Mon May 06 22:12:02 2019 ;
 ; Revision Name         ; Lab1Demo                              ;
 ; Top-level Entity Name ; TOP_VGA_DEMO_WITH_MSS_ALL             ;
 ; Family                ; Cyclone V                             ;
@@ -80,8 +80,8 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                          ;
 +----------------+--------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x037062DA                                                                                       ;
-; Checksum       ; 0x037062DA                                                                                       ;
+; JTAG usercode  ; 0x036B8383                                                                                       ;
+; Checksum       ; 0x036B8383                                                                                       ;
 +----------------+--------------------------------------------------------------------------------------------------+
 
 
@@ -91,7 +91,7 @@ agreement for further details.
 ; Option             ; Setting                                                                                      ;
 +--------------------+----------------------------------------------------------------------------------------------+
 ; JTAG usercode      ; 0x00000000                                                                                   ;
-; Checksum           ; 0xDEF096D1                                                                                   ;
+; Checksum           ; 0xDF134295                                                                                   ;
 ; Compression Ratio  ; 2                                                                                            ;
 +--------------------+----------------------------------------------------------------------------------------------+
 
@@ -102,13 +102,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun May 05 22:30:06 2019
+    Info: Processing started: Mon May 06 22:11:38 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projectTop -c Lab1Demo
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 5102 megabytes
-    Info: Processing ended: Sun May 05 22:30:32 2019
-    Info: Elapsed time: 00:00:26
+    Info: Peak virtual memory: 5107 megabytes
+    Info: Processing ended: Mon May 06 22:12:02 2019
+    Info: Elapsed time: 00:00:24
     Info: Total CPU time (on all processors): 00:00:25
 
 

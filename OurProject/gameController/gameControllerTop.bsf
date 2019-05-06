@@ -395,6 +395,13 @@ agreement for further details.
 		(text "level[3..0]" (rect 240 491 299 510)(font "Intel Clear" (font_size 8)))
 		(line (pt 320 496)(pt 304 496)(line_width 3))
 	)
+	(port
+		(pt 320 512)
+		(output)
+		(text "maxScore1[15..0]" (rect 0 0 105 19)(font "Intel Clear" (font_size 8)))
+		(text "maxScore1[15..0]" (rect 194 507 299 526)(font "Intel Clear" (font_size 8)))
+		(line (pt 320 512)(pt 304 512)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 304 528))
 	)

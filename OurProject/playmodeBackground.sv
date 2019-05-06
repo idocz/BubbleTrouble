@@ -9,7 +9,6 @@ module	playmodeBackground	(
 
 					input	logic	clk,
 					input	logic	resetN,
-					input logic [1:0] bgState,
 					input 	logic	[10:0]	pixelX,
 					input 	logic	[10:0]	pixelY,
 

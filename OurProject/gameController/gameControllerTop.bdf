@@ -868,6 +868,22 @@ agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect -144 1176 33 1192)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "maxScore1[15..0]" (rect 90 0 171 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 928 80 1176 352)
 	(text "collisionDetector" (rect 5 0 86 12)(font "Arial" ))
@@ -1371,58 +1387,6 @@ agreement for further details.
 	(annotation_block (parameter)(rect 1280 1576 1450 1652))
 )
 (symbol
-	(rect 1584 192 1800 304)
-	(text "randomPresent" (rect 5 0 79 12)(font "Arial" ))
-	(text "inst6" (rect 8 96 30 113)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
-		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "rise" (rect 0 0 17 12)(font "Arial" ))
-		(text "rise" (rect 21 59 38 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "dout[SIZE_BITS-1..0]" (rect 0 0 105 12)(font "Arial" ))
-		(text "dout[SIZE_BITS-1..0]" (rect 107 27 212 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
-	)
-	(parameter
-		"SIZE_BITS"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MIN_VAL"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MAX_VAL"
-		"3"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 200 96))
-	)
-	(annotation_block (parameter)(rect 1600 112 1770 188))
-)
-(symbol
 	(rect 1096 1032 1320 1208)
 	(text "levelStateMachine" (rect 5 0 94 12)(font "Arial" ))
 	(text "inst9" (rect 8 160 31 172)(font "Arial" ))
@@ -1592,9 +1556,61 @@ agreement for further details.
 	(annotation_block (parameter)(rect 1592 1008 1761 1236))
 )
 (symbol
-	(rect 1232 608 1480 912)
+	(rect 1576 192 1792 304)
+	(text "randomPresent" (rect 5 0 79 12)(font "Arial" ))
+	(text "inst6" (rect 8 96 30 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "rise" (rect 0 0 17 12)(font "Arial" ))
+		(text "rise" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "dout[SIZE_BITS-1..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "dout[SIZE_BITS-1..0]" (rect 107 27 212 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(parameter
+		"SIZE_BITS"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MIN_VAL"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_VAL"
+		"400"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 96))
+	)
+	(annotation_block (parameter)(rect 1592 112 1762 188))
+)
+(symbol
+	(rect 1224 592 1472 928)
 	(text "gameStateMachine" (rect 5 0 98 12)(font "Arial" ))
-	(text "inst" (rect 8 288 25 300)(font "Arial" ))
+	(text "inst" (rect 8 320 25 332)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1801,9 +1817,16 @@ agreement for further details.
 	(port
 		(pt 248 272)
 		(output)
+		(text "maxScore[15..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "maxScore[15..0]" (rect 159 267 227 279)(font "Arial" ))
+		(line (pt 248 272)(pt 232 272)(line_width 3))
+	)
+	(port
+		(pt 248 288)
+		(output)
 		(text "playmodeEnable" (rect 0 0 81 12)(font "Arial" ))
-		(text "playmodeEnable" (rect 159 267 227 279)(font "Arial" ))
-		(line (pt 248 272)(pt 232 272))
+		(text "playmodeEnable" (rect 159 283 227 295)(font "Arial" ))
+		(line (pt 248 288)(pt 232 288))
 	)
 	(parameter
 		"INITIAL_LIVES"
@@ -1836,9 +1859,9 @@ agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 232 288))
+		(rectangle (rect 16 16 232 320))
 	)
-	(annotation_block (parameter)(rect 1248 472 1528 608))
+	(annotation_block (parameter)(rect 1240 456 1520 592))
 )
 (connector
 	(text "playerDrawingRequest" (rect 802 128 910 145)(font "Intel Clear" ))
@@ -2051,160 +2074,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "col_present_out" (rect 1144 752 1220 769)(font "Intel Clear" ))
-	(pt 1232 768)
-	(pt 1136 768)
-)
-(connector
-	(text "playerX[10..0]" (rect 1146 768 1213 785)(font "Intel Clear" ))
-	(pt 1232 784)
-	(pt 1136 784)
-	(bus)
-)
-(connector
-	(text "ropeY[10..0]" (rect 1146 784 1203 801)(font "Intel Clear" ))
-	(pt 1232 800)
-	(pt 1136 800)
-	(bus)
-)
-(connector
-	(text "secClk" (rect 1146 800 1177 817)(font "Intel Clear" ))
-	(pt 1232 816)
-	(pt 1136 816)
-)
-(connector
-	(text "present_type[1..0]" (rect 1142 816 1228 833)(font "Intel Clear" ))
-	(pt 1232 832)
-	(pt 1136 832)
-	(bus)
-)
-(connector
-	(text "clk" (rect 1146 624 1160 641)(font "Intel Clear" ))
-	(pt 1136 640)
-	(pt 1232 640)
-)
-(connector
-	(text "resetN" (rect 1146 640 1176 657)(font "Intel Clear" ))
-	(pt 1136 656)
-	(pt 1232 656)
-)
-(connector
-	(text "rightArrow" (rect 1146 656 1195 673)(font "Intel Clear" ))
-	(pt 1136 672)
-	(pt 1232 672)
-)
-(connector
-	(text "leftArrow" (rect 1146 672 1190 689)(font "Intel Clear" ))
-	(pt 1136 688)
-	(pt 1232 688)
-)
-(connector
-	(text "spaceBar" (rect 1146 688 1189 705)(font "Intel Clear" ))
-	(pt 1136 704)
-	(pt 1232 704)
-)
-(connector
-	(text "col_player_ball" (rect 1146 704 1221 721)(font "Intel Clear" ))
-	(pt 1136 720)
-	(pt 1232 720)
-)
-(connector
-	(text "col_rope_ball" (rect 1146 720 1212 737)(font "Intel Clear" ))
-	(pt 1136 736)
-	(pt 1232 736)
-)
-(connector
-	(text "col_ball_type[1..0]" (rect 1142 736 1231 753)(font "Intel Clear" ))
-	(pt 1136 752)
-	(pt 1232 752)
-	(bus)
-)
-(connector
-	(text "gameTime[11..0]" (rect 1498 624 1578 641)(font "Intel Clear" ))
-	(pt 1480 640)
-	(pt 1608 640)
-	(bus)
-)
-(connector
-	(text "gameState[1..0]" (rect 1498 640 1573 657)(font "Intel Clear" ))
-	(pt 1480 656)
-	(pt 1608 656)
-	(bus)
-)
-(connector
-	(text "playerMoveRight" (rect 1498 656 1580 673)(font "Intel Clear" ))
-	(pt 1480 672)
-	(pt 1608 672)
-)
-(connector
-	(text "playerMoveLeft" (rect 1498 672 1574 689)(font "Intel Clear" ))
-	(pt 1480 688)
-	(pt 1608 688)
-)
-(connector
-	(text "ropeActive" (rect 1498 688 1548 705)(font "Intel Clear" ))
-	(pt 1480 704)
-	(pt 1608 704)
-)
-(connector
-	(text "playerVisible" (rect 1498 704 1560 721)(font "Intel Clear" ))
-	(pt 1480 720)
-	(pt 1608 720)
-)
-(connector
-	(text "presentsVisible" (rect 1496 720 1567 737)(font "Intel Clear" ))
-	(pt 1480 736)
-	(pt 1608 736)
-)
-(connector
-	(text "ropeX[10..0]" (rect 1498 736 1555 753)(font "Intel Clear" ))
-	(pt 1480 752)
-	(pt 1608 752)
-	(bus)
-)
-(connector
-	(text "dropPresent" (rect 1496 752 1553 769)(font "Intel Clear" ))
-	(pt 1480 768)
-	(pt 1608 768)
-)
-(connector
-	(text "playerReset" (rect 1493 768 1550 785)(font "Intel Clear" ))
-	(pt 1480 784)
-	(pt 1608 784)
-)
-(connector
-	(text "immortal" (rect 1494 784 1537 801)(font "Intel Clear" ))
-	(pt 1480 800)
-	(pt 1608 800)
-)
-(connector
-	(text "superSpeed" (rect 1494 800 1549 817)(font "Intel Clear" ))
-	(pt 1480 816)
-	(pt 1608 816)
-)
-(connector
-	(text "superRope" (rect 1499 816 1549 833)(font "Intel Clear" ))
-	(pt 1480 832)
-	(pt 1608 832)
-)
-(connector
-	(text "lives[15..0]" (rect 1493 832 1544 849)(font "Intel Clear" ))
-	(pt 1480 848)
-	(pt 1608 848)
-	(bus)
-)
-(connector
-	(text "playmodeEnable" (rect 1490 864 1571 881)(font "Intel Clear" ))
-	(pt 1480 880)
-	(pt 1608 880)
-)
-(connector
-	(text "score[15..0]" (rect 1492 848 1546 865)(font "Intel Clear" ))
-	(pt 1480 864)
-	(pt 1608 864)
-	(bus)
-)
-(connector
 	(text "resetN" (rect 794 112 824 129)(font "Intel Clear" ))
 	(pt 928 128)
 	(pt 784 128)
@@ -2225,21 +2094,6 @@ agreement for further details.
 	(pt 1872 1480)
 	(pt 1768 1480)
 	(bus)
-)
-(connector
-	(text "col_rope_ball" (rect 1482 240 1548 257)(font "Intel Clear" ))
-	(pt 1584 256)
-	(pt 1472 256)
-)
-(connector
-	(text "clk" (rect 1482 208 1496 225)(font "Intel Clear" ))
-	(pt 1472 224)
-	(pt 1584 224)
-)
-(connector
-	(text "resetN" (rect 1482 224 1512 241)(font "Intel Clear" ))
-	(pt 1472 240)
-	(pt 1584 240)
 )
 (connector
 	(text "ball1Active" (rect 1326 1048 1380 1065)(font "Intel Clear" ))
@@ -2322,15 +2176,190 @@ agreement for further details.
 	(pt 1096 1176)
 )
 (connector
-	(text "presentChance[1..0]" (rect 1812 208 1906 225)(font "Intel Clear" ))
-	(pt 1800 224)
-	(pt 1920 224)
+	(text "col_present_out" (rect 1136 736 1212 753)(font "Intel Clear" ))
+	(pt 1224 752)
+	(pt 1128 752)
+)
+(connector
+	(text "playerX[10..0]" (rect 1138 752 1205 769)(font "Intel Clear" ))
+	(pt 1224 768)
+	(pt 1128 768)
 	(bus)
 )
 (connector
-	(text "presentChance[1..0]" (rect 1144 832 1238 849)(font "Intel Clear" ))
-	(pt 1232 848)
-	(pt 1136 848)
+	(text "ropeY[10..0]" (rect 1138 768 1195 785)(font "Intel Clear" ))
+	(pt 1224 784)
+	(pt 1128 784)
+	(bus)
+)
+(connector
+	(text "secClk" (rect 1138 784 1169 801)(font "Intel Clear" ))
+	(pt 1224 800)
+	(pt 1128 800)
+)
+(connector
+	(text "present_type[1..0]" (rect 1134 800 1220 817)(font "Intel Clear" ))
+	(pt 1224 816)
+	(pt 1128 816)
+	(bus)
+)
+(connector
+	(text "clk" (rect 1138 608 1152 625)(font "Intel Clear" ))
+	(pt 1128 624)
+	(pt 1224 624)
+)
+(connector
+	(text "resetN" (rect 1138 624 1168 641)(font "Intel Clear" ))
+	(pt 1128 640)
+	(pt 1224 640)
+)
+(connector
+	(text "rightArrow" (rect 1138 640 1187 657)(font "Intel Clear" ))
+	(pt 1128 656)
+	(pt 1224 656)
+)
+(connector
+	(text "leftArrow" (rect 1138 656 1182 673)(font "Intel Clear" ))
+	(pt 1128 672)
+	(pt 1224 672)
+)
+(connector
+	(text "spaceBar" (rect 1138 672 1181 689)(font "Intel Clear" ))
+	(pt 1128 688)
+	(pt 1224 688)
+)
+(connector
+	(text "col_player_ball" (rect 1138 688 1213 705)(font "Intel Clear" ))
+	(pt 1128 704)
+	(pt 1224 704)
+)
+(connector
+	(text "col_rope_ball" (rect 1138 704 1204 721)(font "Intel Clear" ))
+	(pt 1128 720)
+	(pt 1224 720)
+)
+(connector
+	(text "col_ball_type[1..0]" (rect 1134 720 1223 737)(font "Intel Clear" ))
+	(pt 1128 736)
+	(pt 1224 736)
+	(bus)
+)
+(connector
+	(text "gameTime[11..0]" (rect 1490 608 1570 625)(font "Intel Clear" ))
+	(pt 1472 624)
+	(pt 1600 624)
+	(bus)
+)
+(connector
+	(text "presentChance[1..0]" (rect 1136 816 1230 833)(font "Intel Clear" ))
+	(pt 1224 832)
+	(pt 1128 832)
+	(bus)
+)
+(connector
+	(text "gameState[1..0]" (rect 1490 624 1565 641)(font "Intel Clear" ))
+	(pt 1472 640)
+	(pt 1600 640)
+	(bus)
+)
+(connector
+	(text "playerMoveRight" (rect 1490 640 1572 657)(font "Intel Clear" ))
+	(pt 1472 656)
+	(pt 1600 656)
+)
+(connector
+	(text "playerMoveLeft" (rect 1490 656 1566 673)(font "Intel Clear" ))
+	(pt 1472 672)
+	(pt 1600 672)
+)
+(connector
+	(text "ropeActive" (rect 1490 672 1540 689)(font "Intel Clear" ))
+	(pt 1472 688)
+	(pt 1600 688)
+)
+(connector
+	(text "playerVisible" (rect 1490 688 1552 705)(font "Intel Clear" ))
+	(pt 1472 704)
+	(pt 1600 704)
+)
+(connector
+	(text "presentsVisible" (rect 1488 704 1559 721)(font "Intel Clear" ))
+	(pt 1472 720)
+	(pt 1600 720)
+)
+(connector
+	(text "ropeX[10..0]" (rect 1490 720 1547 737)(font "Intel Clear" ))
+	(pt 1472 736)
+	(pt 1600 736)
+	(bus)
+)
+(connector
+	(text "dropPresent" (rect 1488 736 1545 753)(font "Intel Clear" ))
+	(pt 1472 752)
+	(pt 1600 752)
+)
+(connector
+	(text "playerReset" (rect 1485 752 1542 769)(font "Intel Clear" ))
+	(pt 1472 768)
+	(pt 1600 768)
+)
+(connector
+	(text "immortal" (rect 1486 768 1529 785)(font "Intel Clear" ))
+	(pt 1472 784)
+	(pt 1600 784)
+)
+(connector
+	(text "superSpeed" (rect 1486 784 1541 801)(font "Intel Clear" ))
+	(pt 1472 800)
+	(pt 1600 800)
+)
+(connector
+	(text "superRope" (rect 1491 800 1541 817)(font "Intel Clear" ))
+	(pt 1472 816)
+	(pt 1600 816)
+)
+(connector
+	(text "lives[15..0]" (rect 1485 816 1536 833)(font "Intel Clear" ))
+	(pt 1472 832)
+	(pt 1600 832)
+	(bus)
+)
+(connector
+	(text "score[15..0]" (rect 1484 832 1538 849)(font "Intel Clear" ))
+	(pt 1472 848)
+	(pt 1600 848)
+	(bus)
+)
+(connector
+	(text "playmodeEnable" (rect 1482 864 1563 881)(font "Intel Clear" ))
+	(pt 1472 880)
+	(pt 1600 880)
+)
+(connector
+	(text "maxScore[15..0]" (rect 1484 848 1559 865)(font "Intel Clear" ))
+	(pt 1472 864)
+	(pt 1600 864)
+	(bus)
+)
+(connector
+	(text "col_rope_ball" (rect 1474 240 1540 257)(font "Intel Clear" ))
+	(pt 1576 256)
+	(pt 1464 256)
+)
+(connector
+	(text "clk" (rect 1474 208 1488 225)(font "Intel Clear" ))
+	(pt 1464 224)
+	(pt 1576 224)
+)
+(connector
+	(text "resetN" (rect 1474 224 1504 241)(font "Intel Clear" ))
+	(pt 1464 240)
+	(pt 1576 240)
+)
+(connector
+	(text "presentChance[1..0]" (rect 1804 208 1898 225)(font "Intel Clear" ))
+	(pt 1792 224)
+	(pt 1912 224)
 	(bus)
 )
 (text "General" (rect -136 104 -90 123)(font "Intel Clear" (font_size 8)))

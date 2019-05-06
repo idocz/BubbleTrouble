@@ -22,7 +22,7 @@ module gameStateMachine 	(
 	output logic [10:0] ropeX,
 	output logic presentDrop, playerReset,
 	output logic immortal, superSpeed, superRope,
-	output shortint lives, score,
+	output shortint lives, score, maxScore,
 	output logic playmodeEnable
 	
 );
@@ -36,7 +36,7 @@ parameter HIT_SCORE_QUANTUM = 10;
 parameter TIME_SCORE_QUANTUM = 1;
 	
 enum logic [2:0] {welcomeScreen, playMode, gameOver} cur_st, nxt_st;
-shortint nxt_lives, nxt_score;
+shortint nxt_lives, nxt_score, nxt_maxScore;
 logic [10:0] nxt_ropeX;
 logic nxt_ropeActive;
 logic [11:0] nxt_gameTime;
@@ -52,6 +52,7 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		cur_st <= welcomeScreen;
 		lives <= INITIAL_LIVES;
 		score <= 0;
+		maxScore <= 0;
 		ropeX <= 0;
 		ropeActive <= 0;
 		gameTime <= 0;
@@ -70,6 +71,7 @@ always_ff @(posedge clk or negedge resetN) // State machine logic ////
 		cur_st <= nxt_st; // Update current state
 		lives <= nxt_lives;
 		score <= nxt_score;
+		maxScore <= nxt_maxScore;
 		ropeX <= nxt_ropeX;
 		ropeActive <= nxt_ropeActive;
 		gameTime <= nxt_gameTime;
@@ -138,6 +140,7 @@ always_comb // Update the outputs //////////////////////
 	nxt_playmodeEnable = playmodeEnable;
 	nxt_lives = lives;
 	nxt_score = score;
+	nxt_maxScore = maxScore;
 	nxt_gameTime = gameTime;
 	
 	nxt_ropeX = ropeX;
@@ -159,6 +162,7 @@ always_comb // Update the outputs //////////////////////
 			nxt_ropeActive = 0;
 			nxt_gameTime = 0;
 			nxt_score = 0;
+			nxt_maxScore = 0;
 			nxt_lives = INITIAL_LIVES;
 			nxt_superRope = 0;
 			nxt_immortal = 0;
@@ -168,6 +172,7 @@ always_comb // Update the outputs //////////////////////
 		end // welcomeScreen
 							
 		playMode: begin
+		
 		
 			gameState = 1;
 			playerVisible = 1;
@@ -180,6 +185,9 @@ always_comb // Update the outputs //////////////////////
 			begin
 				nxt_score = score + 1;
 				nxt_gameTime = gameTime + 1;
+				
+				if ( score > maxScore )
+					nxt_maxScore = score;
 			end
 	
 
@@ -205,11 +213,12 @@ always_comb // Update the outputs //////////////////////
 				
 			if ( col_rope_ball )
 			begin
+			
 				nxt_score = score + (col_ball_type + 1) * HIT_SCORE_QUANTUM;
 				nxt_ropeActive = 0;
 				nxt_superRope = 0;
 				
-				if ( presentChance == 0 )
+				if ( presentChance == 1 )
 					presentDrop = 1;	
 				
 			end
