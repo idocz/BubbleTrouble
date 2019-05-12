@@ -9,8 +9,8 @@ module	welcomeInfo	(
 
 					input	logic	clk,
 					input	logic	resetN,
-					input 	logic	[10:0]	offsetX,
-					input 	logic	[10:0]	offsetY,
+					input 	logic	[10:0]	pixelX,
+					input 	logic	[10:0]	pixelY,
 					input		logic InsideRectangle,
 
 					output	logic drawingRequest,
@@ -18,11 +18,16 @@ module	welcomeInfo	(
 );
 
 
-localparam logic [7:0] TRANSPARENT_ENCODING = 8'hFF ;// RGB value in the bitmap representing a transparent pixel 
-localparam  int TITLE_OBJECT_WIDTH_X = 60;
-localparam  int TITLE_OBJECT_HEIGHT_Y = 20;
+parameter topLeftX = 170;
+parameter topLeftY = 10;
 
-logic [0:TITLE_OBJECT_HEIGHT_Y-1] [0:TITLE_OBJECT_WIDTH_X-1] [8-1:0] title = {
+localparam logic [7:0] TRANSPARENT_ENCODING = 8'hFF ;// RGB value in the bitmap representing a transparent pixel 
+localparam  int OBJECT_WIDTH_X = 60;
+localparam  int OBJECT_HEIGHT_Y = 20;
+int offsetX = pixelX - topLeftX;
+int offsetY = pixelY - topLeftY;
+
+logic [0:OBJECT_HEIGHT_Y-1] [0:OBJECT_WIDTH_X-1] [8-1:0] title = {
 {8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, },
 {8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hDA, 8'hDA, 8'hFF, },
 {8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hFF, 8'hDB, 8'hFF, 8'hFF, 8'hB6, 8'h25, 8'h49, 8'hB6, 8'hFF, },
@@ -53,7 +58,7 @@ begin
 		INFO_RGB <=	8'hFF;
 	end
 	else begin
-		if (InsideRectangle == 1'b1 )  // inside an external bracket 
+		if ((offsetX  >= 0) &&  (offsetX < OBJECT_WIDTH_X) && (offsetY  >= 0) &&  (offsetY < OBJECT_HEIGHT_Y)  )  // inside an external bracket 
 			INFO_RGB <= title[offsetY/5][offsetX/5];	//get RGB from the colors table  
 		else 
 			INFO_RGB <= TRANSPARENT_ENCODING ; // force color to transparent so it will not be displayed 

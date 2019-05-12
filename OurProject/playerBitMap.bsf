@@ -74,6 +74,13 @@ agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
+		(pt 0 144)
+		(input)
+		(text "bg[7..0]" (rect 0 0 29 12)(font "Arial" ))
+		(text "bg[7..0]" (rect 21 139 50 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
 		(pt 224 32)
 		(output)
 		(text "drawingRequest" (rect 0 0 63 12)(font "Arial" ))
@@ -87,13 +94,7 @@ agreement for further details.
 		(text "RGBout[7..0]" (rect 150 43 203 55)(font "Arial" ))
 		(line (pt 224 48)(pt 208 48)(line_width 3))
 	)
-	(parameter
-		"BG_COLOR"
-		"10000000"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
 	(drawing
 		(rectangle (rect 16 16 208 160)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 240 -64 340 16))
 )

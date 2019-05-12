@@ -5,48 +5,51 @@
 // (c) Technion IIT, Department of Electrical Engineering 2019 
 
 module displayMux	(	
+					input logic resetN,
+					input logic clk,					
+					input		logic	titleRequest,
+					input		logic	[7:0] titleRGB,
+					input    logic gameOverRequest,
+					input    logic [7:0] gameOverRGB,
+					input    logic lifeRequest,
+					input    logic [7:0] lifeRGB,
+					input    logic levelRequest,
+					input    logic [7:0] levelRGB,
+					input    logic pressSpaceRequest,
+					input    logic [7:0] pressSpaceRGB,
 					
-					input		logic	welcomeRequest,
-					input		logic	[7:0] welcomeRGB,
+					output   logic infoRequest,
+					output   logic [7:0] infoRGB
 					
-					input		logic	playmodeRequest,
-					input    logic [7:0] playmodeRGB,
-					
-					input		logic	gameoverRequest,
-					input    logic [7:0] gameoverRGB,
-					
-					input 	logic [1:0] selector,
-
-					output	logic infoRequest,
-					output	logic	[7:0] backGround
 );
 
-
-always_comb
+assign infoRequest = titleRequest | gameOverRequest | lifeRequest | levelRequest | pressSpaceRequest ;
+always_ff@(posedge clk or negedge resetN)
 begin
-
-	infoRequest = 0;
-	backGround = welcomeRGB;
-
-	case ( selector )
+	if(!resetN) begin
+			infoRGB	<= 8'b0;
+	end
+	else begin
 	
-		0 : begin
-			infoRequest = welcomeRequest;
-			backGround = welcomeRGB;
-		end
+		//first priority
 		
-		1 : begin
-			infoRequest = playmodeRequest;
-			backGround = playmodeRGB;
-		end
-		
-		2 : begin
-			infoRequest = gameoverRequest;
-			backGround = gameoverRGB;
-		end
+		if (titleRequest == 1'b1)
+			infoRGB <= titleRGB;
 			
-	endcase
-
+		else if( gameOverRequest == 1'b1)
+			infoRGB <= gameOverRGB;
+		
+		else if ( lifeRequest == 1'b1 )
+			infoRGB <= lifeRGB;
+		
+		else if ( levelRequest == 1'b1 )
+			infoRGB <= levelRGB;
+		
+		else
+			infoRGB <= pressSpaceRGB;
+			
+			
+	end
 end
 
 endmodule

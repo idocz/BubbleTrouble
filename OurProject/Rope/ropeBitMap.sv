@@ -63,7 +63,7 @@ begin
 	end
 	else begin
 		if (InsideRectangle == 1'b1 )  // inside an external bracket 
-			RGBout <= object_colors[superRope][offsetY % 8][offsetX];	//get RGB from the colors table  
+			RGBout <= object_colors[superRope][(offsetY/2) % 8][offsetX];	//get RGB from the colors table  
 		else 
 			RGBout <= TRANSPARENT_ENCODING ; // force color to transparent so it will not be displayed 
 	end 

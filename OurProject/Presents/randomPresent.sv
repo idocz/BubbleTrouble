@@ -31,7 +31,7 @@ always_ff @(posedge clk or negedge resetN) begin
 				counter <=  MIN_VAL ; // set min and max mvalues 
 			rise_d <= rise;
 			if (rise && !rise_d) // rising edge 
-				dout <= counter % 4;
+				dout <= counter;
 		end
 	
 	end

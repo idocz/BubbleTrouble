@@ -1012,7 +1012,7 @@ agreement for further details.
 (symbol
 	(rect -376 752 -160 864)
 	(text "randomPresent" (rect 5 0 79 12)(font "Arial" ))
-	(text "inst7" (rect 8 96 30 113)(font "Intel Clear" ))
+	(text "inst7" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1038,12 +1038,12 @@ agreement for further details.
 		(pt 216 32)
 		(output)
 		(text "dout[SIZE_BITS-1..0]" (rect 0 0 105 12)(font "Arial" ))
-		(text "dout[SIZE_BITS-1..0]" (rect 107 27 212 39)(font "Arial" ))
+		(text "dout[SIZE_BITS-1..0]" (rect 107 27 195 39)(font "Arial" ))
 		(line (pt 216 32)(pt 200 32)(line_width 3))
 	)
 	(parameter
 		"SIZE_BITS"
-		"2"
+		"3"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -1053,7 +1053,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"MAX_VAL"
-		"400"
+		"3"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
@@ -1131,8 +1131,8 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "nxt_present[1..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "nxt_present[1..0]" (rect 21 171 104 183)(font "Arial" ))
+		(text "nxt_present[2..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "nxt_present[2..0]" (rect 21 171 104 183)(font "Arial" ))
 		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
@@ -1153,77 +1153,77 @@ agreement for further details.
 		(pt 256 32)
 		(output)
 		(text "present1Visible" (rect 0 0 74 12)(font "Arial" ))
-		(text "present1Visible" (rect 173 27 247 39)(font "Arial" ))
+		(text "present1Visible" (rect 173 27 235 39)(font "Arial" ))
 		(line (pt 256 32)(pt 240 32))
 	)
 	(port
 		(pt 256 48)
 		(output)
 		(text "present2Visible" (rect 0 0 74 12)(font "Arial" ))
-		(text "present2Visible" (rect 173 43 247 55)(font "Arial" ))
+		(text "present2Visible" (rect 173 43 235 55)(font "Arial" ))
 		(line (pt 256 48)(pt 240 48))
 	)
 	(port
 		(pt 256 64)
 		(output)
 		(text "present3Visible" (rect 0 0 74 12)(font "Arial" ))
-		(text "present3Visible" (rect 173 59 247 71)(font "Arial" ))
+		(text "present3Visible" (rect 173 59 235 71)(font "Arial" ))
 		(line (pt 256 64)(pt 240 64))
 	)
 	(port
 		(pt 256 80)
 		(output)
 		(text "present1Reset" (rect 0 0 71 12)(font "Arial" ))
-		(text "present1Reset" (rect 175 75 246 87)(font "Arial" ))
+		(text "present1Reset" (rect 175 75 235 87)(font "Arial" ))
 		(line (pt 256 80)(pt 240 80))
 	)
 	(port
 		(pt 256 96)
 		(output)
 		(text "present2Reset" (rect 0 0 71 12)(font "Arial" ))
-		(text "present2Reset" (rect 175 91 246 103)(font "Arial" ))
+		(text "present2Reset" (rect 175 91 235 103)(font "Arial" ))
 		(line (pt 256 96)(pt 240 96))
 	)
 	(port
 		(pt 256 112)
 		(output)
 		(text "present3Reset" (rect 0 0 71 12)(font "Arial" ))
-		(text "present3Reset" (rect 175 107 246 119)(font "Arial" ))
+		(text "present3Reset" (rect 175 107 235 119)(font "Arial" ))
 		(line (pt 256 112)(pt 240 112))
 	)
 	(port
 		(pt 256 128)
 		(output)
 		(text "pType1[1..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "pType1[1..0]" (rect 183 123 245 135)(font "Arial" ))
+		(text "pType1[1..0]" (rect 183 123 235 135)(font "Arial" ))
 		(line (pt 256 128)(pt 240 128)(line_width 3))
 	)
 	(port
 		(pt 256 144)
 		(output)
 		(text "pType2[1..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "pType2[1..0]" (rect 183 139 245 151)(font "Arial" ))
+		(text "pType2[1..0]" (rect 183 139 235 151)(font "Arial" ))
 		(line (pt 256 144)(pt 240 144)(line_width 3))
 	)
 	(port
 		(pt 256 160)
 		(output)
 		(text "pType3[1..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "pType3[1..0]" (rect 183 155 245 167)(font "Arial" ))
+		(text "pType3[1..0]" (rect 183 155 235 167)(font "Arial" ))
 		(line (pt 256 160)(pt 240 160)(line_width 3))
 	)
 	(port
 		(pt 256 176)
 		(output)
 		(text "col_present" (rect 0 0 56 12)(font "Arial" ))
-		(text "col_present" (rect 188 171 244 183)(font "Arial" ))
+		(text "col_present" (rect 188 171 235 183)(font "Arial" ))
 		(line (pt 256 176)(pt 240 176))
 	)
 	(port
 		(pt 256 192)
 		(output)
 		(text "present_type[1..0]" (rect 0 0 90 12)(font "Arial" ))
-		(text "present_type[1..0]" (rect 159 187 249 199)(font "Arial" ))
+		(text "present_type[1..0]" (rect 159 187 235 199)(font "Arial" ))
 		(line (pt 256 192)(pt 240 192)(line_width 3))
 	)
 	(parameter
@@ -1330,12 +1330,6 @@ agreement for further details.
 	(text "presentRGBout[7..0]" (rect 463 480 558 497)(font "Intel Clear" ))
 	(pt 560 496)
 	(pt 456 496)
-	(bus)
-)
-(connector
-	(text "nxt_present[1..0]" (rect -150 768 -71 785)(font "Intel Clear" ))
-	(pt -160 784)
-	(pt -40 784)
 	(bus)
 )
 (connector
@@ -1632,12 +1626,6 @@ agreement for further details.
 	(pt -128 496)
 )
 (connector
-	(text "nxt_present[1..0]" (rect -506 544 -427 561)(font "Intel Clear" ))
-	(pt -384 560)
-	(pt -512 560)
-	(bus)
-)
-(connector
 	(text "secClk" (rect -502 560 -471 577)(font "Intel Clear" ))
 	(pt -384 576)
 	(pt -512 576)
@@ -1818,6 +1806,18 @@ agreement for further details.
 	(text "present3_type[1..0]" (rect -124 528 -32 545)(font "Intel Clear" ))
 	(pt -128 544)
 	(pt 0 544)
+	(bus)
+)
+(connector
+	(text "nxt_present[2..0]" (rect -150 768 -71 785)(font "Intel Clear" ))
+	(pt -160 784)
+	(pt -40 784)
+	(bus)
+)
+(connector
+	(text "nxt_present[2..0]" (rect -506 544 -427 561)(font "Intel Clear" ))
+	(pt -384 560)
+	(pt -512 560)
 	(bus)
 )
 (text "Present 1 Unit" (rect 648 -104 732 -85)(font "Intel Clear" (font_size 8)))

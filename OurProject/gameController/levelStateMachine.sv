@@ -132,7 +132,7 @@ end
 	
 always_comb //update outputs
 begin
-
+		
 		nxt_ball1Active = ball1Active;
 		nxt_ball2Active = ball2Active;
 		nxt_ball3Active = ball3Active;
@@ -141,6 +141,7 @@ begin
 		nxt_ball2InitialState = ball2InitialState;
 		nxt_ball3InitialState = ball3InitialState;
 		
+		level = 0;
 		case (cur_st)
 					
 			L0: 
@@ -154,7 +155,8 @@ begin
 			L1: 
 			begin
 			
-				if( !ball1InUse )
+				level = 1;
+				if( !ball1InUse && secClk )
 				begin
 				
 					nxt_ball1InitialState = 0;
@@ -170,8 +172,9 @@ begin
 							
 			L2: 
 			begin
-			
-				if( !ball1InUse )
+				
+				level = 2;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 0;
 					
@@ -182,7 +185,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk)
 				begin
 					nxt_ball2InitialState = 0;
 					
@@ -198,8 +201,9 @@ begin
 			
 			L3: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 3;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 0;
 					
@@ -210,7 +214,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 0;
 					
@@ -221,7 +225,7 @@ begin
 						
 				end
 			
-				if( !ball3InUse )
+				else if( !ball3InUse && secClk )
 				begin
 					nxt_ball3InitialState = 0;
 					
@@ -236,8 +240,9 @@ begin
 
 			L4: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 4;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 1;
 					
@@ -252,8 +257,9 @@ begin
 							
 			L5: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 5;
+				if( !ball1InUse && secClk)
 				begin
 					nxt_ball1InitialState = 1;
 					
@@ -264,7 +270,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 1;
 					
@@ -279,8 +285,9 @@ begin
 			
 			L6: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 6;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 1;
 					
@@ -291,7 +298,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 1;
 					
@@ -302,7 +309,7 @@ begin
 						
 				end
 			
-				if( !ball3InUse )
+				else if( !ball3InUse && secClk )
 				begin
 					nxt_ball3InitialState = 1;
 					
@@ -317,8 +324,9 @@ begin
 
 			L7: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 7;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 2;
 					
@@ -333,8 +341,9 @@ begin
 							
 			L8: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 8;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 2;
 					
@@ -345,7 +354,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 2;
 					
@@ -360,8 +369,9 @@ begin
 			
 			L9: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 9;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 2;
 					
@@ -372,7 +382,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 2;
 					
@@ -383,7 +393,7 @@ begin
 						
 				end
 			
-				if( !ball3InUse )
+				else if( !ball3InUse && secClk )
 				begin
 					nxt_ball3InitialState = 2;
 					
@@ -398,8 +408,9 @@ begin
 
 			L10: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 10;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 3;
 					
@@ -414,8 +425,9 @@ begin
 							
 			L11: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 11;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 3;
 					
@@ -426,7 +438,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 3;
 					
@@ -441,8 +453,9 @@ begin
 			
 			L12: 
 			begin
-			
-				if( !ball1InUse )
+						
+				level = 12;
+				if( !ball1InUse && secClk )
 				begin
 					nxt_ball1InitialState = 3;
 					
@@ -453,7 +466,7 @@ begin
 						
 				end
 				
-				if( !ball2InUse )
+				else if( !ball2InUse && secClk )
 				begin
 					nxt_ball2InitialState = 3;
 					
@@ -464,7 +477,7 @@ begin
 						
 				end
 			
-				if( !ball3InUse )
+				else if( !ball3InUse && secClk )
 				begin
 					nxt_ball3InitialState = 3;
 					
@@ -481,6 +494,5 @@ begin
 
 end 
 
-assign level = cur_st;
 
 endmodule

@@ -22,6 +22,7 @@ module ballMove	(
 // a module used to generate a ball trajectory.  
 
 parameter int g = 1;
+parameter ballSize = 20;
 
 const int	MULTIPLIER	=	64;
 // multiplier is used to work with integers in high resolution 
@@ -47,7 +48,7 @@ begin
 			if ((topLeftX_tmp <= 0 ) && (Xspeed_tmp < 0) ) // hit left border while moving right
 				Xspeed_tmp <= -Xspeed_tmp ; 
 			
-			if ( (topLeftX_tmp >= x_FRAME_SIZE) && (Xspeed_tmp > 0 )) // hit right border while moving left
+			if ( (topLeftX_tmp >= x_FRAME_SIZE-ballSize) && (Xspeed_tmp > 0 )) // hit right border while moving left
 				Xspeed_tmp <= -Xspeed_tmp ; 
 	end
 end
@@ -69,7 +70,7 @@ begin
 		if ((topLeftY_tmp <= 0 ) && (Yspeed_tmp < 0 )) // hit top border heading up
 			Yspeed_tmp <= -Yspeed_tmp ; 
 			
-		if ( ( topLeftY_tmp >= y_FRAME_SIZE) && (Yspeed_tmp > 0 )) //hit bottom border heading down 
+		if ( ( topLeftY_tmp >= y_FRAME_SIZE-ballSize) && (Yspeed_tmp > 0 )) //hit bottom border heading down 
 			Yspeed_tmp <= -Yspeed_tmp ; 
 			
 	end 

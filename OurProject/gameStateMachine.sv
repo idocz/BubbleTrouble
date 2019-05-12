@@ -14,7 +14,7 @@ module gameStateMachine 	(
 	input logic [10:0] playerX, ropeTopY,
 	input logic secClk,
 	input logic [1:0] presentType,
-	input logic [1:0] presentChance,
+	input logic presentChance,
 	
 	output logic [11:0] gameTime,
 	output logic [1:0] gameState,
@@ -34,6 +34,7 @@ parameter MAX_ROPE_TIMER = 5;
 parameter MAX_SUPERSPEED_TIMER = 5;
 parameter HIT_SCORE_QUANTUM = 10;
 parameter TIME_SCORE_QUANTUM = 1;
+parameter player_WIDTH = 35;
 	
 enum logic [2:0] {welcomeScreen, playMode, gameOver} cur_st, nxt_st;
 shortint nxt_lives, nxt_score, nxt_maxScore;
@@ -198,12 +199,12 @@ always_comb // Update the outputs //////////////////////
 			if ( spaceBar && ropeActive == 0) 
 			begin
 				nxt_ropeActive = 1;
-				nxt_ropeX = playerX;
+				nxt_ropeX = playerX + player_WIDTH/2-4;
 			end
 			
 			
 			//////// COLLISIONS CONTROLLER
-			if ( col_player_ball )
+			if ( col_player_ball && !immortal)
 			begin
 				nxt_lives = lives - 1;
 				nxt_immortal = 1;

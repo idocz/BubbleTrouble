@@ -20,7 +20,7 @@ module  presentsController (
 	input logic col_rope_present3,
 	
 	//random present
-	input logic [1:0] nxt_present,
+	input logic [2:0] nxt_present,
 
 	//sec counter
 	input logic secClk,

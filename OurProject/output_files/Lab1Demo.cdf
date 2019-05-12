@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/ohadv/Desktop/BubbleTrouble/BubbleTrouble/OurProject/output_files/") File("Lab1Demo.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/idocz/OneDrive - Technion/LAB A/Project/BubbleTrouble/OurProject/output_files/") File("Lab1Demo.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -90,8 +90,8 @@ agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "nxt_present[1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "nxt_present[1..0]" (rect 21 171 87 183)(font "Arial" ))
+		(text "nxt_present[2..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "nxt_present[2..0]" (rect 21 171 88 183)(font "Arial" ))
 		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
