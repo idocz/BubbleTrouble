@@ -17,13 +17,15 @@ module displayMux	(
 					input    logic [7:0] levelRGB,
 					input    logic pressSpaceRequest,
 					input    logic [7:0] pressSpaceRGB,
+					input    logic scoreRequest,
+					input    logic [7:0] scoreRGB,
 					
 					output   logic infoRequest,
 					output   logic [7:0] infoRGB
 					
 );
 
-assign infoRequest = titleRequest | gameOverRequest | lifeRequest | levelRequest | pressSpaceRequest ;
+assign infoRequest = titleRequest | gameOverRequest | lifeRequest | levelRequest | pressSpaceRequest | scoreRequest ;
 always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) begin
@@ -44,6 +46,9 @@ begin
 		
 		else if ( levelRequest == 1'b1 )
 			infoRGB <= levelRGB;
+		
+		else if ( scoreRequest == 1'b1 )
+			infoRGB <= scoreRGB;
 		
 		else
 			infoRGB <= pressSpaceRGB;

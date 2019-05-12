@@ -1712,39 +1712,6 @@ agreement for further details.
 	(annotation_block (parameter)(rect 1600 24 1783 100))
 )
 (symbol
-	(rect 1584 216 1736 296)
-	(text "Chance" (rect 5 0 42 12)(font "Arial" ))
-	(text "inst7" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "signal[5..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "signal[5..0]" (rect 21 27 75 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "out" (rect 0 0 15 12)(font "Arial" ))
-		(text "out" (rect 119 27 134 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32))
-	)
-	(parameter
-		"devider"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"max"
-		"60"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 136 64))
-	)
-	(annotation_block (parameter)(rect 1592 296 1761 353))
-)
-(symbol
 	(rect 1224 592 1464 928)
 	(text "gameStateMachine" (rect 5 0 98 12)(font "Arial" ))
 	(text "inst" (rect 8 320 25 332)(font "Arial" ))
@@ -1992,7 +1959,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"TIME_SCORE_QUANTUM"
-		"1"
+		"0"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -2004,6 +1971,39 @@ agreement for further details.
 		(rectangle (rect 16 16 224 320))
 	)
 	(annotation_block (parameter)(rect 1240 440 1496 592))
+)
+(symbol
+	(rect 1584 216 1736 296)
+	(text "Chance" (rect 5 0 42 12)(font "Arial" ))
+	(text "inst7" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "signal[5..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "signal[5..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "out" (rect 0 0 15 12)(font "Arial" ))
+		(text "out" (rect 119 27 134 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32))
+	)
+	(parameter
+		"devider"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"max"
+		"60"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 136 64))
+	)
+	(annotation_block (parameter)(rect 1592 296 1761 353))
 )
 (connector
 	(text "playerDrawingRequest" (rect 802 128 910 145)(font "Intel Clear" ))

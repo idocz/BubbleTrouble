@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 17.0 595 (Future versions may contain additional information.) -->
- <!-- 2019.05.10.18:27:09 -->
+ <!-- 2019.05.12.23:25:45 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>b7f2cd64c2eeb3bf553c</value>
+   <value>dccbdd121622b2e81615</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {gameControllerTop:gameControllerTop|Xspeed_const:inst11|lpm_constant:LPM_CONSTANT_component|lpm_constant_3f8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {gameControllerTop:gameControllerTop|Yspeed_const:inst12|lpm_constant:LPM_CONSTANT_component|lpm_constant_4f8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {Presents_TOP:inst16|present_top:inst3|zeroConst16:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_jl8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {Presents_TOP:inst16|present_top:inst4|zeroConst16:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_jl8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {Presents_TOP:inst16|present_top:inst5|zeroConst16:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_jl8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {sld_signaltap:auto_signaltap_0} } </value>
+   <value>{hpath {gameControllerTop:gameControllerTop|Xspeed_const:inst11|lpm_constant:LPM_CONSTANT_component|lpm_constant_8f8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {gameControllerTop:gameControllerTop|Yspeed_const:inst12|lpm_constant:LPM_CONSTANT_component|lpm_constant_4f8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {TOP_KBD_DEMOALL:TOP_KBD|leftArrowConst:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_rc8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {TOP_KBD_DEMOALL:TOP_KBD|rightArrowConst:inst1|lpm_constant:LPM_CONSTANT_component|lpm_constant_hi8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {TOP_KBD_DEMOALL:TOP_KBD|spaceBarConst:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_mb8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {Presents_TOP:inst16|present_top:inst3|zeroConst16:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_jl8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {Presents_TOP:inst16|present_top:inst4|zeroConst16:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_jl8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {Presents_TOP:inst16|present_top:inst5|zeroConst16:inst3|lpm_constant:LPM_CONSTANT_component|lpm_constant_jl8:ag|sld_mod_ram_rom:mgl_prim1} } {hpath {sld_signaltap:auto_signaltap_0} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -6059,7 +6059,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>b7f2cd64c2eeb3bf553c</value>
+   <value>dccbdd121622b2e81615</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

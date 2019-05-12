@@ -11,7 +11,8 @@ module	bgController	(
 					output logic gameOverVisible,
 					output logic lifeVisible,
 					output logic levelVisible,
-					output logic pressSpaceVisible
+					output logic pressSpaceVisible,
+					output logic scoreVisible
 );
 
 always_comb
@@ -21,6 +22,7 @@ begin
 	lifeVisible = 0;
 	levelVisible = 0;
 	pressSpaceVisible = 0;
+	scoreVisible = 0;
 	
 	if( gameState == 0)
 	begin
@@ -32,6 +34,7 @@ begin
 	begin
 		lifeVisible = 1;
 		levelVisible = 1;
+		scoreVisible = 1;
 	end
 	
 	if( gameState == 2 )

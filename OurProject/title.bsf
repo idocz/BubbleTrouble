@@ -85,7 +85,7 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"size"
-		"5"
+		"2"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing

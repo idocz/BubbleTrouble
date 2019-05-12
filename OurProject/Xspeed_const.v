@@ -48,7 +48,7 @@ module Xspeed_const (
 	lpm_constant	LPM_CONSTANT_component (
 				.result (sub_wire0));
 	defparam
-		LPM_CONSTANT_component.lpm_cvalue = 50,
+		LPM_CONSTANT_component.lpm_cvalue = 70,
 		LPM_CONSTANT_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=XS",
 		LPM_CONSTANT_component.lpm_type = "LPM_CONSTANT",
 		LPM_CONSTANT_component.lpm_width = 16;

@@ -1,5 +1,5 @@
 Archive Project report for Lab1Demo
-Sat May 04 21:09:04 2019
+Mon May 13 00:02:19 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sat May 04 21:09:04 2019 ;
+; Archive Project Status ; Successful - Mon May 13 00:02:19 2019 ;
 ; Revision Name          ; Lab1Demo                              ;
 ; Top-level Entity Name  ; TOP_VGA_DEMO_WITH_MSS_ALL             ;
 ; Family                 ; Cyclone V                             ;
@@ -53,16 +53,16 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory Z:/BubbleTrouble/OurProject/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/spe4/Desktop/bubbleTroubleIntegration.qar'
+Info: Generated archive 'Z:/BubbleTrouble/OurProject/BubbleTroubleFinal.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'Lab1Demo.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 674 megabytes
-    Info: Processing ended: Sat May 04 21:09:04 2019
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 683 megabytes
+    Info: Processing ended: Mon May 13 00:02:19 2019
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +-------------------------------------------------------+
@@ -71,24 +71,41 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; File Name                                             ;
 +-------------------------------------------------------+
 ; assignment_defaults.qdf                               ;
+; Background/background.sv                              ;
+; Background/bubbleTitle.sv                             ;
+; Background/gameOver.sv                                ;
+; Background/level.sv                                   ;
+; Background/life.sv                                    ;
+; Background/pressSpace.sv                              ;
+; Background/score.sv                                   ;
+; Background/title.sv                                   ;
+; backgroundDraw.sv                                     ;
+; backgrounds_TOP.bdf                                   ;
 ; Ball/ballController.sv                                ;
 ; Ball/ballMove.sv                                      ;
 ; Ball/bigBallBitMap.sv                                 ;
 ; Ball/hugeBallBitMap.sv                                ;
 ; Ball/mediumBallBitMap.sv                              ;
 ; Ball/smallBallBitMap.sv                               ;
+; bgController.sv                                       ;
 ; blinkClk.sv                                           ;
 ; collisionDetector.sv                                  ;
 ; db/stp2_auto_stripped.stp                             ;
 ; DE10_Standard_Audio.sdc                               ;
+; displayMux.sv                                         ;
+; freqDev.sv                                            ;
 ; gameController/gameControllerTop.bdf                  ;
+; gameController/levelStateMachine.sv                   ;
+; gameoverBackground.sv                                 ;
 ; gameStateMachine.sv                                   ;
 ; Huge_Ball_TOP/ballMux.sv                              ;
 ; Huge_Ball_TOP/balls_TOP.bdf                           ;
 ; Huge_Ball_TOP/Big_Ball_TOP.bdf                        ;
 ; Huge_Ball_TOP/Huge_Ball_TOP.bdf                       ;
 ; Huge_Ball_TOP/hugeBallCollisionDetector.sv            ;
+; Huge_Ball_TOP/initialStatesMux.sv                     ;
 ; Huge_Ball_TOP/Medium_Ball_TOP.bdf                     ;
+; Huge_Ball_TOP/Small_Ball_TOP.bdf                      ;
 ; Huge_Ball_TOP/speedCalc.sv                            ;
 ; Lab1Demo.qsf                                          ;
 ; leftArrowConst.bsf                                    ;
@@ -99,6 +116,8 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; pin.tcl                                               ;
 ; Player/playerBitMap.sv                                ;
 ; Player/playerMove.sv                                  ;
+; playmodeBackground.sv                                 ;
+; Presents/chance.sv                                    ;
 ; Presents/present_top.bdf                              ;
 ; Presents/presentBitMap.sv                             ;
 ; Presents/presentMove.sv                               ;
@@ -113,6 +132,8 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; rightArrowConst.qip                                   ;
 ; rightArrowConst.v                                     ;
 ; rightArrowConst_bb.v                                  ;
+; risingEdge.sv                                         ;
+; risingEdge15.sv                                       ;
 ; Rope/ropeBitMap.sv                                    ;
 ; Rope/ropeMove.sv                                      ;
 ; Rope/squareRope.sv                                    ;
@@ -140,6 +161,8 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                 ;
 ; RTL/VGA/VGA_Controller.sv                             ;
 ; secClk.sv                                             ;
+; sound/soundController.sv                              ;
+; soundSystem.bdf                                       ;
 ; spaceBarConst.bsf                                     ;
 ; spaceBarConst.qip                                     ;
 ; spaceBarConst.v                                       ;
@@ -160,8 +183,21 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; test4.qip                                             ;
 ; test4.v                                               ;
 ; test4_bb.v                                            ;
+; test5.bsf                                             ;
+; test5.qip                                             ;
+; test5.v                                               ;
+; test5_bb.v                                            ;
 ; test_bb.v                                             ;
 ; Waveform.vwf                                          ;
+; welcomeBackground.sv                                  ;
+; Xspeed_const.bsf                                      ;
+; Xspeed_const.qip                                      ;
+; Xspeed_const.v                                        ;
+; Xspeed_const_bb.v                                     ;
+; Yspeed_const.bsf                                      ;
+; Yspeed_const.qip                                      ;
+; Yspeed_const.v                                        ;
+; Yspeed_const_bb.v                                     ;
 ; zeroConst.bsf                                         ;
 ; zeroConst.qip                                         ;
 ; zeroConst.v                                           ;

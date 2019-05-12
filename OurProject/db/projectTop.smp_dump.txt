@@ -14,6 +14,40 @@ Name cur_st3.active
 cur_st3.inactive 0 
 cur_st3.active 1 
 
+State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst10|ballController:inst6|cur_st
+Name cur_st.inactive cur_st.active cur_st.deploy 
+cur_st.inactive 0 0 0 
+cur_st.deploy 1 0 1 
+cur_st.active 1 1 0 
+
+State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst9|ballController:inst6|cur_st
+Name cur_st.inactive cur_st.active cur_st.deploy 
+cur_st.inactive 0 0 0 
+cur_st.deploy 1 0 1 
+cur_st.active 1 1 0 
+
+State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst|ballController:inst6|cur_st
+Name cur_st.inactive cur_st.active cur_st.deploy 
+cur_st.inactive 0 0 0 
+cur_st.deploy 1 0 1 
+cur_st.active 1 1 0 
+
+State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|levelStateMachine:inst9|cur_st
+Name cur_st.L12 cur_st.L11 cur_st.L10 cur_st.L9 cur_st.L8 cur_st.L7 cur_st.L6 cur_st.L5 cur_st.L4 cur_st.L3 cur_st.L2 cur_st.L1 cur_st.L0 
+cur_st.L0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cur_st.L1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+cur_st.L2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+cur_st.L3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+cur_st.L4 0 0 0 0 0 0 0 0 1 0 0 0 1 
+cur_st.L5 0 0 0 0 0 0 0 1 0 0 0 0 1 
+cur_st.L6 0 0 0 0 0 0 1 0 0 0 0 0 1 
+cur_st.L7 0 0 0 0 0 1 0 0 0 0 0 0 1 
+cur_st.L8 0 0 0 0 1 0 0 0 0 0 0 0 1 
+cur_st.L9 0 0 0 1 0 0 0 0 0 0 0 0 1 
+cur_st.L10 0 0 1 0 0 0 0 0 0 0 0 0 1 
+cur_st.L11 0 1 0 0 0 0 0 0 0 0 0 0 1 
+cur_st.L12 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
 State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|TOP_KBD_DEMOALL:TOP_KBD|TOP_KBDINTF:inst|lpf:cleaner|cur_st
 Name cur_st.ONE 
 cur_st.ZERO 0 
@@ -53,37 +87,3 @@ Name cur_st.welcomeScreen cur_st.gameOver cur_st.playMode
 cur_st.welcomeScreen 0 0 0 
 cur_st.playMode 1 0 1 
 cur_st.gameOver 1 1 0 
-
-State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst|ballController:inst6|cur_st
-Name cur_st.inactive cur_st.active cur_st.deploy 
-cur_st.inactive 0 0 0 
-cur_st.deploy 1 0 1 
-cur_st.active 1 1 0 
-
-State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst10|ballController:inst6|cur_st
-Name cur_st.inactive cur_st.active cur_st.deploy 
-cur_st.inactive 0 0 0 
-cur_st.deploy 1 0 1 
-cur_st.active 1 1 0 
-
-State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|balls_TOP:inst9|ballController:inst6|cur_st
-Name cur_st.inactive cur_st.active cur_st.deploy 
-cur_st.inactive 0 0 0 
-cur_st.deploy 1 0 1 
-cur_st.active 1 1 0 
-
-State Machine - |TOP_VGA_DEMO_WITH_MSS_ALL|gameControllerTop:gameControllerTop|levelStateMachine:inst9|cur_st
-Name cur_st.L12 cur_st.L11 cur_st.L10 cur_st.L9 cur_st.L8 cur_st.L7 cur_st.L6 cur_st.L5 cur_st.L4 cur_st.L3 cur_st.L2 cur_st.L1 cur_st.L0 
-cur_st.L0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-cur_st.L1 0 0 0 0 0 0 0 0 0 0 0 1 1 
-cur_st.L2 0 0 0 0 0 0 0 0 0 0 1 0 1 
-cur_st.L3 0 0 0 0 0 0 0 0 0 1 0 0 1 
-cur_st.L4 0 0 0 0 0 0 0 0 1 0 0 0 1 
-cur_st.L5 0 0 0 0 0 0 0 1 0 0 0 0 1 
-cur_st.L6 0 0 0 0 0 0 1 0 0 0 0 0 1 
-cur_st.L7 0 0 0 0 0 1 0 0 0 0 0 0 1 
-cur_st.L8 0 0 0 0 1 0 0 0 0 0 0 0 1 
-cur_st.L9 0 0 0 1 0 0 0 0 0 0 0 0 1 
-cur_st.L10 0 0 1 0 0 0 0 0 0 0 0 0 1 
-cur_st.L11 0 1 0 0 0 0 0 0 0 0 0 0 1 
-cur_st.L12 1 0 0 0 0 0 0 0 0 0 0 0 1 

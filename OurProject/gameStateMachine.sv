@@ -184,7 +184,7 @@ always_comb // Update the outputs //////////////////////
 			//////// GAME TIMER
 			if ( secClk && !col_rope_ball)
 			begin
-				nxt_score = score + 1;
+				nxt_score = score + TIME_SCORE_QUANTUM;
 				nxt_gameTime = gameTime + 1;
 				
 				if ( score > maxScore )
