@@ -123,24 +123,25 @@ begin
 		nxt_timer2 = timer2;
 		nxt_timer3 = timer3;
 		
-		if ( dropPresent == 1'b1 )
+		if ( dropPresent == 1'b1 ) //present is ready to deploy
+		//checks for available present between the 3 slots, if found - deploy.
 		begin
 			if (cur_st1 == inactive) begin
 				nxt_st1 = active;
-				nxt_timer1 = maxTime;
-				nxt_pType1 = nxt_present;
+				nxt_timer1 = maxTime; //reset timer
+				nxt_pType1 = nxt_present; //output the present type
 			end
 				
 			else if (cur_st2 == inactive) begin
 				nxt_st2 = active;
-				nxt_timer2 = maxTime;
-				nxt_pType2 = nxt_present;
+				nxt_timer2 = maxTime; //reset timer
+				nxt_pType2 = nxt_present;//output the present type
 			end
 			
 			else if (cur_st3 == inactive) begin
 				nxt_st3 = active;
-				nxt_timer3 = maxTime;
-				nxt_pType3 = nxt_present;
+				nxt_timer3 = maxTime; //reset timer
+				nxt_pType3 = nxt_present;//output the present type
 			end
 		end
 
@@ -157,6 +158,8 @@ begin
 				else
 					nxt_st1 = inactive;
 					
+					
+				//check if the present has been collected / not deployed.
 				if ( col_rope_present1 || col_player_present1 || presentsVisible == 1'b0 )
 					nxt_st1 = inactive;
 					
@@ -176,7 +179,8 @@ begin
 				end
 				else
 					nxt_st2 = inactive;
-					
+				
+				//check if the present has been collected / not deployed.
 				if ( col_rope_present2 || col_player_present2 || presentsVisible == 1'b0 )
 					nxt_st2 = inactive;
 				
@@ -196,6 +200,7 @@ begin
 				else
 					nxt_st3 = inactive;
 				
+				//check if the present has been collected / not deployed.
 				if ( col_rope_present3 || col_player_present3 || presentsVisible == 1'b0 )
 					nxt_st3 = inactive;	
 			end
@@ -235,6 +240,7 @@ always_comb // Update the outputs //////////////////////
 			nxt_present1Visible = 1;
 			nxt_present1Reset = 1;
 			
+			//check for collection of present
 			if ( col_rope_present1 || col_player_present1 )
 			begin
 					col_present = 1;
@@ -260,6 +266,7 @@ always_comb // Update the outputs //////////////////////
 			nxt_present2Visible = 1;
 			nxt_present2Reset = 1;
 
+			//check for collection of present
 			if ( col_rope_present2 || col_player_present2 )
 			begin
 					col_present = 1;
@@ -284,6 +291,7 @@ always_comb // Update the outputs //////////////////////
 			nxt_present3Visible = 1;
 			nxt_present3Reset = 1;
 
+			//check for collection of present
 			if ( col_rope_present3 || col_player_present3 )
 			begin
 					col_present = 1;

@@ -17,6 +17,8 @@ module	bgController	(
 
 always_comb
 begin
+
+
 	titleVisible = 0;
 	gameOverVisible = 0;
 	lifeVisible = 0;
@@ -24,6 +26,7 @@ begin
 	pressSpaceVisible = 0;
 	scoreVisible = 0;
 	
+	//assemble the background accoring to the game state.
 	if( gameState == 0)
 	begin
 		titleVisible = 1;
@@ -39,6 +42,8 @@ begin
 	
 	if( gameState == 2 )
 		gameOverVisible = 1;
+		
+		
 end
 
 endmodule

@@ -39,10 +39,11 @@ begin
 		Xspeed	<= 0;
 	else 	begin
 	
-			if ( rightArrow == 1'b1 && leftArrow == 1'b0)
+			//super speed : 1 - enabled, 0 - disabled
+			if ( rightArrow == 1'b1 && leftArrow == 1'b0) //move right
 				Xspeed <= X_SPEED * (1 + superSpeed);
 				
-			else if ( leftArrow == 1'b1 && rightArrow == 1'b0 )
+			else if ( leftArrow == 1'b1 && rightArrow == 1'b0 ) //move left set speed
 				Xspeed <= -X_SPEED * (1 + superSpeed);
 				
 			else
@@ -68,10 +69,10 @@ begin
 			if(topLeftX_tmp >= 5 && topLeftX <= (635 - playerWidth))
 				topLeftX_tmp  <= topLeftX_tmp + Xspeed;
 					
-			else if(topLeftX_tmp < 5 && rightArrow == 1'b1)
+			else if(topLeftX_tmp < 5 && rightArrow == 1'b1) //move right till border
 				topLeftX_tmp  <= topLeftX_tmp + Xspeed;
 				
-			else if((topLeftX_tmp > (635 - playerWidth)) && leftArrow == 1'b1)
+			else if((topLeftX_tmp > (635 - playerWidth)) && leftArrow == 1'b1) //move left till border
 				topLeftX_tmp  <= topLeftX_tmp + Xspeed;
 
 	end

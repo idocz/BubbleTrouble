@@ -130,7 +130,8 @@ begin
 			ballRGBout <= hugeBallRGB; // last priority 
 		end ;
 	end
-
+	
+	//check if any request is active for current pixel
 	assign ballRequest = hugeBallRequest || 
 								bigBall1Request || bigBall2Request || 
 								mediumBall1Request || mediumBall2Request || mediumBall3Request || mediumBall4Request ||

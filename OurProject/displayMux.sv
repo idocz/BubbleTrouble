@@ -25,7 +25,10 @@ module displayMux	(
 					
 );
 
+//pixel is an info pixel:
 assign infoRequest = titleRequest | gameOverRequest | lifeRequest | levelRequest | pressSpaceRequest | scoreRequest ;
+
+
 always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) begin

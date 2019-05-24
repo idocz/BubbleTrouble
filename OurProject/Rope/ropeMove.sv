@@ -43,7 +43,7 @@ begin
 			topY_tmp  <= topY_tmp + Yspeed_tmp;				
 		end
 		
-		else if (startOfFrame == 1'b1 && ropeActive == 1'b0) begin //
+		else if (startOfFrame == 1'b1 && ropeActive == 1'b0) begin //reset rope (disable)
 			topY_tmp <= y_FRAME_SIZE;
 		end
 			

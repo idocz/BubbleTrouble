@@ -98,7 +98,7 @@ begin
 			welcomeScreen: 
 			begin
 		
-				if ( spaceBar )
+				if ( spaceBar ) //proceed only by space press
 					nxt_st = playMode;
 					
 			end // welcomeScreen
@@ -106,7 +106,7 @@ begin
 			playMode: 
 			begin
 			
-				if ( lives <= 0 )
+				if ( lives <= 0 ) //no more lives
 					nxt_st = gameOver;
 					
 			end // playMode
@@ -114,7 +114,7 @@ begin
 			gameOver: 
 			begin
 			
-				if ( spaceBar )
+				if ( spaceBar ) //proceed only by space press
 					nxt_st = welcomeScreen;
 					
 			end // gameOver
@@ -182,7 +182,7 @@ always_comb // Update the outputs //////////////////////
 			
 
 			//////// GAME TIMER
-			if ( secClk && !col_rope_ball)
+			if ( secClk && !col_rope_ball) //count game time (score update by quantums)
 			begin
 				nxt_score = score + TIME_SCORE_QUANTUM;
 				nxt_gameTime = gameTime + 1;
@@ -193,10 +193,10 @@ always_comb // Update the outputs //////////////////////
 	
 
 			//////// ROPE CONTROLLER
-			if ( ropeTopY <= 0 && !superRope )
+			if ( ropeTopY <= 0 && !superRope ) //disable rope
 				nxt_ropeActive = 0;
 			
-			if ( spaceBar && ropeActive == 0) 
+			if ( spaceBar && ropeActive == 0) //deploy rope
 			begin
 				nxt_ropeActive = 1;
 				nxt_ropeX = playerX + player_WIDTH/2-4;
@@ -204,7 +204,7 @@ always_comb // Update the outputs //////////////////////
 			
 			
 			//////// COLLISIONS CONTROLLER
-			if ( col_player_ball && !immortal)
+			if ( col_player_ball && !immortal )
 			begin
 				nxt_lives = lives - 1;
 				nxt_immortal = 1;
@@ -215,11 +215,11 @@ always_comb // Update the outputs //////////////////////
 			if ( col_rope_ball )
 			begin
 			
-				nxt_score = score + (col_ball_type + 1) * HIT_SCORE_QUANTUM;
+				nxt_score = score + ( col_ball_type + 1 ) * HIT_SCORE_QUANTUM; //ball type: 0/1/2/3 
 				nxt_ropeActive = 0;
 				nxt_superRope = 0;
 				
-				if ( presentChance == 1 )
+				if ( presentChance == 1 ) //presentChance is a random signal
 					presentDrop = 1;	
 				
 			end
@@ -246,20 +246,20 @@ always_comb // Update the outputs //////////////////////
 				else if ( presentType == 2'b01 ) // super rope
 				begin
 					nxt_superRope = 1;
-					nxt_superRopeTimer = MAX_ROPE_TIMER;
+					nxt_superRopeTimer = MAX_ROPE_TIMER; //reset timer
 				end
 				
 				
 				else if ( presentType == 2'b10 ) // super speed
 				begin
 					nxt_superSpeed = 1;
-					nxt_superSpeedTimer = MAX_SUPERSPEED_TIMER;
+					nxt_superSpeedTimer = MAX_SUPERSPEED_TIMER;//reset timer
 				end
 				
 				else if ( presentType == 2'b11 ) // immortal
 				begin
 					nxt_immortal = 1;
-					nxt_immortalTimer = MAX_IMMORTAL_TIMER;
+					nxt_immortalTimer = MAX_IMMORTAL_TIMER; //reset timer
 				end
 					
 			end

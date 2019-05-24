@@ -250,7 +250,7 @@ begin
 					
 			inactive: begin
 			
-				if ( unitActive )
+				if ( unitActive ) //input signal of reset
 					nxt_st = deploy;
 						
 			end // inactive
@@ -263,17 +263,7 @@ begin
 			
 			active: begin
 			
-/*				if ( (hugeBallVisible || 
-						bigBall1Visible || bigBall2Visible ||
-						mediumBall1Visible || mediumBall2Visible || mediumBall3Visible || mediumBall4Visible ||
-						smallBall1Visible || smallBall2Visible || smallBall3Visible || smallBall4Visible || 
-						smallBall5Visible || smallBall6Visible || smallBall7Visible || smallBall8Visible) == 0 )
-				begin
-					nxt_st = inactive;
-				end
-*/
-
-				if ( !unitActive )
+				if ( !unitActive ) //terminate the ball
 					nxt_st = inactive;
 					
 			end // active
@@ -380,22 +370,22 @@ always_comb // Update the outputs //////////////////////
 			
 			case ( initialState )
 			
-				0 : begin
+				0 : begin // start with small ball
 					nxt_smallBall1Visible = 1;
 					nxt_smallBall1Reset = 1;
 				end
 				
-				1 : begin
+				1 : begin //start with medium ball
 					nxt_mediumBall1Visible = 1;
 					nxt_mediumBall1Reset = 1;
 				end
 				
-				2 : begin
+				2 : begin //start with big ball
 					nxt_bigBall1Visible = 1;
 					nxt_bigBall1Reset = 1;
 				end
 				
-				3 : begin
+				3 : begin //start with huge ball
 					nxt_hugeBallVisible = 1;
 					nxt_hugeBallReset = 1;
 				end
@@ -407,13 +397,15 @@ always_comb // Update the outputs //////////////////////
 		
 		active: begin
 		
+			//inUse = 1 if any sub-ball is active, 0 otherwise.
+			
 			if ( hugeBallVisible || 
 					bigBall1Visible || bigBall2Visible ||
 					mediumBall1Visible || mediumBall2Visible || mediumBall3Visible || mediumBall4Visible ||
 					smallBall1Visible || smallBall2Visible || smallBall3Visible || smallBall4Visible || 
 					smallBall5Visible || smallBall6Visible || smallBall7Visible || smallBall8Visible )
 			begin
-				nxt_inUse = 1;
+				nxt_inUse = 1; 
 			end
 			else
 			begin
@@ -611,7 +603,7 @@ always_comb // Update the outputs //////////////////////
 end // always outputs //////////////////////////////
 	
 	
-								
+//check if any collision with player has occured.
 assign col_player_ball = col_player_hugeBall || 
 									col_player_bigBall1 || col_player_bigBall2 ||
 									col_player_mediumBall1 || col_player_mediumBall2 || col_player_mediumBall3 || col_player_mediumBall4 ||

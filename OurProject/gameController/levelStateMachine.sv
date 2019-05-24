@@ -28,6 +28,8 @@ module levelStateMachine 	(
 	output logic [3:0] level
 );
 	
+	
+//12 current levels. L0 is idle state.
 enum logic [3:0] { L0, L1, L2, L3, L4, L5, L6, L7, L8, L9, L10, L11, L12 } cur_st, nxt_st;
 
 logic nxt_ball1Active, nxt_ball2Active, nxt_ball3Active;
@@ -85,7 +87,7 @@ begin
 
 	nxt_st = cur_st;	// Set default values
 	
-	if ( enable )
+	if ( enable ) //while play mode - switch levels when score has passed the level bar.
 	begin
 	
 		if(score > score12)
@@ -156,10 +158,10 @@ begin
 			begin
 			
 				level = 1;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
 				
-					nxt_ball1InitialState = 0;
+					nxt_ball1InitialState = 0; //small ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -174,9 +176,9 @@ begin
 			begin
 				
 				level = 2;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 0;
+					nxt_ball1InitialState = 0; //small ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -185,9 +187,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk)
+				else if( !ball2InUse && secClk) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 0;
+					nxt_ball2InitialState = 0; //small ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -203,9 +205,9 @@ begin
 			begin
 						
 				level = 3;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 0;
+					nxt_ball1InitialState = 0; //small ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -214,9 +216,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 0;
+					nxt_ball2InitialState = 0; //small ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -225,9 +227,9 @@ begin
 						
 				end
 			
-				else if( !ball3InUse && secClk )
+				else if( !ball3InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball3InitialState = 0;
+					nxt_ball3InitialState = 0; //small ball
 					
 					if ( ball3Active == 0 )
 						nxt_ball3Active = 1;
@@ -242,9 +244,9 @@ begin
 			begin
 						
 				level = 4;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 1;
+					nxt_ball1InitialState = 1; //medium ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -259,9 +261,9 @@ begin
 			begin
 						
 				level = 5;
-				if( !ball1InUse && secClk)
+				if( !ball1InUse && secClk) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 1;
+					nxt_ball1InitialState = 1; //medium ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -270,9 +272,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 1;
+					nxt_ball2InitialState = 1; //medium ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -287,9 +289,9 @@ begin
 			begin
 						
 				level = 6;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 1;
+					nxt_ball1InitialState = 1; //medium ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -298,9 +300,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 1;
+					nxt_ball2InitialState = 1; //medium ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -309,9 +311,9 @@ begin
 						
 				end
 			
-				else if( !ball3InUse && secClk )
+				else if( !ball3InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball3InitialState = 1;
+					nxt_ball3InitialState = 1; //medium ball
 					
 					if ( ball3Active == 0 )
 						nxt_ball3Active = 1;
@@ -326,9 +328,9 @@ begin
 			begin
 						
 				level = 7;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 2;
+					nxt_ball1InitialState = 2; //big ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -343,9 +345,9 @@ begin
 			begin
 						
 				level = 8;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 2;
+					nxt_ball1InitialState = 2; //big ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -354,9 +356,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 2;
+					nxt_ball2InitialState = 2; //big ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -371,9 +373,9 @@ begin
 			begin
 						
 				level = 9;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 2;
+					nxt_ball1InitialState = 2; //big ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -382,9 +384,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 2;
+					nxt_ball2InitialState = 2; //big ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -393,9 +395,9 @@ begin
 						
 				end
 			
-				else if( !ball3InUse && secClk )
+				else if( !ball3InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball3InitialState = 2;
+					nxt_ball3InitialState = 2; //big ball
 					
 					if ( ball3Active == 0 )
 						nxt_ball3Active = 1;
@@ -410,9 +412,9 @@ begin
 			begin
 						
 				level = 10;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 3;
+					nxt_ball1InitialState = 3; //huge ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -427,9 +429,9 @@ begin
 			begin
 						
 				level = 11;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 3;
+					nxt_ball1InitialState = 3; //huge ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -438,9 +440,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 3;
+					nxt_ball2InitialState = 3; //huge ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball2Active = 1;
@@ -455,9 +457,9 @@ begin
 			begin
 						
 				level = 12;
-				if( !ball1InUse && secClk )
+				if( !ball1InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball1InitialState = 3;
+					nxt_ball1InitialState = 3; //huge ball
 					
 					if ( ball1Active == 0 )
 						nxt_ball1Active = 1;
@@ -466,9 +468,9 @@ begin
 						
 				end
 				
-				else if( !ball2InUse && secClk )
+				else if( !ball2InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball2InitialState = 3;
+					nxt_ball2InitialState = 3; //huge ball
 					
 					if ( ball2Active == 0 )
 						nxt_ball2Active = 1;
@@ -477,9 +479,9 @@ begin
 						
 				end
 			
-				else if( !ball3InUse && secClk )
+				else if( !ball3InUse && secClk ) // check if ball is inactive and ready to deploy
 				begin
-					nxt_ball3InitialState = 3;
+					nxt_ball3InitialState = 3; //huge ball
 					
 					if ( ball3Active == 0 )
 						nxt_ball3Active = 1;

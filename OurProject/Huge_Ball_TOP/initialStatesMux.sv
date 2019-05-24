@@ -32,14 +32,15 @@ parameter state = 0;
 always_comb
 begin
 
-	if ( initialState == state )
+	//checks if the current ball is reset with initial states or a ball's split
+	if ( initialState == state ) //initial reset
 	begin
 		initialX = unitInitialX;
 		initialY = unitInitialY;
 		initialXSpeed = unitInitialXSpeed;
 		initialYSpeed = unitInitialYSpeed;
 	end
-	else
+	else //ball's split
 	begin
 		initialX = ballInitialX;
 		initialY = ballInitialY;

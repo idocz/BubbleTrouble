@@ -1,6 +1,6 @@
 Fitter report for Lab1Demo
-Sun May 12 23:34:24 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Fri May 24 13:26:08 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -66,30 +66,30 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Fitter Summary                                                                    ;
-+---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Sun May 12 23:34:23 2019           ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
-; Revision Name                   ; Lab1Demo                                        ;
-; Top-level Entity Name           ; TOP_VGA_DEMO_WITH_MSS_ALL                       ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CSXFC6D6F31C6                                  ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 25,914 / 41,910 ( 62 % )                        ;
-; Total registers                 ; 8870                                            ;
-; Total pins                      ; 73 / 499 ( 15 % )                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 1,344 / 5,662,720 ( < 1 % )                     ;
-; Total RAM Blocks                ; 3 / 553 ( < 1 % )                               ;
-; Total DSP Blocks                ; 4 / 112 ( 4 % )                                 ;
-; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                   ;
-; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                   ;
-; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                   ;
-; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                   ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Fitter Summary                                                                ;
++---------------------------------+---------------------------------------------+
+; Fitter Status                   ; Successful - Fri May 24 13:26:08 2019       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Lab1Demo                                    ;
+; Top-level Entity Name           ; TOP_VGA_DEMO_WITH_MSS_ALL                   ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSXFC6D6F31C6                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 25,914 / 41,910 ( 62 % )                    ;
+; Total registers                 ; 8870                                        ;
+; Total pins                      ; 73 / 499 ( 15 % )                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 1,344 / 5,662,720 ( < 1 % )                 ;
+; Total RAM Blocks                ; 3 / 553 ( < 1 % )                           ;
+; Total DSP Blocks                ; 4 / 112 ( 4 % )                             ;
+; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
+; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
+; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
+; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                               ;
+; Total PLLs                      ; 0 / 15 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -160,14 +160,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
+; Average used               ; 1.39        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  15.8%      ;
-;     Processor 3            ;  11.5%      ;
-;     Processor 4            ;  11.2%      ;
+;     Processor 2            ;  15.4%      ;
+;     Processor 3            ;  12.1%      ;
+;     Processor 4            ;  11.9%      ;
 +----------------------------+-------------+
 
 
@@ -667,7 +667,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Z:/BubbleTrouble/OurProject/output_files/Lab1Demo.pin.
+The pin-out file can be found in C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/output_files/Lab1Demo.pin.
 
 
 +---------------------------------------------------------------------------------------------+
@@ -4129,6 +4129,7 @@ Info (119006): Selected device 5CSXFC6D6F31C6 for design "Lab1Demo"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Critical Warning (11114): Active serial configuration mode is selected with the INIT_DONE pin disabled. Depending on the configuration setup and board design, the INIT_DONE pin may need to be enabled in the design. For more information, refer to the Intel FPGA Knowledge Database solution number rd05092012_239
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
@@ -4144,7 +4145,7 @@ Warning (16406): 2 global input pin(s) will use non-dedicated clock routing
         Info (179012): Refclk input I/O pad AUD_BCLK is placed onto PIN_AF30
     Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver resetN~inputCLKENA0, placed at CLKCTRL_G5
         Info (179012): Refclk input I/O pad resetN is placed onto PIN_AJ4
-Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:01
 Info (176233): Starting register packing
 Warning (335093): TimeQuest Timing Analyzer is analyzing 2034 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332164): Evaluating HDL-embedded SDC commands
@@ -4157,67 +4158,67 @@ Info (332164): Evaluating HDL-embedded SDC commands
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 30MHz   
         Info (332166): if { [string equal quartus_fit $::TimeQuestInfo(nameofexecutable)] } { set_max_delay -to [get_ports { altera_reserved_tdo } ] 0 }
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
-Warning (332174): Ignored filter at qfit2_legacy_fmain_fitter_flow.tcl(117): **fiforam|cells** could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/intelFPGA/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
-Warning (332174): Ignored filter at qfit2_legacy_fmain_fitter_flow.tcl(117): **fiforam|xq** could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/intelFPGA/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
-Warning (332049): Ignored set_false_path at qfit2_legacy_fmain_fitter_flow.tcl(117): Argument <from> is not an object ID File: C:/intelFPGA/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
-    Info (332050): run_legacy_fitter_flow File: C:/intelFPGA/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
-Warning (332049): Ignored set_false_path at qfit2_legacy_fmain_fitter_flow.tcl(117): Argument <to> is not an object ID File: C:/intelFPGA/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
+Warning (332174): Ignored filter at qfit2_legacy_fmain_fitter_flow.tcl(117): **fiforam|cells** could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
+Warning (332174): Ignored filter at qfit2_legacy_fmain_fitter_flow.tcl(117): **fiforam|xq** could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
+Warning (332049): Ignored set_false_path at qfit2_legacy_fmain_fitter_flow.tcl(117): Argument <from> is not an object ID File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
+    Info (332050): run_legacy_fitter_flow File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
+Warning (332049): Ignored set_false_path at qfit2_legacy_fmain_fitter_flow.tcl(117): Argument <to> is not an object ID File: C:/intelFPGA_lite/17.0/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117
 Info (332104): Reading SDC File: 'DE10_Standard_Audio.sdc'
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(9): CLOCK2_50 could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 9
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(9): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 9
-    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK2_50] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 9
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(10): CLOCK3_50 could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 10
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(10): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 10
-    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK3_50] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 10
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(11): CLOCK4_50 could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 11
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(11): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 11
-    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK4_50] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 11
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(14): CLOCK_27 could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 14
-Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(14): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 14
-    Info (332050): create_clock -period "27.000000 MHz" [get_ports CLOCK_27] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 14
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(9): CLOCK2_50 could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 9
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(9): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 9
+    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK2_50] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 9
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(10): CLOCK3_50 could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 10
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(10): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 10
+    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK3_50] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 10
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(11): CLOCK4_50 could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 11
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(11): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 11
+    Info (332050): create_clock -period "50.000000 MHz" [get_ports CLOCK4_50] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 11
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(14): CLOCK_27 could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 14
+Warning (332049): Ignored create_clock at DE10_Standard_Audio.sdc(14): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 14
+    Info (332050): create_clock -period "27.000000 MHz" [get_ports CLOCK_27] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 14
 Warning (332043): Overwriting existing clock: altera_reserved_tck
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(38): u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(39): DRAM_CLK could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 39
-Critical Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(38): u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a pin File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(39): DRAM_CLK could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 39
+Critical Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
     Info (332050): create_generated_clock -source [get_pins {u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk}] \
-                      -name clk_dram_ext [get_ports {DRAM_CLK}] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
-Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument -source is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
+                      -name clk_dram_ext [get_ports {DRAM_CLK}] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
+Warning (332049): Ignored create_generated_clock at DE10_Standard_Audio.sdc(38): Argument -source is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 38
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): DRAM_DQ* could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): clk_dram_ext could not be matched with a clock File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
-    Info (332050): set_input_delay -max -clock clk_dram_ext 5.9 [get_ports DRAM_DQ*] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument -clock is not an object ID File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 63
-    Info (332050): set_input_delay -min -clock clk_dram_ext 3.0 [get_ports DRAM_DQ*] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 63
-Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument -clock is not an object ID File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 63
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(67): u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 67
-Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <from> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 66
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): DRAM_DQ* could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(62): clk_dram_ext could not be matched with a clock File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
+    Info (332050): set_input_delay -max -clock clk_dram_ext 5.9 [get_ports DRAM_DQ*] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(62): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 62
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 63
+    Info (332050): set_input_delay -min -clock clk_dram_ext 3.0 [get_ports DRAM_DQ*] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 63
+Warning (332049): Ignored set_input_delay at DE10_Standard_Audio.sdc(63): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 63
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(67): u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk could not be matched with a clock File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 67
+Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <from> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 66
     Info (332050): set_multicycle_path -from [get_clocks {clk_dram_ext}] \
                     -to [get_clocks {u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}] \
-                                                  -setup 2 File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 66
-Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <to> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 66
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_*DQM could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_DQ* could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
-    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_DQ* DRAM_*DQM}] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument -clock is not an object ID File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 81
-    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_DQ* DRAM_*DQM}] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 81
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument -clock is not an object ID File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 81
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_ADDR* could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_BA* could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CAS_N could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CKE could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CS_N could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_RAS_N could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_WE_N could not be matched with a port File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument -clock is not an object ID File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument <targets> is an empty collection File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 83
-    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 83
-Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument -clock is not an object ID File: Z:/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 83
+                                                  -setup 2 File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 66
+Warning (332049): Ignored set_multicycle_path at DE10_Standard_Audio.sdc(66): Argument <to> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 66
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_*DQM could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(80): DRAM_DQ* could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
+    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_DQ* DRAM_*DQM}] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(80): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 80
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 81
+    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_DQ* DRAM_*DQM}] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 81
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(81): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 81
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_ADDR* could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_BA* could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CAS_N could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CKE could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_CS_N could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_RAS_N could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332174): Ignored filter at DE10_Standard_Audio.sdc(82): DRAM_WE_N could not be matched with a port File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+    Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(82): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 82
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument <targets> is an empty collection File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 83
+    Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 83
+Warning (332049): Ignored set_output_delay at DE10_Standard_Audio.sdc(83): Argument -clock is not an object ID File: C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/DE10_Standard_Audio.sdc Line: 83
 Warning (332060): Node: VGA_Controller:VGA_Controller|oVGA_HS was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register VGA_Controller:VGA_Controller|oVGA_VS is being clocked by VGA_Controller:VGA_Controller|oVGA_HS
 Warning (332060): Node: resetN was determined to be a clock but was found without an associated clock assignment.
@@ -4283,41 +4284,41 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "numKey[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "numKey[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sound_on" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:20
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:25
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:01:32
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:02:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:42
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:53
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 10% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 31% of the available device resources in the region that extends from location X0_Y0 to location X10_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:59
-Info (11888): Total time spent on timing analysis during the Fitter is 64.30 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:01:12
+Info (11888): Total time spent on timing analysis during the Fitter is 80.77 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:01:16
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:01:29
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169064): Following 3 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin AUD_ADCLRCK has a permanently disabled output enable
     Info (169065): Pin AUD_BCLK has a permanently disabled output enable
     Info (169065): Pin AUD_DACLRCK has a permanently disabled output enable
-Info (144001): Generated suppressed messages file Z:/BubbleTrouble/OurProject/output_files/Lab1Demo.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 102 warnings
-    Info: Peak virtual memory: 3027 megabytes
-    Info: Processing ended: Sun May 12 23:34:40 2019
-    Info: Elapsed time: 00:07:08
-    Info: Total CPU time (on all processors): 00:17:45
+Info (144001): Generated suppressed messages file C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/output_files/Lab1Demo.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 7127 megabytes
+    Info: Processing ended: Fri May 24 13:26:19 2019
+    Info: Elapsed time: 00:08:42
+    Info: Total CPU time (on all processors): 00:21:38
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Z:/BubbleTrouble/OurProject/output_files/Lab1Demo.fit.smsg.
+The suppressed messages can be found in C:/Users/ohadv/Desktop/EELab1A/BubbleTrouble/OurProject/output_files/Lab1Demo.fit.smsg.
 
 

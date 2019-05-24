@@ -28,6 +28,7 @@ begin
 	else
 		Yspeed_both = -Yspeed;		
 		
+	//one ball goes right and another left
 	Xspeed1_out = Xspeed;
 	Xspeed2_out = -Xspeed;	
 			

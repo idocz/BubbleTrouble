@@ -29,6 +29,7 @@ begin
 	HexIn3 = 0;
 	HexIn4 = 0;
 	
+	//split an integer to digits for 7Seg output
 	if( integerInput > 0 )
 	begin
 		HexIn1 = integerInput % 10;
